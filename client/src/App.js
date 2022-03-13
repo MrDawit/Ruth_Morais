@@ -85,7 +85,7 @@ function App() {
           <ProjectProvider>
             <Switch>
             
-        <Route exact path="/" component={MainPage} />
+        <Route exact path="/" component={PortfolioPage} />
         
               <Route exact path='/main' component={MainPage} />
               <Route exact path='/contact' component={ContactPage} />

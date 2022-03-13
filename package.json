@@ -1,0 +1,50 @@
+{
+    "name": "ruth_morais",
+    "version": "1.0.0",
+    "description": "Ruth Morais portfolio",
+    "main": "server.js",
+    "scripts": {
+      "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+      "start:prod": "node server.js",
+      "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+      "client": "cd client && npm run start",
+      "install": "cd client && npm install",
+      "build": "cd client && npm run build",
+      "heroku-postbuild": "npm run build"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/MrDawit/Ruth_Morais.git"
+    },
+    "author": "",
+    "license": "Apache-2.0",
+    "bugs": {
+      "url": "https://github.com/MrDawit/Ruth_Morais/issues"
+    },
+    "homepage": "",
+    "dependencies": {
+      "@popperjs/core": "^2.11.3",
+      "bcryptjs": "^2.4.3",
+      "body-parser": "^1.19.2",
+      "bootstrap": "^5.1.3",
+      "concurrently": "^7.0.0",
+      "cookie-parser": "^1.4.6",
+      "core-js": "^3.21.1",
+      "cors": "^2.8.5",
+      "dotenv": "^16.0.0",
+      "express": "^4.17.3",
+      "googleapis": "^96.0.0",
+      "if-env": "^1.0.4",
+      "nodemailer": "^6.7.2",
+      "nodemon": "^2.0.15",
+      "react": "^17.0.2",
+      "react-bootstrap": "^2.2.1",
+      "react-dom": "^17.0.2",
+      "react-lazy-load": "^3.1.13",
+      "react-tilt": "^0.1.4",
+      "run-all": "^1.0.1"
+    },
+    "devDependencies": {
+      "gh-pages": "^3.2.3"
+    }
+  }
