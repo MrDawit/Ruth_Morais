@@ -32,7 +32,8 @@ const AboutPage = () => {
                 <main className="col-xs-12 col-lg-10">
                     <div id="skillsAbout">
 
-                        <h3>Skills </h3>
+                        <h3>Roles </h3>
+                        <article >Marketing Project Manager | Sales Manager | Product Innovation</article>
                         <SkillIconProvider>
                             <SkillIconList />
                         </SkillIconProvider>
