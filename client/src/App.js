@@ -6,7 +6,7 @@ import {
   HashRouter as Router,
   //  BrowserRouter as Router,
   Route,
-  Switch,
+  Routes,
   Redirect
 } from 'react-router-dom';
 
@@ -35,8 +35,8 @@ import modernBackground from './assets/img/modern5.jpg';
 
 //Duplicate react test
 require('react-dom');
-window.React2 = require('react');
-console.log(window.React1 === window.React2);
+// window.React2 = require('react');
+// console.log(window.React1 === window.React2);
 
 function App() {
 
@@ -83,17 +83,17 @@ function App() {
           <SideDrawer show={sideDrawerOpen} click={drawerToggleClickHandler} />
           {backdrop}
           <ProjectProvider>
-            <Switch>
+            <Routes>
             
-        <Route exact path="/" component={PortfolioPage} />
+        <Route exact path="/" component={MainPage} />
         
               <Route exact path='/main' component={MainPage} />
               <Route exact path='/contact' component={ContactPage} />
               <Route exact path='/portfolio' component={PortfolioPage} />
               {/* <Route exact path='/404' component={NotFoundPage} /> */}
               <Route component={NotFoundPage} />
-              <Redirect to='/404' />
-            </Switch>
+              {/* <Redirect to='/404' /> */}
+            </Routes>
           </ProjectProvider>
        
           <Footer />

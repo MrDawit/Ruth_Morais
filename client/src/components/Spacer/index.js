@@ -35,7 +35,7 @@ function Spacer() {
       
         <div id="globe">
           <img id="globe_spacer"
-            src={require("../../assets/img/globe3.png").default} alt={"spacer"} />
+            src={require("../../assets/img/modern.jpg").default} alt={"spacer"} />
             {/* <div className="centered">DREAM BIG...DREAM BIG...</div> */}
         </div>
  
