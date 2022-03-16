@@ -3,7 +3,7 @@
     height: 100%;
     /* background: white; */
     /* background-image: url("../../assets/img/bgimage.jpg"); */
-    background-image: url("../../assets/img/modern6.jpg");
+    background-image: url("../../assets/img/modern.jpg");
     box-shadow: 1px 0px 7px rgba(0,0,0,0.5);
     position: fixed;
     top: 0;
@@ -21,7 +21,7 @@
 
 .drawer_links {
     border-radius:95%;
-  background-color:purple;
+  background-color:rgb(66, 64, 66);
   /* float:right; */
   color:silver;
   text-decoration:none; 
@@ -40,26 +40,26 @@
 }
 
 #red_sideDrawer{
-    box-shadow: 0 5px red;
+    box-shadow: 0 5px rgb(85, 79, 79);
   }
 #red_sideDrawer:hover {
-    background-color:red;
-     color:black;
+    background-color:black;
+     color:grey;
     text-decoration: none;
   }
 #green_sideDrawer{
-    box-shadow: 0 5px green;
+    box-shadow: 0 5px rgb(11, 12, 11);
   }
 #green_sideDrawer:hover {
-    background-color:green;
+    background-color:rgb(195, 197, 195);
     color:black;
     text-decoration: none;
   }
 #blue_sideDrawer{
-    box-shadow: 0 5px blue;
+    box-shadow: 0 5px rgb(157, 157, 182);
   }
 #blue_sideDrawer:hover {
-    background-color:blue;
+    background-color:rgb(143, 143, 146);
     color:black;
     text-decoration: none;
   }

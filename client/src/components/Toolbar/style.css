@@ -11,7 +11,7 @@
   }
   
    #navForm {
-    border-radius:95%;
+    border-radius:95%; 
 
     float:right;
     color:silver;
@@ -24,22 +24,26 @@
     color:black;
   } 
   #red{
-    box-shadow: 0 5px red;
+    box-shadow: 0 5px rgb(26, 26, 31);
+    
   }
   #red:hover{
-    background-color:red;
+    background-color:rgb(26, 26, 31);
+    color: silver;
   }
   #green{
-    box-shadow: 0 5px green;
+    box-shadow: 0 5px rgb(26, 26, 31);
   }
   #green:hover{
-    background-color:green;
+    background-color:rgb(26, 26, 31);
+    color: silver;
   }
   #blue{
-    box-shadow: 0 5px blue;
+    box-shadow: 0 5px rgb(26, 26, 31);
   }
   #blue:hover{
-    background-color:blue;
+    background-color:rgb(26, 26, 31);
+    color: silver;
   }
   
   

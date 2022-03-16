@@ -23,9 +23,9 @@ nav{
 
  .navbar a {
   border-radius:95%;
-  background-color:purple;
+  background-color:grey;
   float:right;
-  color:silver;
+  color:rgb(26, 26, 31);
   text-decoration:none; 
   padding:8px; 
   /*only work if .navbar button has a .hover*/

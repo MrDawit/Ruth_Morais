@@ -43,7 +43,7 @@ const AboutPage = () => {
                             <img alt={"Shalom Dawit"} src={require("../assets/img/aria_light.jpg").default} className="image-wrapper float-left img-responsive pr-2" id="bioImage" />
 
                             <article className="pull-right">
-                                <span>Greetings into the window of my life! </span>
+                                <span> </span>
                             </article>
                             {/* <a id="purple" href={"../assets/img/pic0.jpg"} target="_blank" rel="noreferrer">RESUME</a> */}
                             <a id="purple" href={resume} download="Ruth Morais Resume"> Resume </a>
