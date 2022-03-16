@@ -39,7 +39,7 @@ function Spacer() {
             {/* <div className="centered">DREAM BIG...DREAM BIG...</div> */}
         </div>
  
-        <img id="image_spacer" src={require("../../assets/img/spacer.jpg").default} alt={"spacer"} />
+        {/* <img id="image_spacer" src={require("../../assets/img/spacer.jpg").default} alt={"spacer"} /> */}
 
       </div>
 

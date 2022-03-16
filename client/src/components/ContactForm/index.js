@@ -94,9 +94,9 @@ function ContactForm() {
         <br />
         <input id="submitBtn" type="submit" value="Submit" />
         <br /><br />
-        <div><span>Email: </span>Shalom.Dawit@Gmail.com</div>
+        <div><span>Email: </span>moraisruth@yahoo.com</div>
         <div id="contact_links">
-          <a href="https://www.linkedin.com/in/shalom-dawit-a0a5a4126"
+          <a href="https://linkedin.com/in/ruth-morais "
             target="_blank" rel="noreferrer">
             <img className="contact_icon" alt="LinkedIn_Image" src={require("../../assets/img/icon-linkedin.png").default} />
           </a>

@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import ProjectList from '../components/ProjectList';
 import { ProjectProvider } from "../utils/ProjectContext";
 import "../assets/css/portfolioPage.css";
-
+import Spacer from '../components/Spacer';
 const ProjectListPage = () => {
 
     return (
@@ -31,7 +31,7 @@ const ProjectListPage = () => {
             </main>
        
             </div>
-
+<Spacer/>
 
 
             </motion.div>

@@ -44,7 +44,7 @@ function Toolbar (props) {
            </div>
            {/* <div className="toolbar__logo"> */}
        
-               <h2>Shalom Dawit</h2>
+               <h2>Ruth Morais</h2>
            {/* </div> */}
            {/* <div className="spacer" /> */}
            
