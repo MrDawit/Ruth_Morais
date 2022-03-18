@@ -7,47 +7,47 @@ export const ProjectProvider = props => {
 
     const [projects, setProjects] = useState([
         
-        // {
+        {
             
-        //     name: "The ToolShed",
-        //     descriptionShort: "A REACT app to help users not lose their tools!",
-        //     imageURL: require("../assets/img/toolshed.png").default,
-        //     gitHubRepo:"https://github.com/MrDawit/ToolShed",
-        //     deployURL:"https://toolshed-app-team8.herokuapp.com/",
-        //     skills: "React, REST API, OKTA, BLK systems framework, Bootstrap, MySQL, NodeJS, Javascript, HTML, CSS",
-        //     id: 1
-        // },
-        // {
+            name: "The ToolShed",
+            descriptionShort: "A REACT app to help users not lose their tools!",
+            imageURL: require("../assets/img/icon-linkedin.png").default,
+            gitHubRepo:"https://github.com/MrDawit/ToolShed",
+            deployURL:"https://toolshed-app-team8.herokuapp.com/",
+            skills: "React, REST API, OKTA, BLK systems framework, Bootstrap, MySQL, NodeJS, Javascript, HTML, CSS",
+            id: 1
+        },
+        {
            
-        //     name: "Covid19 Info",
-        //     descriptionShort: "Covid-19 high level statistics dashboard",
-        //     imageURL: require("../assets/img/covid19_info.png").default,
-        //     gitHubRepo:"https://github.com/troylochner/covid19-info",
-        //     deployURL:"https://troylochner.github.io/covid19-info/",
-        //     skills: "Web API, Materialize framework, Javascript, JQuery, HTML, CSS",
-        //     id: 2
-        // }, 
-        // {
+            name: "Covid19 Info",
+            descriptionShort: "Covid-19 high level statistics dashboard",
+            // imageURL: require("../assets/img/covid19_info.png").default,
+            gitHubRepo:"https://github.com/troylochner/covid19-info",
+            deployURL:"https://troylochner.github.io/covid19-info/",
+            skills: "Web API, Materialize framework, Javascript, JQuery, HTML, CSS",
+            id: 2
+        }, 
+        {
            
-        //     name: "Recipe Tracker",
-        //     descriptionShort: "An App to organize your recipes",
-        //     imageURL: require("../assets/img/main.png").default,
-        //     gitHubRepo:"https://github.com/lcalderin12/Recipe-Tracker",
-        //     deployURL:"https://recipes-tracker-hanzee.herokuapp.com/",
-        //     loginInfo:"* (For Login) EMAIL: Shalom.Dawit@gmail.com PASSWORD: food",
-        //     skills: "JavaScript, HTML, CSS3, REST API, NodeMailer, NodeJS, Express Handlebars, JQuery, AJAX, Passport, Sequelize, Bootstrap ",
-        //     id: 3
-        // }, 
-        // {
+            name: "Recipe Tracker",
+            descriptionShort: "An App to organize your recipes",
+            //imageURL: require("../assets/img/main.png").default,
+            gitHubRepo:"https://github.com/lcalderin12/Recipe-Tracker",
+            deployURL:"https://recipes-tracker-hanzee.herokuapp.com/",
+            loginInfo:"* (For Login) EMAIL: Shalom.Dawit@gmail.com PASSWORD: food",
+            skills: "JavaScript, HTML, CSS3, REST API, NodeMailer, NodeJS, Express Handlebars, JQuery, AJAX, Passport, Sequelize, Bootstrap ",
+            id: 3
+        }, 
+        {
            
-        //     name: "All U Can Burger",
-        //     descriptionShort: "An App to organize your burger diet using express handlebars",
-        //     imageURL: require("../assets/img/AllUCanBurger.png").default,
-        //     gitHubRepo:"https://github.com/MrDawit/All-U-Can-Burger",
-        //     deployURL:"https://all-u-can-burger.herokuapp.com/",
-        //     skills: "JavaScript, HTML5, CSS3, REST API, NodeJS, Express Handlebars, JQuery, AJAX, MySQL, Sequelize, Bootstrap, MVC design pattern ",
-        //     id: 4
-        // },
+            name: "All U Can Burger",
+            descriptionShort: "An App to organize your burger diet using express handlebars",
+            //imageURL: require("../assets/img/AllUCanBurger.png").default,
+            gitHubRepo:"https://github.com/MrDawit/All-U-Can-Burger",
+            deployURL:"https://all-u-can-burger.herokuapp.com/",
+            skills: "JavaScript, HTML5, CSS3, REST API, NodeJS, Express Handlebars, JQuery, AJAX, MySQL, Sequelize, Bootstrap, MVC design pattern ",
+            id: 4
+        },
         // {
             
         //     name: "WeatherApp",
