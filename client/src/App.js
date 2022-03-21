@@ -86,11 +86,14 @@ function App() {
           <ProjectProvider>
             <Switch>
             
-        <Route exact path="/" component={MainPage} />
+        <Route exact path="/about" component={MainPage} />
+        <Route exact path='/resume' component={ContactPage} />
+        <Route exact path='/' component={PortfolioPage} />
+
         
-              <Route exact path='/main' component={MainPage} />
-              <Route exact path='/contact' component={ContactPage} />
-              <Route exact path='/portfolio' component={PortfolioPage} />
+              {/* <Route exact path='/main' component={MainPage} /> */}
+              {/* <Route exact path='/contact' component={ContactPage} /> */}
+              {/* <Route exact path='/portfolio' component={PortfolioPage} /> */}
               {/* <Route exact path='/404' component={NotFoundPage} /> */}
               <Route component={NotFoundPage} />
               <Redirect to='/404' />

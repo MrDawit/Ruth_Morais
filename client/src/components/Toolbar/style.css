@@ -1,20 +1,19 @@
 .toolbar {
-    border-style:solid;
+    /* border-style:solid;
     border-width:5px;
-    border-color: rgb(23, 2, 37);
+    border-color: rgb(23, 2, 37); */
     position:fixed;
     top:0;
     right:0;
     width:100%;
-    background-color:rgb(130, 132, 175);
+    background-color:rgb(238, 239, 245);
     z-index:150;
   }
   
    #navForm {
-    border-radius:95%; 
-
+   
     float:right;
-    color:silver;
+    color:rgb(17, 8, 8);
     text-decoration:none; 
     padding:8px; 
     /*only work if .navbar button has a .hover*/
@@ -22,34 +21,27 @@
   }
   .toolbar_navigation-items li:hover {
     color:black;
+   
   } 
-  #red{
-    box-shadow: 0 5px rgb(26, 26, 31);
+  #navLink{
+    /* box-shadow: 0 5px rgb(26, 26, 31); */
+    color:silver;
+    border-radius:0%; 
+    background-color:rgb(238, 239, 245);
+/* border-color: white; */
     
   }
-  #red:hover{
-    background-color:rgb(26, 26, 31);
-    color: silver;
+  #navLink:hover{
+    /* background-color:rgb(26, 26, 31); */
+    color: black;
   }
-  #green{
-    box-shadow: 0 5px rgb(26, 26, 31);
-  }
-  #green:hover{
-    background-color:rgb(26, 26, 31);
-    color: silver;
-  }
-  #blue{
-    box-shadow: 0 5px rgb(26, 26, 31);
-  }
-  #blue:hover{
-    background-color:rgb(26, 26, 31);
-    color: silver;
-  }
+ 
   
   
   h2{
-    font-family:bladeST, Arial, Helvetica, sans-serif;
-    /* color:red; */
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:20px;
+    font-weight:bold;
   }
   
 
