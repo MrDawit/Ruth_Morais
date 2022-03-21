@@ -21,7 +21,7 @@ const NotFoundPage = () => {
                 }
             },
         }}>
-        //     <div className="bod">
+            <div className="bod">
         <div id="container404">
             <h3 className="text404">404 :  Page Not Found!</h3>
             {/* <Spacer /> */}

@@ -1,6 +1,7 @@
 import React, {  useContext } from "react";
 import ProjectCard from "../ProjectCard";
-import { ProjectContext } from "../../utils/ProjectContext"
+import { ProjectContext } from "../../utils/ProjectContext";
+
 
 const ProjectList = () => {
     const [projects, setProjects] = useContext(ProjectContext)
@@ -10,7 +11,9 @@ const ProjectList = () => {
                 {projects.map(project => (
                    
                      <div className="col-sm-12 col-md-6 " key={project.id}>
+                        
                         <ProjectCard name={project.name} imageURL={project.imageURL} descriptionShort={project.descriptionShort} gitHubRepo={project.gitHubRepo} deployURL={project.deployURL} loginInfo ={project.loginInfo} skills ={project.skills}/>
+                       
                     </div>
 
                 ))}

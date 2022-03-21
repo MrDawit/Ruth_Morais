@@ -9,12 +9,9 @@ export const ProjectProvider = props => {
         
         {
             
-            name: "The ToolShed",
-            descriptionShort: "A REACT app to help users not lose their tools!",
+            name: "LinkedIn",
             imageURL: require("../assets/img/icon-linkedin.png").default,
-            gitHubRepo:"https://github.com/MrDawit/ToolShed",
-            deployURL:"https://toolshed-app-team8.herokuapp.com/",
-            skills: "React, REST API, OKTA, BLK systems framework, Bootstrap, MySQL, NodeJS, Javascript, HTML, CSS",
+            deployURL:"https://www.linkedin.com/in/ruth-morais/",
             id: 1
         },
         {

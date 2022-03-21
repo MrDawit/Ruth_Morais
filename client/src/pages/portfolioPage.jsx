@@ -25,13 +25,17 @@ const ProjectListPage = () => {
         <div className="bod">
         <main className="col-xs-12 col-lg-10">
         <h1>Portfolio</h1>
+      
                 <ProjectProvider>
+                  
                     <ProjectList/>
+                
                 </ProjectProvider>
+              
             </main>
        
             </div>
-<Spacer/>
+{/* <Spacer/> */}
 
 
             </motion.div>
