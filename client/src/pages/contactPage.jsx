@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import ContactForm from '../components/ContactForm';
-import Tilt from '../components/Tilt/Tilt.js';
+// import ContactForm from '../components/ContactForm';
+// import Tilt from '../components/Tilt/Tilt.js';
+import resume from '../assets/files/RMorais.docx';
 import "../assets/css/contactPage.css";
 
 const ContactPage = () => {
@@ -20,14 +21,22 @@ const ContactPage = () => {
                 }
             },
         }}>
-            <div className="bod">
+            {/* <div className="bod"> */}
                 <main className="col-xs-12 col-lg-10">
-                    <h1>Contact</h1>
-                    <ContactForm />
+                    <h1>My Resume</h1>
+                    <div>Simply click on the image below to view my resume.</div>
+                    <a href="https://mrdawit.github.io/Ruth_Morais/client/src/assets/files/RMorais.docx"
+            target="_blank" rel="noreferrer">
+            <img className="resume_image" alt="resume_image" src={require("../assets/img/icon-linkedin.png").default} />
+          </a>
+                    <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod porro quisquam est qui labore et dolore magna aliqua. Ut labore et dolore toil and pain veniam, quis nostrud exercitation ullamco quia dolor sit amet ut aliquip ex de finibus bonorum et malorum.
+                    </div>
+                    {/* <ContactForm /> */}
 
                 </main>
-                <Tilt />
-            </div>
+                {/* <Tilt /> */}
+            {/* </div> */}
         </motion.div>
     )
 };

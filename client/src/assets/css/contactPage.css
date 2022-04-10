@@ -9,7 +9,9 @@
     max-width: 40px;
   
   }
-
+h1{
+  text-align: center;
+}
 
   @media screen and (max-width:768px) {
     main{padding-top:5rem!important;
