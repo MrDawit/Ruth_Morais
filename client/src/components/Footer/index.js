@@ -5,7 +5,9 @@ function Footer() {
   return (
   
     <>
-    <footer id="outer_footer" >
+    <footer id="outer_footer">Ruth Morais | Marketing Project Manager </footer>    
+    
+    {/* <footer id="outer_footer" >
  
   <div className="row footerRow">
     
@@ -18,7 +20,7 @@ function Footer() {
        <img  src={require("../../assets/img/favicon.ico").default} alt={"juju"}/> 12/20
     </div>
     </div>
-</footer>
+</footer> */}
 </>
   );
 }
