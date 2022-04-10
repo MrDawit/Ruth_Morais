@@ -43,6 +43,9 @@
     font-size:20px;
     font-weight:bold;
   }
+  nav{
+    border-color: rgb(238, 239, 245);
+  }
   
 
   @media (max-width: 768px) {
