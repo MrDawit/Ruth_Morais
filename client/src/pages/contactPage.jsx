@@ -25,7 +25,7 @@ const ContactPage = () => {
                 <main className="col-xs-12 col-lg-10">
                     <h1>My Resume</h1>
                     <div>Simply click on the image below to view my resume.</div>
-                    <a href="https://mrdawit.github.io/Ruth_Morais/client/src/assets/files/RMorais.docx"
+                    <a href="https://mrdawit.github.io/Ruth_Morais/client/src/assets/files/RMorais.pdf"
             target="_blank" rel="noreferrer">
             <img className="resume_image" alt="resume_image" src={require("../assets/img/icon-linkedin.png").default} />
           </a>
