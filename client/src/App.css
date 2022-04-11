@@ -45,6 +45,8 @@
     /* background-image:repeat; */
     /* background-image: no-repeat; */
     background-color:rgb(238, 239, 245);
+    /* display: flex;
+  justify-content: center; */
 }
  
 main {
@@ -63,14 +65,15 @@ main {
   /* background-color:white; */
   width: 60%;
   /* overflow:hidden; */
-  overflow-y:scroll;
+  /* overflow-y:scroll; */
   /* scrollbar-color: rgb(61, 56, 56) rgb(138, 43, 226,0.1); */
   background-color:rgb(238, 239, 245);
 }
 
 
 h1, h3{
-  font-family:bladeS, Arial, Helvetica, sans-serif ;
+  /* font-family:bladeS, Arial, Helvetica, sans-serif ; */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 // import ContactForm from '../components/ContactForm';
 // import Tilt from '../components/Tilt/Tilt.js';
-import resume from "../assets/files/RMorais.docx";
+// import resume from "../assets/files/RMorais.docx";
 import "../assets/css/contactPage.css";
 
 const ContactPage = () => {
@@ -27,13 +27,15 @@ const ContactPage = () => {
       {/* <div className="bod"> */}
       <main className="col-xs-12 col-lg-10">
         <h1>My Resume</h1>
+        <br/><br/><br/><br/>
         <div>Simply click on the image below to view my resume.</div>
-        <a
+        
+            <div id="resume_outer">
+            <a
           href="https://mrdawit.github.io/Ruth_Morais/client/src/assets/files/RMorais.pdf"
           target="_blank"
           rel="noreferrer"
         >
-            <div id="resume_outer">
           <div id="resume_imageBorder">
               
             {/* <img
@@ -42,8 +44,9 @@ const ContactPage = () => {
               src={require("../assets/img/resume_image.png").default}
             /> */}
           </div>
+          </a>
           </div>
-        </a>
+        
         <div>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod porro quisquam est qui labore et dolore magna aliqua. Ut

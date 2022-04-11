@@ -9,8 +9,16 @@
     max-width: 40px;
   
   }
+  .bod{
+    /* display: flex;
+    justify-content: center; */
+  
+  }
   main{
-    align-self: center;
+    /* align-self: center;
+    align-items: center; */
+    /* margin: 0 auto ; */
+   /* left:50%; */
     text-decoration:none;
     border: none;
 
