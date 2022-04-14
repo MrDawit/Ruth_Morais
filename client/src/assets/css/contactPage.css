@@ -12,36 +12,52 @@
   .bod{
     /* display: flex;
     justify-content: center; */
-  
+    align-self: center;
+    align-items: center;
+    /* border-color:red; */
   }
   main{
-    /* align-self: center;
-    align-items: center; */
+    /* display: flex; */
+    /* justify-content: center; */
+    align-items: center;
     /* margin: 0 auto ; */
    /* left:50%; */
     text-decoration:none;
     border: none;
-
+    
+  
   }
-h1{
+h1,#resume_command{
   text-align: center;
+
 }
 .resume_image{
   filter: blur(4px);
 }
 #resume_outer{
   height: 50vh;
-  width: 100vh;
-  border: 10px solid black;
+  width: 50vh;
+  border: 5px solid black;
+  margin: auto;
+  
+  
 }
 #resume_imageBorder{
   /* border: 1px solid; */
   /* background-image: url("../img/resume_image.png") no-repeat center; */
   background: url("../img/resume_image.png") no-repeat center;
-  filter: blur(4px);
+  filter: blur(2px);
   height: 100%;
   width: 100%;
   background-size:100%;
+}
+/* #resume_command{
+  text-align: center;
+} */
+#resume_quote{
+  margin: auto;
+  width:60%;
+  text-align: center;
 }
   @media screen and (max-width:768px) {
     main{padding-top:5rem!important;

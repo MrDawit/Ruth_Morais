@@ -25,10 +25,10 @@ const ContactPage = () => {
       }}
     >
       {/* <div className="bod"> */}
-      <main className="col-xs-12 col-lg-10">
+      <main className="col-xs-12 col-lg-10" id="main_resume">
         <h1>My Resume</h1>
-        <br/><br/><br/><br/>
-        <div>Simply click on the image below to view my resume.</div>
+        <br/><br/>
+        <div id="resume_command">Simply click on the image below to view my resume.</div>
         
             <div id="resume_outer">
             <a
@@ -36,28 +36,24 @@ const ContactPage = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <div id="resume_imageBorder">
-              
-            {/* <img
-              className="resume_image"
-              alt="resume_image"
-              src={require("../assets/img/resume_image.png").default}
-            /> */}
+
+          <div id="resume_imageBorder">  
+            {/* img through css url link */}
           </div>
+
           </a>
           </div>
-        
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          <br/><br/>
+        <div id="resume_quote">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod porro quisquam est qui labore et dolore magna aliqua. Ut
           labore et dolore toil and pain veniam, quis nostrud exercitation
           ullamco quia dolor sit amet ut aliquip ex de finibus bonorum et
-          malorum.
+          malorum."
+          -Lorem Ipsum
         </div>
-        {/* <ContactForm /> */}
-      </main>
-      {/* <Tilt /> */}
-      {/* </div> */}
+      </main> 
+
     </motion.div>
   );
 };
