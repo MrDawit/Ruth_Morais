@@ -27,16 +27,20 @@
     
   
   }
-h1,#resume_command{
+/* h1,#resume_command{
   text-align: center;
 
+} */
+h1{
+  text-align:center;
+  /* font-family:Courier; */
 }
 .resume_image{
   filter: blur(4px);
 }
 #resume_outer{
-  height: 50vh;
-  width: 50vh;
+  height: 75vh;
+  width: 75vh;
   border: 5px solid black;
   margin: auto;
   
@@ -46,18 +50,21 @@ h1,#resume_command{
   /* border: 1px solid; */
   /* background-image: url("../img/resume_image.png") no-repeat center; */
   background: url("../img/resume_image.png") no-repeat center;
-  filter: blur(2px);
+  filter: blur(1px);
   height: 100%;
   width: 100%;
   background-size:100%;
 }
-/* #resume_command{
+#resume_command{
   text-align: center;
-} */
+}
 #resume_quote{
   margin: auto;
   width:60%;
-  text-align: center;
+  text-align: left;
+}
+#resumeQuoteSig{
+  color:rgba(197, 194, 194, 0.884);
 }
   @media screen and (max-width:768px) {
     main{padding-top:5rem!important;

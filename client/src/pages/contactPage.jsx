@@ -26,10 +26,11 @@ const ContactPage = () => {
     >
       {/* <div className="bod"> */}
       <main className="col-xs-12 col-lg-10" id="main_resume">
+        <br/><br/><br/><br/>
         <h1>My Resume</h1>
-        <br/><br/>
+        <br/><br/><br/><br/>
         <div id="resume_command">Simply click on the image below to view my resume.</div>
-        
+        <br/><br/>
             <div id="resume_outer">
             <a
           href="https://mrdawit.github.io/Ruth_Morais/client/src/assets/files/RMorais.pdf"
@@ -50,8 +51,9 @@ const ContactPage = () => {
           labore et dolore toil and pain veniam, quis nostrud exercitation
           ullamco quia dolor sit amet ut aliquip ex de finibus bonorum et
           malorum."
-          -Lorem Ipsum
+          <div id="resumeQuoteSig">-Lorem Ipsum @ The Malorum Suite</div>
         </div>
+        
       </main> 
 
     </motion.div>

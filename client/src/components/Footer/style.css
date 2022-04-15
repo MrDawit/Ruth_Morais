@@ -19,11 +19,11 @@ background-color:rgb(238, 239, 245);
 }
 
 #texting, #image{
-color:black;
+/* color:black; */
   /*text-align:center; */
   /* background-color:rgb(130, 132, 175);*/
   /* background: linear-gradient(45deg,black,indigo, #053ea8, #7a00ff);  */
-  background: linear-gradient(90deg,rgb(62, 66, 145, 1),rgb(130, 132, 175),rgb(130, 132, 175));
-  background-clip:border-box;
-}
+  /* background: linear-gradient(90deg,rgb(62, 66, 145, 1),rgb(130, 132, 175),rgb(130, 132, 175));
+  background-clip:border-box;*/
+} 
 
