@@ -6,7 +6,7 @@
     top:0;
     right:0;
     width:100%;
-    background-color:rgb(238, 239, 245);
+    background-color:rgb(251, 251, 253);
     z-index:150;
   }
   
@@ -25,9 +25,9 @@
   } 
   #navLink{
     /* box-shadow: 0 5px rgb(26, 26, 31); */
-    color:rgba(97, 96, 96, 0.884);
+    color:rgba(166, 166, 166, 0.884);
     border-radius:0%; 
-    background-color:rgb(238, 239, 245);
+    background-color:rgb(251, 251, 253);
 /* border-color: white; */
     
   }
@@ -44,7 +44,7 @@
     font-weight:bold;
   }
   nav{
-    border-color: rgb(238, 239, 245);
+    border-color: rgb(251, 251, 253);
   }
   
 
