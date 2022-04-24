@@ -24,6 +24,9 @@ const AboutPage = () => {
                 {/* <Navbar /> */}
 
                 <main className="col-xs-12 col-lg-10">
+                    <h1 id="aboutH1">About Ruth</h1>
+                    <br/><br/><br/>
+                    <h2 id="aboutH2">Marketing Project Manager</h2>
                     <div id="skillsAbout">
 
                     </div>
