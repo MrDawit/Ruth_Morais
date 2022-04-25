@@ -60,12 +60,12 @@ h1{
 }
 
 #aboutH1 {
-    font-size: 2.5vw;
-    font-weight:bolder;
+    font-size: 2.75vw;
+    /* font-weight:bold; */
 color:black;
 }
 #aboutH2 {
-    font-size: 2.25vw;
+    font-size: 2.5vw;
     text-align: center;
     color: rgb(85, 84, 84);
     font-weight:bold;
