@@ -20,13 +20,18 @@ const AboutPage = () => {
                 }
             },
         }}>
-            <div className="bod">
+            {/* <div className="bod"> */}
                 {/* <Navbar /> */}
 
-                <main className="col-xs-12 col-lg-10">
+                <main className="col-xs-12 col-lg-10" id="main_about">
+                <br/><br/><br/><br/><br/><br/><br/><br/>
                     <h1 id="aboutH1">About Ruth</h1>
-                    <br/><br/><br/>
+                    <br/><br/><br/><br/><br/><br/><br/><br/>
                     <h2 id="aboutH2">Marketing Project Manager</h2>
+                    <br/><br/>
+                    <h2 id="aboutH3">Strategic, Collaborative, Data-Driven</h2>
+                    {/* <h2 id="aboutH3">I am a strategic, collaborative and data-driven Marketing Project Manager and Sales Manager leveraging nearly 10 years of experience in supporting strategic visions through driving process implementation, delivering comprehensive training for staff and clients, and leading organizational process improvements. As a dynamic team leader, I have been recognized for driving sales, facilitating event coordination, analyzing data, and streamlining processes and procedures.</h2> */}
+                    <br/><br/><br/>
                     <div id="skillsAbout">
 
                     </div>
@@ -37,7 +42,7 @@ const AboutPage = () => {
 
          </modal>
 
-            </div>
+            {/* </div> */}
         </motion.div>
     );
 };

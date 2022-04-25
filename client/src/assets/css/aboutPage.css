@@ -3,6 +3,9 @@
     
       background-image:repeat; */
       padding-top: 50px;
+      align-self:center;
+      align-items:center;
+        
 }
 #purple{
     border: 3px solid indigo;
@@ -51,7 +54,34 @@ h1{
     font-size: 3vw;
     
 }
+#main_about {
+  
+    align-items:center;
+}
 
+#aboutH1 {
+    font-size: 2.5vw;
+    font-weight:bolder;
+color:black;
+}
+#aboutH2 {
+    font-size: 2.25vw;
+    text-align: center;
+    color: rgb(85, 84, 84);
+    font-weight:bold;
+
+}
+#aboutH3 {
+    font-size: 2vw;
+    text-align:center;
+    /* centers box */
+    margin: auto;
+    /* align-items:center;
+    align-self:center; */
+    width:30%;
+    color: black;
+    /* border:solid black 10px; */
+}
 /*for now, I like the professional look of only the overline*/
 h1 span{
     /* text-decoration:double underline;
