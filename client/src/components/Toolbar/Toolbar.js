@@ -14,7 +14,7 @@ function Toolbar(props) {
       </div>
       {/* <div className="toolbar__logo"> */}
 
-      <h2>RUTH MORAIS</h2>
+      <h2 id="h2Toolbar">RUTH MORAIS</h2>
       {/* </div> */}
       {/* <div className="spacer" /> */}
 
