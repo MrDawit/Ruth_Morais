@@ -7,6 +7,7 @@ import "./style.css";
 
 function Toolbar(props) {
   return (
+  <div>
     <nav className="toolbar navbar" id="toolbar_navbar">
       {/* <nav className="toolbar_navigation"> */}
       <div className="toolbar_toggle-button">
@@ -33,6 +34,8 @@ function Toolbar(props) {
         </Link>
       </form>
     </nav>
+    </div>
+ 
   );
 }
 

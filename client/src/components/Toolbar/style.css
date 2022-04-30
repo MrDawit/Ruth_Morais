@@ -52,8 +52,11 @@
   }
   
 #toolbar_navbar{
-  width: 95%;
-  margin:auto;
+  /* width: 95%; */
+  /* margin-right:5%;
+ */
+  padding:7%;
+  padding-top:2%;
 }
   @media (max-width: 768px) {
       /* .toolbar_navigation-items{ */
