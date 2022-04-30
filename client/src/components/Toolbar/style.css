@@ -51,7 +51,10 @@
     border-color: rgb(251, 251, 253);
   }
   
-
+#toolbar_navbar{
+  width: 95%;
+  margin:auto;
+}
   @media (max-width: 768px) {
       /* .toolbar_navigation-items{ */
       #navForm {  

@@ -7,7 +7,7 @@ import "./style.css";
 
 function Toolbar(props) {
   return (
-    <nav className="toolbar navbar">
+    <nav className="toolbar navbar" id="toolbar_navbar">
       {/* <nav className="toolbar_navigation"> */}
       <div className="toolbar_toggle-button">
         <DrawerToggleButton click={props.drawerClickHandler} />
