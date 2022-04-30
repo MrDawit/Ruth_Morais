@@ -37,7 +37,13 @@
     max-height:350px;
     max-width:350px;
 }
-
+#h2Portfolio{
+  text-align:center;
+  padding:5%;
+  padding-bottom:10%;
+  font-size:2.75vw;
+  line-height:2em;
+}
 
   @media screen and (max-width:768px) {
     main{padding-top:5rem!important;

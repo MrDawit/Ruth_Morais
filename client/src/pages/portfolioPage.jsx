@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import ProjectList from '../components/ProjectList';
 import { ProjectProvider } from "../utils/ProjectContext";
 import "../assets/css/portfolioPage.css";
-import Spacer from '../components/Spacer';
+// import Spacer from '../components/Spacer';
 const ProjectListPage = () => {
 
     return (
@@ -24,7 +24,7 @@ const ProjectListPage = () => {
         }}> 
         <div className="bod">
         <main className="col-xs-12 col-lg-10">
-    <h3 >- Ruth is a Marketing Project Manager, Sales Manager and Product Innovationist in the USA</h3> 
+    <h2 id="h2Portfolio">- Ruth is a Marketing Project Manager, Sales Manager and Product Innovationist in the USA</h2> 
       
                 <ProjectProvider>
                   
