@@ -38,7 +38,7 @@ const ProjectListPage = () => {
 <article id="portfolioSig">-Ruth Morais @ Webster</article>
                             
             </main>
-       <button id="portfolioButton">ABOUT + CONNECT</button>
+            <Link id="portfolioButton" to="/about">ABOUT + CONNECT</Link>
             </div>
 {/* <Spacer/> */}
 
