@@ -12,8 +12,8 @@ const ProjectList = () => {
                    
                      <div className="col-sm-12 col-md-6 " key={project.id}>
                         
-                        <ProjectCard name={project.name} imageURL={project.imageURL} descriptionShort={project.descriptionShort} gitHubRepo={project.gitHubRepo} deployURL={project.deployURL} loginInfo ={project.loginInfo} skills ={project.skills}/>
-                       
+                        {/* <ProjectCard name={project.name} imageURL={project.imageURL} descriptionShort={project.descriptionShort} gitHubRepo={project.gitHubRepo} deployURL={project.deployURL} loginInfo ={project.loginInfo} skills ={project.skills}/> */}
+                        <ProjectCard name={project.name} imageURL= {project.imageURL} deployURL={project.deployURL}/>
                     </div>
 
                 ))}

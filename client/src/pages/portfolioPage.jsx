@@ -2,6 +2,7 @@ import React from 'react';
 import {motion} from 'framer-motion';
 import ProjectList from '../components/ProjectList';
 import { ProjectProvider } from "../utils/ProjectContext";
+import { Link } from "react-router-dom";
 import "../assets/css/portfolioPage.css";
 // import Spacer from '../components/Spacer';
 const ProjectListPage = () => {
@@ -31,11 +32,13 @@ const ProjectListPage = () => {
                     <ProjectList/>
                 
                 </ProjectProvider>
-                <article className="pull-center">
-                                 I am a strategic, collaborative and data-driven Marketing Project Manager and Sales Manager leveraging nearly 10 years of experience in supporting strategic visions through driving process implementation, delivering comprehensive training for staff and clients, and leading organizational process improvements. As a dynamic team leader, I have been recognized for driving sales, facilitating event coordination, analyzing data, and streamlining processes and procedures.
+                <article className="pull-center" id="portfolioQuote">
+                                 "I am a strategic, collaborative and data-driven Marketing Project Manager and Sales Manager leveraging nearly 10 years of experience in supporting strategic visions through driving process implementation, delivering comprehensive training for staff and clients, and leading organizational process improvements. As a dynamic team leader, I have been recognized for driving sales, facilitating event coordination, analyzing data, and streamlining processes and procedures."
                             </article>
+<article id="portfolioSig">-Ruth Morais @ Webster</article>
+                            
             </main>
-       
+       <button id="portfolioButton">ABOUT + CONNECT</button>
             </div>
 {/* <Spacer/> */}
 
