@@ -41,18 +41,14 @@ main{
   align-items: center;
   
 }
-#projectProvider{
- border:pink solid 100px;
-  align-items:center;
-    align-self: center;
-}
+
   .portfolio-img {
     max-height:350px;
     max-width:350px;
     margin:auto;
     display: flex;
     justify-content: center;
-    border:purple solid 30px;
+    border:none;
 }
 #h2Portfolio{
   text-align:center;

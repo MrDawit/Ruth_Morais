@@ -2,7 +2,7 @@ import React from "react";
 import "./style.css"
 import LazyLoad from 'react-lazy-load';
 
-const ProjectCard = ({ name, imageURL, deployURL, gitHubRepo }) => {
+const ProjectCard = ({ name, imageURL, deployURL }) => {
 
   return (
     <>
@@ -16,10 +16,6 @@ const ProjectCard = ({ name, imageURL, deployURL, gitHubRepo }) => {
               <div className="text">{name}</div>
             </div></a>
           </div>
-        <a target="_blank" rel="noreferrer" href={gitHubRepo}>
-          <span className="card-title"> {name}</span>
-          </a>
-
         <div className="card-action">
 
 
