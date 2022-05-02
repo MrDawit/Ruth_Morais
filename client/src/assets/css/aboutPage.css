@@ -83,10 +83,10 @@ color:black;
     /* border:solid black 10px; */
 }
 /*for now, I like the professional look of only the overline*/
-h1 span{
-    /* text-decoration:double underline;
-    text-decoration-color: indigo; */
-}
+/* h1 span{
+    text-decoration:double underline;
+    text-decoration-color: indigo;
+} */
  span{
      font-weight: bold;
  }
@@ -106,9 +106,9 @@ h1 span{
      text-decoration: double overline;
  }
 
- #skillsAbout {
+ /* #skillsAbout {
      
- }
+ } */
 /* 
 @media screen and (max-width:768px) {
     main{padding-top:5rem!important;
