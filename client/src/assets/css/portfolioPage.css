@@ -41,8 +41,8 @@ main{
   align-items: center;
   
 }
-ProjectProvider{
- border:pink solid 50px;
+#projectProvider{
+ border:pink solid 100px;
   align-items:center;
     align-self: center;
 }
@@ -92,6 +92,7 @@ ProjectProvider{
   color: white;
   background-color: black;
 }
+
   @media screen and (max-width:768px) {
     main{padding-top:5rem!important;
       
