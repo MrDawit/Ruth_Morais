@@ -26,25 +26,31 @@ const ContactPage = () => {
     >
       {/* <div className="bod"> */}
       <main className="col-xs-12 col-lg-10" id="main_resume">
-        <br/><br/><br/><br/>
+        <br />
+        <br />
+        <br />
+        <br />
         <h1>My Resume</h1>
-        <br/><br/><br/><br/>
-        <div id="resume_command">Simply click on the image below to view my resume.</div>
-        <br/><br/>
-            <div id="resume_outer">
-            <a
-          href="https://mrdawit.github.io/Ruth_Morais/client/src/assets/files/RMorais.pdf"
-          target="_blank"
-          rel="noreferrer"
-        >
-
-          <div id="resume_imageBorder">  
-            {/* img through css url link */}
-          </div>
-
+        <br />
+        <br />
+        <br />
+        <br />
+        <div id="resume_command">
+          Simply click on the image below to view my resume.
+        </div>
+        <br />
+        <br />
+        <div id="resume_outer">
+          <a
+            href="https://mrdawit.github.io/Ruth_Morais/client/src/assets/files/RMorais.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div id="resume_imageBorder">{/* img through css url link */}</div>
           </a>
-          </div>
-          <br/><br/>
+        </div>
+        <br />
+        <br />
         <div id="resume_quote">
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod porro quisquam est qui labore et dolore magna aliqua. Ut
@@ -53,9 +59,7 @@ const ContactPage = () => {
           malorum."
           <div id="resumeQuoteSig">-Lorem Ipsum @ The Malorum Suite</div>
         </div>
-        
-      </main> 
-
+      </main>
     </motion.div>
   );
 };
