@@ -106,9 +106,51 @@ color:black;
      text-decoration: double overline;
  }
 
+#aboutH6 {
+    font-size: 1.5em;
+    text-align: left;
+}
  /* #skillsAbout {
-     
+    align-items:left; 
+ }
+
+ #bioAbout {
+   margin-left:auto;
  } */
+
+ #imageAbout {
+     width:40%;
+   /* align-self:right; */
+   /* margin-left:auto; */
+   float:right;
+ }
+ #bioSection {
+     width:40%;
+     /* align-self:left; */
+     /* margin-right:auto; */
+     float:left;
+ }
+ #skillsSection{
+   
+     /* align-self:left; */
+     /* margin-right:auto; */
+     width:40%;
+     float:left;
+ }
+ #quoteAbout {
+     /* position:absolute;
+     right:200px; */
+     /* margin-left:auto; */
+     /* align-self:right;
+     margin:right;
+     align-self:right;
+     align-items:right; */
+     width:40%;
+     float:right;
+ }
+ 
+
+
 /* 
 @media screen and (max-width:768px) {
     main{padding-top:5rem!important;
