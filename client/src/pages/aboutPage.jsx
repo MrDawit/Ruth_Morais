@@ -70,8 +70,8 @@ const AboutPage = () => {
             src={require("../assets/img/aria_light.jpg").default}
           />
         </div>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <div id="skillsAndQuoteAboutSection">
           <div id="skillsSection">
             <h5 id="aboutH6">Noteworthy Skills</h5>
@@ -99,10 +99,21 @@ const AboutPage = () => {
             “A very high standard that helps push teams forward to produce the
             best possible outcomes. As product manager, she owns the process and
             understands how to communicate in all directions so that everyone in
-            the organization stays on the same page.” 
+            the organization stays on the same page.”
             <div id="quoteSpan">— Bradley, Vice President @ Webster</div>
           </div>
         </div>
+
+        <div id="connectAndLinks">
+          <h1 id="connectHeader">Let's Connect</h1>
+          <div id="connectComment">
+            Please feel free to reach out. I am open to chatting about work or
+            side projects opportunities, sharing my feedback or input, and
+            really anything... As always, I’ll my best to answer you in a timely
+            fashion.
+          </div>
+        </div>
+
       </main>
 
       <modal></modal>
