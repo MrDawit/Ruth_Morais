@@ -106,7 +106,7 @@ const AboutPage = () => {
       </main>
 
       <modal></modal>
-      {/* <Footer/> */}
+      <Footer/>
       {/* </div> */}
     </motion.div>
   );
