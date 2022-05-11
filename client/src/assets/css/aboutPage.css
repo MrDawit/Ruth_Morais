@@ -110,46 +110,62 @@ color:black;
     font-size: 1.5em;
     text-align: left;
 }
- /* #skillsAbout {
-    align-items:left; 
- }
-
- #bioAbout {
-   margin-left:auto;
- } */
+#bioAndImageAboutSection{
+    display: flex;
+    justify-content: space-around;
+    
+     }
+    
+     #skillsAndQuoteAboutSection{
+        display: flex;
+        justify-content: space-around;
+     }
 
  #imageAbout {
-     width:40%;
+     
    /* align-self:right; */
-   /* margin-left:auto; */
-   float:right;
+   /* margin-right:auto; */
+   width:40%;
+   /* margin:right; */
+   /* float:right; */
  }
  #bioSection {
-     width:40%;
+     
      /* align-self:left; */
-     /* margin-right:auto; */
-     float:left;
+     /* margin-left:auto; */
+     width:40%;
+     /* margin:right; */
+     /* float:left; */
  }
  #skillsSection{
    
      /* align-self:left; */
-     /* margin-right:auto; */
+     /* margin-left:auto; */
      width:40%;
-     float:left;
+     /* margin:right; */
+     /* float:left; */
  }
  #quoteAbout {
      /* position:absolute;
      right:200px; */
-     /* margin-left:auto; */
+     /* margin-right:auto; */
      /* align-self:right;
-     margin:right;
      align-self:right;
      align-items:right; */
      width:40%;
-     float:right;
+     /* margin:left; */
+     /* float:right; */
  }
- 
 
+
+ #outer_footer{
+    /* position:sticky;
+    bottom:0; */
+ position:fixed;
+    bottom:0;
+    right:0;
+    width:100%;
+ }
 
 /* 
 @media screen and (max-width:768px) {
