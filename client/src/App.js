@@ -19,7 +19,7 @@ import PortfolioPage from './pages/portfolioPage';
 
 //Components
 // import Navbar from './components/Navbar';
-// import Footer from './components/Footer';
+import Footer from './components/Footer';
 // import ProjectList from './components/Project-List';
 //was working pre-nodemailer form issue
 import { ProjectProvider } from "./utils/ProjectContext";
@@ -100,7 +100,7 @@ function App() {
             </Switch>
           </ProjectProvider>
        
-          {/* <Footer /> */}
+          <Footer />
         </Router>
       </div>
       </motion.div>

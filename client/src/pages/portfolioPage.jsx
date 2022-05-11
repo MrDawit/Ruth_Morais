@@ -5,7 +5,7 @@ import { ProjectProvider } from "../utils/ProjectContext";
 import { Link } from "react-router-dom";
 import "../assets/css/portfolioPage.css";
 // import Spacer from '../components/Spacer';
-import Footer from '../components/Footer/index';
+// import Footer from '../components/Footer/index';
 
 const ProjectListPage = () => {
   return (
@@ -54,7 +54,7 @@ const ProjectListPage = () => {
           </Link>
         </div>
         {/* <Spacer/> */}
-        <Footer/>
+        {/* <Footer/> */}
       </motion.div>
     </>
   );

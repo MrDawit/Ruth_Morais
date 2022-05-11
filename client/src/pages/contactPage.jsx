@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 // import ContactForm from '../components/ContactForm';
 // import Tilt from '../components/Tilt/Tilt.js';
 // import resume from "../assets/files/RMorais.docx";
-import Footer from '../components/Footer/index';
+// import Footer from '../components/Footer/index';
 import "../assets/css/contactPage.css";
 
 const ContactPage = () => {
@@ -61,7 +61,7 @@ const ContactPage = () => {
           <div id="resumeQuoteSig">-Lorem Ipsum @ The Malorum Suite</div>
         </div>
       </main>
-      <Footer/>
+      {/* <Footer/> */}
     </motion.div>
   );
 };

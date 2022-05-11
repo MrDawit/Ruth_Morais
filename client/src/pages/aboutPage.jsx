@@ -1,7 +1,7 @@
 import React from "react"; // ,{ useContext }
 import { motion } from "framer-motion";
 import "../assets/css/aboutPage.css";
-import Footer from "../components/Footer/index";
+// import Footer from "../components/Footer/index";
 
 const AboutPage = () => {
   return (
@@ -106,7 +106,7 @@ const AboutPage = () => {
       </main>
 
       <modal></modal>
-      <Footer/>
+      {/* <Footer/> */}
       {/* </div> */}
     </motion.div>
   );
