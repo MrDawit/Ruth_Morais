@@ -28,7 +28,9 @@
     color:rgba(166, 166, 166, 0.884);
     border-radius:0%; 
     background-color:rgb(251, 251, 253);
-/* border-color: white; */
+    padding-left: 1em;
+    font-size:0.9em;
+
     
   }
   #navLink:hover{
