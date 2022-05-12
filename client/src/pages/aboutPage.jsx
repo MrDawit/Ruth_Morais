@@ -1,6 +1,7 @@
 import React from "react"; // ,{ useContext }
 import { motion } from "framer-motion";
 import "../assets/css/aboutPage.css";
+import { Link } from "react-router-dom";
 // import Footer from "../components/Footer/index";
 
 const AboutPage = () => {
@@ -112,6 +113,9 @@ const AboutPage = () => {
             really anything... As always, I’ll my best to answer you in a timely
             fashion.
           </div>
+          <Link id="aboutButton" to="/resume">
+            CONTACT ME
+          </Link>
         </div>
 
       </main>

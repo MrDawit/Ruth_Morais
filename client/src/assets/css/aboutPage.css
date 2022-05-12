@@ -156,7 +156,29 @@ h3 {
     width:50%;
     display:inline-block;
 }
-
+#aboutButton {
+    color:black;
+    text-decoration: none;
+    border: black solid 2px;
+    margin:auto;
+    display: flex;
+    background-color:white;
+    padding:1.25vw;
+    padding-right:2.5vw;
+    padding-left:2.5vw;
+   
+    border-radius:45%;
+    /* border-top-left-radius:45%;
+    border-bottom-left-radius:45%;
+    border-top-right-radius:45%;
+    border-bottom-right-radius:45%; */
+    width:18%;
+    margin-top: 2vw;
+  }
+  #aboutButton:hover{
+    color: white;
+    background-color: black;
+  }
 /* 
 @media screen and (max-width:768px) {
     main{padding-top:5rem!important;
