@@ -2,6 +2,7 @@ import React from "react"; // ,{ useContext }
 import { motion } from "framer-motion";
 import "../assets/css/aboutPage.css";
 import { Link } from "react-router-dom";
+import {AiOutlineMail} from "react-icons/ai";
 // import Footer from "../components/Footer/index";
 
 const AboutPage = () => {
@@ -107,6 +108,16 @@ const AboutPage = () => {
 
         <div id="connectAndLinks">
           <h1 id="connectHeader">Let's Connect</h1>
+          <div id="aboutLinkedinAndEmail" >
+          <a
+          id="aboutLinkedin"
+            href="https://www.linkedin.com/in/ruth-morais/"
+            target="_blank"
+            rel="noreferrer"
+          >in</a>
+          {/* <img alt="emailIcon" onClick={() => window.location.href = 'mailto:moraisruth@yahoo.com'} src={require("../assets/img/aria_light.jpg").default}/> */}
+          <AiOutlineMail id="emailIcon" onClick={() => window.location.href = 'mailto:moraisruth@yahoo.com'} />
+          </div>
           <div id="connectComment">
             Please feel free to reach out. I am open to chatting about work or
             side projects opportunities, sharing my feedback or input, and

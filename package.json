@@ -40,6 +40,7 @@
     "react": "^17.0.1",
     "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
+    "react-icons": "^4.3.1",
     "react-lazy-load": "^3.1.13",
     "react-tilt": "^0.1.4",
     "run-all": "^1.0.1"
