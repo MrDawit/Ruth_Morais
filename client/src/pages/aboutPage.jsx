@@ -1,11 +1,33 @@
-import React from "react"; // ,{ useContext }
+import React, { useState } from "react"; // ,{ useContext }
 import { motion } from "framer-motion";
 import "../assets/css/aboutPage.css";
 import { Link } from "react-router-dom";
-import {AiOutlineMail} from "react-icons/ai";
+import { AiOutlineMail } from "react-icons/ai";
 // import Footer from "../components/Footer/index";
 
 const AboutPage = () => {
+  let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
+  let [emailIconButtonColor, setEmailIconButtonColor] = useState("black");
+
+  let linkedInHandleHoverOver = () => {
+    setEmailIconButtonColor("grey");
+  };
+  let linkedInHandleHoverOut = () => {
+    setEmailIconButtonColor("black");
+  };
+
+  let emailHandleHoverOver = () => {
+    setLinkedInButtonColor("grey");
+  };
+  let emailHandleHoverOut = () => {
+    setLinkedInButtonColor("black");
+  };
+  const linkedInButtonStyle = {
+    color: linkedInButtonColor,
+  };
+  const emailIconButtonStyle = {
+    color: emailIconButtonColor,
+  };
   return (
     <motion.div
       initial="hidden"
@@ -108,15 +130,28 @@ const AboutPage = () => {
 
         <div id="connectAndLinks">
           <h1 id="connectHeader">Let's Connect</h1>
-          <div id="aboutLinkedinAndEmail" >
-          <a
-          id="aboutLinkedin"
-            href="https://www.linkedin.com/in/ruth-morais/"
-            target="_blank"
-            rel="noreferrer"
-          >in</a>
-          {/* <img alt="emailIcon" onClick={() => window.location.href = 'mailto:moraisruth@yahoo.com'} src={require("../assets/img/aria_light.jpg").default}/> */}
-          <AiOutlineMail id="emailIcon" onClick={() => window.location.href = 'mailto:moraisruth@yahoo.com'} />
+          <div id="aboutLinkedinAndEmail">
+            <a
+              id="aboutLinkedin"
+              href="https://www.linkedin.com/in/ruth-morais/"
+              target="_blank"
+              rel="noreferrer"
+              onMouseOver={() => linkedInHandleHoverOver()}
+              onMouseOut={() => linkedInHandleHoverOut()}
+              style={linkedInButtonStyle}
+            >
+              in
+            </a>
+
+            <AiOutlineMail
+              id="emailIcon"
+              onClick={() =>
+                (window.location.href = "mailto:moraisruth@yahoo.com")
+              }
+              onMouseOver={() => emailHandleHoverOver()}
+              onMouseOut={() => emailHandleHoverOut()}
+              style={emailIconButtonStyle}
+            />
           </div>
           <div id="connectComment">
             Please feel free to reach out. I am open to chatting about work or
@@ -128,7 +163,6 @@ const AboutPage = () => {
             CONTACT ME
           </Link>
         </div>
-
       </main>
 
       <modal></modal>
