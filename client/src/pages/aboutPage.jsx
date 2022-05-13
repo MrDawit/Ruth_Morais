@@ -162,6 +162,8 @@ const AboutPage = () => {
           <Link id="aboutButton" to="/resume">
             CONTACT ME
           </Link>
+          <div id="connectQuote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod porro quisquam est qui labore et dolore magna aliqua. Ut labore et dolore toil and pain veniam, quis nostrud exercitation ullamco quia dolor sit amet ut aliquip ex de finibus bonorum et malorum."
+</div><div id="connectQuoteSpan">-Lorem Ipsum @ The Malorum Suite</div>
         </div>
       </main>
 

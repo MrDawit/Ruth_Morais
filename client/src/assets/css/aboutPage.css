@@ -200,6 +200,21 @@ h3 {
       width:3vw;
       margin-left:1vw;
   }
+  #connectQuote{
+width:65%;
+display:inline-block;
+text-align:left;
+font-weight:bold;
+font-size:1.2em;
+margin-top:4em;
+margin-bottom:1em;
+
+  }
+  #connectQuoteSpan{
+width:65%;
+display:inline-block;
+text-align:left;
+  }
 /* 
 @media screen and (max-width:768px) {
     main{padding-top:5rem!important;
