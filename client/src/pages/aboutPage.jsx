@@ -175,6 +175,10 @@ const AboutPage = () => {
       </main>
 
       {/* <modal> */}
+      <div id="carouselPlacement">
+        <h2 id="carouselTitle">
+          Ruth-according to Instragram
+        </h2>
         <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
@@ -187,10 +191,10 @@ const AboutPage = () => {
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>
       </Carousel.Item>
-       {/*<Carousel.Item>
+       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Second slide&bg=282c34"
+          src="../assets/img/aria.jpg"
           alt="Second slide"
         />
 
@@ -202,7 +206,7 @@ const AboutPage = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="holder.js/800x400?text=Third slide&bg=20232a"
+          src="../assets/img/aria_light.jpg"
           alt="Third slide"
         />
 
@@ -212,8 +216,9 @@ const AboutPage = () => {
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
         </Carousel.Caption>
-      </Carousel.Item> */}
+      </Carousel.Item>
     </Carousel>
+    </div>
     {/* </modal> */}
       {/* <Footer/> */}
       {/* </div> */}
