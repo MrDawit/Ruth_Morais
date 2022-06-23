@@ -210,6 +210,21 @@ width:65%;
 display:inline-block;
 text-align:left;
   }
+
+  .imgCarouselTest{
+color:black;
+    width:30%;
+display:inline-block;
+text-align:center;
+    /* border:10px solid red; */
+  }
+  #carouselTitle {
+    font-weight:bolder;
+    text-decoration:underline;
+  }
+  #carouselH3 {
+    color:black;
+  }
 /* 
 @media screen and (max-width:768px) {
     main{padding-top:5rem!important;

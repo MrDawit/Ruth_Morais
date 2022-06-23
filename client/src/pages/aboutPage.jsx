@@ -1,10 +1,19 @@
 import React, { useState } from "react"; // ,{ useContext }
-import Carousel from 'react-bootstrap/Carousel';
+import {Carousel, Image} from 'react-bootstrap';
 import { motion } from "framer-motion";
 import "../assets/css/aboutPage.css";
 import { Link } from "react-router-dom";
 import { AiOutlineMail } from "react-icons/ai";
 // import Footer from "../components/Footer/index";
+
+// const carouselImgItems= [
+//   {
+//     // href: "https://www.instagram.com/p/Bzg0W_uDIHWDlp_zwBC_w-cJJ_S5bNrDaVtdFI0/?igshid=MDJmNzVkMjY=",
+//     src:"../assets/img/0.jpg",
+//     altText: "Slide 1",
+//     caption: "",
+//   },
+// ];
 
 const AboutPage = () => {
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
@@ -182,43 +191,100 @@ const AboutPage = () => {
         <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
-          className="d-block w-100"
-          src="../assets/img/0.jpg"
+        className="imgCarouselTest"
+          // className="d-block w-100 "
+          src={require("../assets/img/aria.jpg").default}
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3 id="carouselH3">Low Def</h3>
+          <p> </p>
         </Carousel.Caption>
       </Carousel.Item>
        <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="../assets/img/aria.jpg"
+        <Image
+        className="imgCarouselTest"
+          // className="d-block w-100"
+       src="https://igdownloader.com/file?id=aHR0cHM6Ly9zY29udGVudC1hdGwzLTEuY2RuaW5zdGFncmFtLmNvbS92L3Q1MS4yODg1LTE1LzYyNDQ4ODM5XzI2NzYxNDY4NzQyMzUxNV8yNzQ0NzMyNDM5MDU2MjIxNTc2X24uanBnP3N0cD1kc3QtanBnX2UzNSZfbmNfaHQ9c2NvbnRlbnQtYXRsMy0xLmNkbmluc3RhZ3JhbS5jb20mX25jX2NhdD0xMDcmX25jX29oYz03OGZUeEtncXNJb0FYLU5TWXVEJmVkbT1BQUJCdmpVQkFBQUEmY2NiPTctNSZvaD0wMF9BVDlFUW5Eb0JHZTlEaTJRZ1YzTTlxYjRYTW12REZ1Y2ZhWl9xTGx3bm5sVEVnJm9lPTYyQkI5MUU5Jl9uY19zaWQ9ODNkNjAz"
           alt="Second slide"
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3 id="carouselH3">@ Tom's Wedding</h3>
+          <p> </p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="../assets/img/aria_light.jpg"
+        <Image
+        // fluid='true'
+        // thumbnail='true'
+        className="imgCarouselTest"
+          // className="d-block w-100"
+          src={require("../assets/img/aria_light.jpg").default}
           alt="Third slide"
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3 id="carouselH3">With the scarf!</h3>
           <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+             
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+        className="imgCarouselTest"
+          // className="d-block w-100 "
+          src={require("../assets/img/Screenshot 2022-06-23 at 00-08-04 Y.png").default}
+           alt="Fourth slide"
+        />
+        <Carousel.Caption>
+          <h3 id="carouselH3">Palm Trees! </h3>
+          <p> </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+       <Carousel.Item>
+        <Image
+        className="imgCarouselTest"
+          // className="d-block w-100"
+          src={require("../assets/img/Screenshot 2022-06-23 at 00-09-50 Y.png").default}
+          alt="Fifth slide"
+        />
+
+        <Carousel.Caption>
+          <h3 id="carouselH3">Fourth of July Food Truckin' </h3>
+          <p> </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Image
+        // fluid='true'
+        // thumbnail='true'
+        className="imgCarouselTest"
+          // className="d-block w-100"
+          src={require("../assets/img/Screenshot 2022-06-23 at 00-09-24 Y.png").default}
+          alt="Sixth slide"
+        />
+
+        <Carousel.Caption>
+          <h3 id="carouselH3">Ramen, Ramen, Ramen </h3>
+          <p>
+           
           </p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
     </div>
+    
+    {/* <div>
+      <Carousel>
+      <Carousel.Item >
+      <img items={carouselImgItems} alt="when"/>
+        <Carousel.Caption>WORK</Carousel.Caption>
+      </Carousel.Item>
+      </Carousel> 
+      </div> */}
+
     {/* </modal> */}
       {/* <Footer/> */}
       {/* </div> */}
