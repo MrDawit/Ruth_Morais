@@ -186,7 +186,7 @@ const AboutPage = () => {
       {/* <modal> */}
       <div id="carouselPlacement">
         <h2 id="carouselTitle">
-          Ruth-according to Instragram
+         <span style={{fontWeight:"bold"}}>Ruth</span> -according to Instragram
         </h2>
         <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>

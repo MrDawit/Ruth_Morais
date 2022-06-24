@@ -219,8 +219,8 @@ text-align:center;
     /* border:10px solid red; */
   }
   #carouselTitle {
-    font-weight:bolder;
-    text-decoration:underline;
+    font-weight:normal;
+    text-align:center;
   }
   #carouselH3 {
     color:black;
