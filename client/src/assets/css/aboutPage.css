@@ -213,7 +213,8 @@ text-align:left;
 
   #photoCollectionParent{
     display:flex;
-    /* flex-direction:row; */
+    justify-content: center ;
+    flex-direction:row;
 
   }
   .imgCarousel{
