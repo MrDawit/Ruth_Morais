@@ -150,7 +150,7 @@ h3 {
     text-align:center;
 }
 #connectHeader {
-    
+  
 }
 #connectComment {
     width:50%;
@@ -211,7 +211,12 @@ display:inline-block;
 text-align:left;
   }
 
-  .imgCarouselTest{
+  #photoCollectionParent{
+    display:flex;
+    /* flex-direction:row; */
+
+  }
+  .imgCarousel{
 color:black;
     width:30%;
 display:inline-block;

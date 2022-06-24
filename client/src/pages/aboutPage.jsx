@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import "../assets/css/aboutPage.css";
 import { Link } from "react-router-dom";
 import { AiOutlineMail } from "react-icons/ai";
+import PhotoCollectionList from "../components/PhotoCollectionList/index"
+import { PhotoCollectionProvider } from "../utils/PhotoCollectionContext";
 // import Footer from "../components/Footer/index";
 
 // const carouselImgItems= [
@@ -188,10 +190,15 @@ const AboutPage = () => {
         <h2 id="carouselTitle">
          <span style={{fontWeight:"bold"}}>Ruth</span> -according to Instragram
         </h2>
+        <div id="photoCollectionParent">
+        <PhotoCollectionProvider>
+                            <PhotoCollectionList />
+                        </PhotoCollectionProvider>
+        </div>
         <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <img
-        className="imgCarouselTest"
+        className="imgCarousel"
           // className="d-block w-100 "
           src={require("../assets/img/aria.jpg").default}
           alt="First slide"
@@ -203,7 +210,7 @@ const AboutPage = () => {
       </Carousel.Item>
        <Carousel.Item>
         <Image
-        className="imgCarouselTest"
+        className="imgCarousel"
           // className="d-block w-100"
        src="https://igdownloader.com/file?id=aHR0cHM6Ly9zY29udGVudC1hdGwzLTEuY2RuaW5zdGFncmFtLmNvbS92L3Q1MS4yODg1LTE1LzYyNDQ4ODM5XzI2NzYxNDY4NzQyMzUxNV8yNzQ0NzMyNDM5MDU2MjIxNTc2X24uanBnP3N0cD1kc3QtanBnX2UzNSZfbmNfaHQ9c2NvbnRlbnQtYXRsMy0xLmNkbmluc3RhZ3JhbS5jb20mX25jX2NhdD0xMDcmX25jX29oYz03OGZUeEtncXNJb0FYLU5TWXVEJmVkbT1BQUJCdmpVQkFBQUEmY2NiPTctNSZvaD0wMF9BVDlFUW5Eb0JHZTlEaTJRZ1YzTTlxYjRYTW12REZ1Y2ZhWl9xTGx3bm5sVEVnJm9lPTYyQkI5MUU5Jl9uY19zaWQ9ODNkNjAz"
           alt="Second slide"
@@ -218,7 +225,7 @@ const AboutPage = () => {
         <Image
         // fluid='true'
         // thumbnail='true'
-        className="imgCarouselTest"
+        className="imgCarousel"
           // className="d-block w-100"
           src={require("../assets/img/aria_light.jpg").default}
           alt="Third slide"
@@ -233,7 +240,7 @@ const AboutPage = () => {
       </Carousel.Item>
       <Carousel.Item>
         <img
-        className="imgCarouselTest"
+        className="imgCarousel"
           // className="d-block w-100 "
           src={require("../assets/img/Screenshot 2022-06-23 at 00-08-04 Y.png").default}
            alt="Fourth slide"
@@ -245,7 +252,7 @@ const AboutPage = () => {
       </Carousel.Item>
        <Carousel.Item>
         <Image
-        className="imgCarouselTest"
+        className="imgCarousel"
           // className="d-block w-100"
           src={require("../assets/img/Screenshot 2022-06-23 at 00-09-50 Y.png").default}
           alt="Fifth slide"
@@ -260,7 +267,7 @@ const AboutPage = () => {
         <Image
         // fluid='true'
         // thumbnail='true'
-        className="imgCarouselTest"
+        className="imgCarousel"
           // className="d-block w-100"
           src={require("../assets/img/Screenshot 2022-06-23 at 00-09-24 Y.png").default}
           alt="Sixth slide"
