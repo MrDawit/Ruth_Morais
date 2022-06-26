@@ -1,5 +1,5 @@
 import React, { useState } from "react"; // ,{ useContext }
-import {  Carousel, Image, Modal } from "react-bootstrap";
+import {  Carousel, Image, Modal, Button } from "react-bootstrap";
 // import {  Modal } from "reactstrap";
 import { motion } from "framer-motion";
 import "../assets/css/aboutPage.css";
@@ -11,6 +11,22 @@ import { PhotoCollectionProvider } from "../utils/PhotoCollectionContext";
 
 const AboutPage = () => {
   const [modal, setModal] = useState(false);
+  // const [fullscreen, setFullscreen] = useState(true);
+
+  // const [show, setShow] = useState(false);
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
+
+  const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
+  const [fullscreen, setFullscreen] = useState(true);
+  const [show, setShow] = useState(false);
+
+  function handleShow(breakpoint) {
+    setFullscreen(breakpoint);
+    setShow(true);
+  }
+
+
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
   let [emailIconButtonColor, setEmailIconButtonColor] = useState("black");
 
@@ -200,28 +216,60 @@ const AboutPage = () => {
         </div>
 <button 
 onClick={() => {
-                                  setModal(true);
-                                  
-                                }}
-                                 >WE NEXT</button>
+      setModal(true);
+         }} >
+          WE NEXT
+         </button>
 
-        <Modal
-                            className="modal"
-                            modalClassName="modal-black"
+        {/* <Modal
+                            // className="modal"
                             show={modal}
-                            toggle={() => setModal(false)}
+                            fullscreen={fullscreen}
                           >
-                            <div className="modal-header justify-content-center">
-                              <button
-                                className="close"
-                                onClick={() => setModal(false)}
-                              />
-                              <img src="../assets/img/AfricaIsWoke.jpg" alt="ImgTest"/>
-                              </div>
+                              <Modal.Header closeButton="true" closeVariant="white" closeLabel='Close'>
+          <Modal.Title>Modal</Modal.Title>
+        </Modal.Header>
+        <Modal.Body> <img src="../assets/img/AfricaIsWoke.jpg" alt="ImgTest"/></Modal.Body>
                               </Modal>
-                              </div>
+                              </div> */}
 
 
+
+
+                              {/* <Button variant="primary" onClick={handleShow}>
+        Launch demo modal
+      </Button>
+
+      <Modal show={show} onHide={handleClose} >
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
+     */}
+
+
+{values.map((v, idx) => (
+        <Button key={idx} className="me-2 mb-2" onClick={() => handleShow(v)}>
+          Full screen
+          {typeof v === 'string' && `below ${v.split('-')[0]}`}
+        </Button>
+      ))}
+      <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Modal body content</Modal.Body>
+      </Modal>
+    </div>
         {/* <Carousel activeIndex={index} onSelect={handleSelect}>
           // image 1 
           <Carousel.Item>
