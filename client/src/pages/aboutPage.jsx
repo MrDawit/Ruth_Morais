@@ -1,23 +1,16 @@
 import React, { useState } from "react"; // ,{ useContext }
-import { Carousel, Image } from "react-bootstrap";
+import {  Carousel, Image, Modal } from "react-bootstrap";
+// import {  Modal } from "reactstrap";
 import { motion } from "framer-motion";
 import "../assets/css/aboutPage.css";
 import { Link } from "react-router-dom";
 import { AiOutlineMail } from "react-icons/ai";
 import PhotoCollectionList from "../components/PhotoCollectionList/index";
 import { PhotoCollectionProvider } from "../utils/PhotoCollectionContext";
-// import Footer from "../components/Footer/index";
 
-// const carouselImgItems= [
-//   {
-//     // href: "https://www.instagram.com/p/Bzg0W_uDIHWDlp_zwBC_w-cJJ_S5bNrDaVtdFI0/?igshid=MDJmNzVkMjY=",
-//     src:"../assets/img/0.jpg",
-//     altText: "Slide 1",
-//     caption: "",
-//   },
-// ];
 
 const AboutPage = () => {
+  const [modal, setModal] = useState(false);
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
   let [emailIconButtonColor, setEmailIconButtonColor] = useState("black");
 
@@ -191,7 +184,7 @@ const AboutPage = () => {
         </div>
       </main>
 
-      {/* <modal> */}
+     
       <div id="carouselPlacement">
         <h2 id="carouselTitle">
           <span style={{ fontWeight: "bold" }}>Ruth</span> -according to
@@ -199,11 +192,38 @@ const AboutPage = () => {
         </h2>
         <div id="photoCollectionParent">
           <PhotoCollectionProvider>
-            <PhotoCollectionList />
+            <PhotoCollectionList onClick={() => {
+                                  setModal(true);
+                                  
+                                }}/>
           </PhotoCollectionProvider>
         </div>
-        <Carousel activeIndex={index} onSelect={handleSelect}>
-          {/* image 1 */}
+<button 
+onClick={() => {
+                                  setModal(true);
+                                  
+                                }}
+                                 >WE NEXT</button>
+
+        <Modal
+                            className="modal"
+                            modalClassName="modal-black"
+                            show={modal}
+                            toggle={() => setModal(false)}
+                          >
+                            <div className="modal-header justify-content-center">
+                              <button
+                                className="close"
+                                onClick={() => setModal(false)}
+                              />
+                              <img src="../assets/img/AfricaIsWoke.jpg" alt="ImgTest"/>
+                              </div>
+                              </Modal>
+                              </div>
+
+
+        {/* <Carousel activeIndex={index} onSelect={handleSelect}>
+          // image 1 
           <Carousel.Item>
             <img
               className="imgCarousel"
@@ -217,7 +237,7 @@ const AboutPage = () => {
             </Carousel.Caption>
           </Carousel.Item>
 
-          {/* image 2 */}
+         // image 2 
           <Carousel.Item>
             <Image
               className="imgCarousel"
@@ -231,7 +251,7 @@ const AboutPage = () => {
             </Carousel.Caption>
           </Carousel.Item>
 
-          {/* image 3 */}
+          // image 3
           <Carousel.Item>
             <Image
               // fluid='true'
@@ -247,7 +267,7 @@ const AboutPage = () => {
             </Carousel.Caption>
           </Carousel.Item>
 
-          {/* image 4 */}
+          // image 4 
           <Carousel.Item>
             <img
               className="imgCarousel"
@@ -264,7 +284,7 @@ const AboutPage = () => {
             </Carousel.Caption>
           </Carousel.Item>
 
-          {/* image 5 */}
+          //image 5 
           <Carousel.Item>
             <Image
               className="imgCarousel"
@@ -281,7 +301,7 @@ const AboutPage = () => {
             </Carousel.Caption>
           </Carousel.Item>
 
-          {/* image 6 */}
+         // image 6 
           <Carousel.Item>
             <Image
               // fluid='true'
@@ -299,17 +319,11 @@ const AboutPage = () => {
               <p></p>
             </Carousel.Caption>
           </Carousel.Item>
-        </Carousel>
-      </div>
+            </Carousel> 
 
-      {/* <div>
-      <Carousel>
-      <Carousel.Item >
-      <img items={carouselImgItems} alt="when"/>
-        <Carousel.Caption>WORK</Carousel.Caption>
-      </Carousel.Item>
-      </Carousel> 
       </div> */}
+
+      
 
       {/* </modal> */}
       {/* <Footer/> */}
