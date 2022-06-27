@@ -1,6 +1,6 @@
 import React, { useState } from "react"; // ,{ useContext }
-import {  Carousel, Image, Modal, Button } from "react-bootstrap";
-// import {  Modal } from "reactstrap";
+// import {  Carousel, Image, Modal, Button } from "react-bootstrap";
+import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
 import { motion } from "framer-motion";
 import "../assets/css/aboutPage.css";
 import { Link } from "react-router-dom";
@@ -11,20 +11,8 @@ import { PhotoCollectionProvider } from "../utils/PhotoCollectionContext";
 
 const AboutPage = () => {
   const [modal, setModal] = useState(false);
-  // const [fullscreen, setFullscreen] = useState(true);
 
-  // const [show, setShow] = useState(false);
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
 
-  const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
-  const [fullscreen, setFullscreen] = useState(true);
-  const [show, setShow] = useState(false);
-
-  function handleShow(breakpoint) {
-    setFullscreen(breakpoint);
-    setShow(true);
-  }
 
 
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
@@ -50,11 +38,11 @@ const AboutPage = () => {
     color: emailIconButtonColor,
   };
 
-  const [index, setIndex] = useState(0);
+  // const [index, setIndex] = useState(0);
 
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
+  // const handleSelect = (selectedIndex, e) => {
+  //   setIndex(selectedIndex);
+  // };
   return (
     <motion.div
       initial="hidden"
@@ -214,12 +202,12 @@ const AboutPage = () => {
                                 }}/>
           </PhotoCollectionProvider>
         </div>
-<button 
+{/* <button 
 onClick={() => {
       setModal(true);
          }} >
           WE NEXT
-         </button>
+         </button> */}
 
         {/* <Modal
                             // className="modal"
@@ -234,41 +222,43 @@ onClick={() => {
                               </div> */}
 
 
-
-
-                              {/* <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+<Button
+    color="danger"
+    onClick={()=>{setModal(true);}}
+  >
+    Click Me
+  </Button>
+ 
+  <Modal 
+    fullscreen
+    size="xl"
+    isOpen={modal}
+    // toggle={function noRefCheck(){}}
+  >
+    <ModalHeader 
+    close={<button className="close" onClick={()=>{ setModal(false);}}>×</button>}
+    >
+      Modal title
+    </ModalHeader>
+    <ModalBody>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </ModalBody>
+    <ModalFooter>
+      <Button
+        color="primary"
+        // onClick={function noRefCheck(){}}
+      >
+        Do Something
       </Button>
-
-      <Modal show={show} onHide={handleClose} >
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
-      </Modal>
-     */}
+      {' '}
+      <Button onClick={setModal(false)}>
+        Cancel
+      </Button>
+    </ModalFooter>
+  </Modal>
 
 
-{values.map((v, idx) => (
-        <Button key={idx} className="me-2 mb-2" onClick={() => handleShow(v)}>
-          Full screen
-          {typeof v === 'string' && `below ${v.split('-')[0]}`}
-        </Button>
-      ))}
-      <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>Modal body content</Modal.Body>
-      </Modal>
+
     </div>
         {/* <Carousel activeIndex={index} onSelect={handleSelect}>
           // image 1 
