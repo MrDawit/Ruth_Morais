@@ -28,16 +28,16 @@
     "body-parser": "^1.19.0",
     "concurrently": "^5.3.0",
     "cookie-parser": "^1.4.5",
-    "core-js": "^3.15.2",
+    "core-js": "^3.23.3",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "googleapis": "^67.0.0",
+    "got": "11.8.5",
     "if-env": "^1.0.4",
     "nodemailer": "^6.4.17",
     "nodemon": "^2.0.18",
-    "run-all": "^1.0.1",
-    "got":"11.8.5"
+    "run-all": "^1.0.1"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
