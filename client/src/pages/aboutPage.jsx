@@ -1,19 +1,24 @@
 import React, { useState } from "react"; // ,{ useContext }
-// import {  Carousel, Image, Modal, Button } from "react-bootstrap";
-import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
+import {  Carousel, Image, Modal, Button } from "react-bootstrap";
+// import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
 import { motion } from "framer-motion";
 import "../assets/css/aboutPage.css";
 import { Link } from "react-router-dom";
 import { AiOutlineMail } from "react-icons/ai";
 import PhotoCollectionList from "../components/PhotoCollectionList/index";
 import { PhotoCollectionProvider } from "../utils/PhotoCollectionContext";
+import modalImage from "../assets/img/AfricaIsWoke.jpg";
 
-
+// const modalImage = {
+//   src:"../assets/img/AfricaIsWoke.jpg",
+// }
 const AboutPage = () => {
   const [modal, setModal] = useState(false);
 
 
-
+// const modalImage = {
+//   src:"../assets/img/AfricaIsWoke.jpg",
+// }
 
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
   let [emailIconButtonColor, setEmailIconButtonColor] = useState("black");
@@ -202,64 +207,48 @@ const AboutPage = () => {
                                 }}/>
           </PhotoCollectionProvider>
         </div>
-{/* <button 
-onClick={() => {
-      setModal(true);
-         }} >
-          WE NEXT
-         </button> */}
 
-        {/* <Modal
+
+        <Modal
                             // className="modal"
                             show={modal}
-                            fullscreen={fullscreen}
+                            fullscreen={true}
                           >
-                              <Modal.Header closeButton="true" closeVariant="white" closeLabel='Close'>
+                              <Modal.Header 
+                              //closeButton is not working
+                              closeButton
+                              >
           <Modal.Title>Modal</Modal.Title>
         </Modal.Header>
-        <Modal.Body> <img src="../assets/img/AfricaIsWoke.jpg" alt="ImgTest"/></Modal.Body>
+        <Modal.Body> <img 
+        src={modalImage}
+        // src={modalImage.src} 
+        width="200" className="img-fluid" alt="ImgTest"/></Modal.Body>
+        <Modal.Footer>
+          <Button onClick={()=>{setModal(false);}}>Close</Button>
+          </Modal.Footer> 
                               </Modal>
-                              </div> */}
+                              </div>
 
 
 <Button
-    color="danger"
+    style={{backgroundColor:'red'}}
     onClick={()=>{setModal(true);}}
   >
+    
     Click Me
   </Button>
  
-  <Modal 
+
+  {/* <Modal 
     fullscreen
     size="xl"
     isOpen={modal}
     // toggle={function noRefCheck(){}}
   >
-    <ModalHeader 
-    close={<button className="close" onClick={()=>{ setModal(false);}}>×</button>}
-    >
-      Modal title
-    </ModalHeader>
-    <ModalBody>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </ModalBody>
-    <ModalFooter>
-      <Button
-        color="primary"
-        // onClick={function noRefCheck(){}}
-      >
-        Do Something
-      </Button>
-      {' '}
-      <Button onClick={setModal(false)}>
-        Cancel
-      </Button>
-    </ModalFooter>
-  </Modal>
+   </Modal> 
+   </div> */}
 
-
-
-    </div>
         {/* <Carousel activeIndex={index} onSelect={handleSelect}>
           // image 1 
           <Carousel.Item>
