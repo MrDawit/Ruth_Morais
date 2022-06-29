@@ -1,5 +1,7 @@
 import React, { useState } from "react"; // ,{ useContext }
-import {  Carousel, Image, Modal, Button } from "react-bootstrap";
+import { 
+  //  Carousel, Image, 
+  Modal, Button } from "react-bootstrap";
 // import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
 import { motion } from "framer-motion";
 import "../assets/css/aboutPage.css";
