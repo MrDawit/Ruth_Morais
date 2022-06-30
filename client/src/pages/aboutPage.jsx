@@ -1,7 +1,7 @@
 import React, { useState } from "react"; // ,{ useContext }
-// import { 
-//   //  Carousel, Image, 
-//   Modal, Button } from "react-bootstrap";
+import { 
+  //  Carousel, Image, 
+  Modal, Button } from "react-bootstrap";
 // import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
 import { motion } from "framer-motion";
 import "../assets/css/aboutPage.css";
@@ -14,13 +14,50 @@ import { PhotoCollectionProvider } from "../utils/PhotoCollectionContext";
 // const modalImage = {
 //   src:"../assets/img/AfricaIsWoke.jpg",
 // }
+
+//testing State of modal
+// const testImgPhoto = [
+//   {
+//     name: "tomWeddingPhoto",
+//     localAddress: require("../assets/img/tomWedding.jpg"),
+//     message:"@Tom's Wedding",
+//     id: 2
+// },
+// {
+//     name: "aria_light",
+//     localAddress: require("../assets/img/aria_light.jpg"),
+//     message:"With the scarf!",
+//     id: 3
+// },
+// {
+//     name: "Screenshot 2022-06-23 at 00-08-04 Y",
+//     localAddress: require("../assets/img/Screenshot 2022-06-23 at 00-08-04 Y.png"),
+//     message:"Palm Trees!",
+//     id: 4
+// },
+// {
+//     name: "Screenshot 2022-06-23 at 00-09-50 Y",
+//     localAddress: require("../assets/img/Screenshot 2022-06-23 at 00-09-50 Y.png"),
+//     message:"Fourth of July Food Truckin'",
+//     id: 5
+// },
+// {
+//     name: "Screenshot 2022-06-23 at 00-09-24 Y",
+//     localAddress: require("../assets/img/Screenshot 2022-06-23 at 00-09-24 Y.png"),
+//     message:"Ramen, Ramen, Ramen",
+//     id: 6
+// },
+
+
+// ]
+
 const AboutPage = () => {
   // const [modal, setModal] = useState(false);
-
-
 // const modalImage = {
 //   src:"../assets/img/AfricaIsWoke.jpg",
 // }
+
+const [testMap, setTestMap]= useState(false);
 
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
   let [emailIconButtonColor, setEmailIconButtonColor] = useState("black");
@@ -349,7 +386,23 @@ const AboutPage = () => {
 
       </div> */}
 
-      
+{/* testing State of Modal */}
+{/* <Button
+    
+    onClick={()=>{setTestMap(true);}}
+  >
+    
+    Click Me
+  </Button>
+{   testMap &&   
+testImgPhoto.map((testImgPhoto) => {
+    // console.log(`imgPhoto is = ${imgPhoto.id}`);
+    return (
+      <>
+
+      </>
+    )})
+    } */}
 
       {/* </modal> */}
       {/* <Footer/> */}
