@@ -7,18 +7,18 @@ import modalImage from "../../assets/img/AfricaIsWoke.jpg";
 const PhotoCollectionList = () => {
   const [imgPhotos] = useContext(PhotoCollectionContext);
   const [modal, setModal] = useState(false);
- const[modalFullscreen, setModalFullscreen] = useState(true);
+  const [modalFullscreen, setModalFullscreen] = useState(true);
 
-  const renderModal = ()=>{
-        setModal(false);
-        setModalFullscreen(false);
-        console.log('this too should be working');
-  }
+  const renderModal = () => {
+    setModal(false);
+    setModalFullscreen(false);
+    console.log("this too should be working");
+  };
 
   return imgPhotos.map((imgPhoto) => {
     console.log(`imgPhoto is = ${imgPhoto.id}`);
     return (
-      <>
+      <div key={imgPhoto.id}>
         <Button
           onClick={() => {
             setModal(true);
@@ -27,7 +27,7 @@ const PhotoCollectionList = () => {
           <PhotoCollection
             name={imgPhoto.name}
             photoUrl={imgPhoto.localAddress}
-            key={imgPhoto.id}
+        //     key={imgPhoto.id}
           />
 
           <Modal
@@ -35,7 +35,6 @@ const PhotoCollectionList = () => {
             show={modal}
             fullscreen={modalFullscreen}
             onHide={renderModal}
-            
           >
             <Modal.Header
             //closeButton is not working
@@ -57,10 +56,10 @@ const PhotoCollectionList = () => {
               <Button
                 onClick={() => {
                   renderModal();
-                  console.log('should be working');
+                  console.log("should be working");
                   setModal(false);
                 }}
-                onRequestClose={() => setModal(false)}
+                // onRequestClose={() => setModal(false)}
               >
                 Close
               </Button>
@@ -76,7 +75,7 @@ const PhotoCollectionList = () => {
         >
           Click Me
         </Button> */}
-      </>
+      </div>
     );
   });
 };
