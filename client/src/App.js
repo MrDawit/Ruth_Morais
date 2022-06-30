@@ -29,8 +29,8 @@ import SideDrawer from './components/SideDrawer';
 import Backdrop from './components/Backdrop';
 
 import {motion} from 'framer-motion';
-import Tilt from './components/Tilt/Tilt.js';
-import modernBackground from './assets/img/modern5.jpg';
+// import Tilt from './components/Tilt/Tilt.js';
+// import modernBackground from './assets/img/modern5.jpg';
 // Tilt component image supercedes this image
 // import tiltForeground from './assets/img/Globe.jpg';
 
@@ -56,11 +56,11 @@ function App() {
     backdrop = <Backdrop click={backdropClickHandler} />
   }
 
-  const options = {
-    max: 10,
-    perspective: 1000,
-    scale: 1.05,
-  }
+  // const options = {
+  //   max: 10,
+  //   perspective: 1000,
+  //   scale: 1.05,
+  // }
 
 
   return (
