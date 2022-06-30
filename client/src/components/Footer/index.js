@@ -1,11 +1,16 @@
 import React from "react";
 import "./style.css";
-
+import icon from "../../assets/img/favicon.ico";
 function Footer() {
   return (
   
     <>
-    <footer id="outer_footer">Ruth Morais | Marketing Project Manager </footer>    
+    <footer id="outer_footer">
+      <span>
+      <img  src={icon} alt={"juju"}/>
+      </span>
+      Ruth Morais | Marketing Project Manager 
+      </footer>    
     
     {/* <footer id="outer_footer" >
  
