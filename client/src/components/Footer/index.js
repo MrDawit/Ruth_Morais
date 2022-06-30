@@ -4,11 +4,10 @@ function Footer() {
   return (
     <>
       <footer id="outer_footer">
-        <img
-          id="footer_link"
-          src={require("../../assets/img/favicon.ico")}
-          alt={"juju"}
-        />
+        <a id="footer_link" href="https://github.com/MrDawit/Ruth_Morais">
+          <img src={require("../../assets/img/favicon.ico")} alt={"juju"} />
+        </a>
+
         <div id="footer_text"> Ruth Morais | Marketing Project Manager </div>
       </footer>
 
