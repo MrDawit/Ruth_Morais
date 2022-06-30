@@ -2,16 +2,17 @@ import React from "react";
 import "./style.css";
 function Footer() {
   return (
-  
     <>
-    <footer id="outer_footer">
-      <span>
-      <img  src={require("../../assets/img/favicon.ico")} alt={"juju"}/>
-      </span>
-      Ruth Morais | Marketing Project Manager 
-      </footer>    
-    
-    {/* <footer id="outer_footer" >
+      <footer id="outer_footer">
+        <img
+          id="footer_link"
+          src={require("../../assets/img/favicon.ico")}
+          alt={"juju"}
+        />
+        <div id="footer_text"> Ruth Morais | Marketing Project Manager </div>
+      </footer>
+
+      {/* <footer id="outer_footer" >
  
   <div className="row footerRow">
     
@@ -25,7 +26,7 @@ function Footer() {
     </div>
     </div>
 </footer> */}
-</>
+    </>
   );
 }
 
