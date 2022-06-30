@@ -4,7 +4,7 @@ function Footer() {
   return (
     <>
       <footer id="outer_footer">
-        <a id="footer_link" href="https://github.com/MrDawit/Ruth_Morais">
+        <a id="footer_link" href="https://github.com/MrDawit">
           <img src={require("../../assets/img/favicon.ico")} alt={"juju"} />
         </a>
 
