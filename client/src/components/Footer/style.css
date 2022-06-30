@@ -12,14 +12,15 @@ color:black;
 background-color:rgb(251, 251, 253);
 }
 
-.footerRow {
-  margin-right:0px;
-}
 #footer_link {
-  position:right;
+  float:left;
 }
 #footer_text{
   text-align:right;
+}
+
+.footerRow {
+  margin-right:0px;
 }
 
 #texting, #image{
