@@ -1,13 +1,12 @@
 import React from "react";
 import "./style.css";
-import icon from "../../assets/img/favicon.ico";
 function Footer() {
   return (
   
     <>
     <footer id="outer_footer">
       <span>
-      <img  src={icon} alt={"juju"}/>
+      <img  src={require("../../assets/img/favicon.ico")} alt={"juju"}/>
       </span>
       Ruth Morais | Marketing Project Manager 
       </footer>    
