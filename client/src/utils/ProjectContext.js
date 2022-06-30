@@ -6,11 +6,11 @@ export const ProjectContext = createContext()
 export const ProjectProvider = props => {
 
     const [projects, setProjects] = useState([
-        
+       //with react-scripts v5 image files with jpg and png should not have '' anymore . svg file types still need '' ending 
         {
             
             name: "WigsRUs",
-            imageURL: require("../assets/img/icon-linkedin.png").default,
+            imageURL: require("../assets/img/icon-linkedin.png"),
             deployURL:"https://www.linkedin.com/in/ruth-morais/",
             id: 1
         },

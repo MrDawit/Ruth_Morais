@@ -9,10 +9,10 @@ export const PhotoCollectionContext = createContext()
 export const PhotoCollectionProvider = props => {
 
     const [imgPhotos, setImgPhotos] = useState([
-
+//with react-scripts v5 image files with jpg and png should not have '' anymore . svg file types still need '' ending
         {
             name: "aria",
-            localAddress: require("../assets/img/aria.jpg").default,
+            localAddress: require("../assets/img/aria.jpg"),
             message:"Low Def",
             id: 1
         },
@@ -25,31 +25,31 @@ export const PhotoCollectionProvider = props => {
         // },
         {
             name: "tomWeddingPhoto",
-            localAddress: require("../assets/img/tomWedding.jpg").default,
+            localAddress: require("../assets/img/tomWedding.jpg"),
             message:"@Tom's Wedding",
             id: 2
         },
         {
             name: "aria_light",
-            localAddress: require("../assets/img/aria_light.jpg").default,
+            localAddress: require("../assets/img/aria_light.jpg"),
             message:"With the scarf!",
             id: 3
         },
         {
             name: "Screenshot 2022-06-23 at 00-08-04 Y",
-            localAddress: require("../assets/img/Screenshot 2022-06-23 at 00-08-04 Y.png").default,
+            localAddress: require("../assets/img/Screenshot 2022-06-23 at 00-08-04 Y.png"),
             message:"Palm Trees!",
             id: 4
         },
         {
             name: "Screenshot 2022-06-23 at 00-09-50 Y",
-            localAddress: require("../assets/img/Screenshot 2022-06-23 at 00-09-50 Y.png").default,
+            localAddress: require("../assets/img/Screenshot 2022-06-23 at 00-09-50 Y.png"),
             message:"Fourth of July Food Truckin'",
             id: 5
         },
         {
             name: "Screenshot 2022-06-23 at 00-09-24 Y",
-            localAddress: require("../assets/img/Screenshot 2022-06-23 at 00-09-24 Y.png").default,
+            localAddress: require("../assets/img/Screenshot 2022-06-23 at 00-09-24 Y.png"),
             message:"Ramen, Ramen, Ramen",
             id: 6
         },

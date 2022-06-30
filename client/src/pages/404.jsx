@@ -2,7 +2,7 @@ import React from 'react';
 // import {Link} from 'react-router-dom';
 import '../assets/css/404Page.css';
 import Spacer from '../components/Spacer';
-import {motion} from 'framer-motion/dist/framer-motion';
+import {motion} from 'framer-motion';
 
 
 const NotFoundPage = () => {

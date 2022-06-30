@@ -28,7 +28,7 @@ import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer';
 import Backdrop from './components/Backdrop';
 
-import {motion} from 'framer-motion/dist/framer-motion';
+import {motion} from 'framer-motion';
 import Tilt from './components/Tilt/Tilt.js';
 import modernBackground from './assets/img/modern5.jpg';
 // Tilt component image supercedes this image

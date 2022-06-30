@@ -3,7 +3,7 @@ import {
   //  Carousel, Image, 
   Modal, Button } from "react-bootstrap";
 // import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
-import { motion } from "framer-motion/dist/framer-motion";
+import { motion } from "framer-motion";
 import "../assets/css/aboutPage.css";
 import { Link } from "react-router-dom";
 import { AiOutlineMail } from "react-icons/ai";
@@ -113,7 +113,7 @@ const AboutPage = () => {
           <img
             id="imageAbout"
             alt="about Ruth"
-            src={require("../assets/img/aria_light.jpg").default}
+            src={require("../assets/img/aria_light.jpg")}
           />
         </div>
         <br />
