@@ -1,7 +1,7 @@
 import React, { useState } from "react"; // ,{ useContext }
-import { 
-  //  Carousel, Image, 
-  Modal, Button } from "react-bootstrap";
+// import { 
+//   //  Carousel, Image, 
+//   Modal, Button } from "react-bootstrap";
 // import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
 import { motion } from "framer-motion";
 import "../assets/css/aboutPage.css";
@@ -9,13 +9,13 @@ import { Link } from "react-router-dom";
 import { AiOutlineMail } from "react-icons/ai";
 import PhotoCollectionList from "../components/PhotoCollectionList/index";
 import { PhotoCollectionProvider } from "../utils/PhotoCollectionContext";
-import modalImage from "../assets/img/AfricaIsWoke.jpg";
+// import modalImage from "../assets/img/AfricaIsWoke.jpg";
 
 // const modalImage = {
 //   src:"../assets/img/AfricaIsWoke.jpg",
 // }
 const AboutPage = () => {
-  const [modal, setModal] = useState(false);
+  // const [modal, setModal] = useState(false);
 
 
 // const modalImage = {
@@ -203,14 +203,11 @@ const AboutPage = () => {
         </h2>
         <div id="photoCollectionParent">
           <PhotoCollectionProvider>
-            <PhotoCollectionList onClick={() => {
-                                  setModal(true);
-                                  
-                                }}/>
+            <PhotoCollectionList />
           </PhotoCollectionProvider>
         </div>
 
-
+{/* 
         <Modal
                             // className="modal"
                             show={modal}
@@ -229,17 +226,17 @@ const AboutPage = () => {
         <Modal.Footer>
           <Button onClick={()=>{setModal(false);}}>Close</Button>
           </Modal.Footer> 
-                              </Modal>
+                              </Modal> */}
                               </div>
 
 
-<Button
+{/* <Button
     style={{backgroundColor:'red'}}
     onClick={()=>{setModal(true);}}
   >
     
     Click Me
-  </Button>
+  </Button> */}
  
 
   {/* <Modal 
