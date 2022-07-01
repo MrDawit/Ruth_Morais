@@ -9,55 +9,9 @@ import { Link } from "react-router-dom";
 import { AiOutlineMail } from "react-icons/ai";
 import PhotoCollectionList from "../components/PhotoCollectionList/index";
 import { PhotoCollectionProvider } from "../utils/PhotoCollectionContext";
-// import modalImage from "../assets/img/AfricaIsWoke.jpg";
 
-// const modalImage = {
-//   src:"../assets/img/AfricaIsWoke.jpg",
-// }
-
-//testing State of modal
-// const testImgPhoto = [
-//   {
-//     name: "tomWeddingPhoto",
-//     localAddress: require("../assets/img/tomWedding.jpg"),
-//     message:"@Tom's Wedding",
-//     id: 2
-// },
-// {
-//     name: "aria_light",
-//     localAddress: require("../assets/img/aria_light.jpg"),
-//     message:"With the scarf!",
-//     id: 3
-// },
-// {
-//     name: "Screenshot 2022-06-23 at 00-08-04 Y",
-//     localAddress: require("../assets/img/Screenshot 2022-06-23 at 00-08-04 Y.png"),
-//     message:"Palm Trees!",
-//     id: 4
-// },
-// {
-//     name: "Screenshot 2022-06-23 at 00-09-50 Y",
-//     localAddress: require("../assets/img/Screenshot 2022-06-23 at 00-09-50 Y.png"),
-//     message:"Fourth of July Food Truckin'",
-//     id: 5
-// },
-// {
-//     name: "Screenshot 2022-06-23 at 00-09-24 Y",
-//     localAddress: require("../assets/img/Screenshot 2022-06-23 at 00-09-24 Y.png"),
-//     message:"Ramen, Ramen, Ramen",
-//     id: 6
-// },
-
-
-// ]
 
 const AboutPage = () => {
-  // const [modal, setModal] = useState(false);
-// const modalImage = {
-//   src:"../assets/img/AfricaIsWoke.jpg",
-// }
-
-const [testMap, setTestMap]= useState(false);
 
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
   let [emailIconButtonColor, setEmailIconButtonColor] = useState("black");
@@ -243,47 +197,8 @@ const [testMap, setTestMap]= useState(false);
             <PhotoCollectionList />
           </PhotoCollectionProvider>
         </div>
-
-{/* 
-        <Modal
-                            // className="modal"
-                            show={modal}
-                            fullscreen={true}
-                          >
-                              <Modal.Header 
-                              //closeButton is not working
-                              closeButton
-                              >
-          <Modal.Title>Modal</Modal.Title>
-        </Modal.Header>
-        <Modal.Body> <img 
-        src={modalImage}
-        // src={modalImage.src} 
-        width="200" className="img-fluid" alt="ImgTest"/></Modal.Body>
-        <Modal.Footer>
-          <Button onClick={()=>{setModal(false);}}>Close</Button>
-          </Modal.Footer> 
-                              </Modal> */}
                               </div>
 
-
-{/* <Button
-    style={{backgroundColor:'red'}}
-    onClick={()=>{setModal(true);}}
-  >
-    
-    Click Me
-  </Button> */}
- 
-
-  {/* <Modal 
-    fullscreen
-    size="xl"
-    isOpen={modal}
-    // toggle={function noRefCheck(){}}
-  >
-   </Modal> 
-   </div> */}
 
         {/* <Carousel activeIndex={index} onSelect={handleSelect}>
           // image 1 
