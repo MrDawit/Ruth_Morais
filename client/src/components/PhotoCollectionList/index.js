@@ -1,8 +1,7 @@
 import React, { useState, useContext } from "react";
-import PhotoCollection from "../PhotoCollection";
 import { PhotoCollectionContext } from "../../utils/PhotoCollectionContext";
 import { Modal, Button, Carousel, Image } from "react-bootstrap";
-
+import "./style.css";
 const PhotoCollectionList = () => {
   const [imgPhotos] = useContext(PhotoCollectionContext);
   const [index2, setIndex2] = useState(0);
@@ -10,11 +9,11 @@ const PhotoCollectionList = () => {
     setIndex2(selectedIndex);
   };
   const [imageCarousel, setImageCarousel] = useState(false);
-  const handleClick = () => {
-    setImageCarousel(true);
-    
-    console.log(`index onClick is ${index2}`);
-  };
+  // const handleClick = () => {
+  //   setImageCarousel(true);
+
+  //   console.log(`index onClick is ${index2}`);
+  // };
   return imgPhotos.map((imgPhoto) => {
     console.log(`imgPhoto is = ${imgPhoto.id}`);
     console.log(imageCarousel);
@@ -33,17 +32,20 @@ const PhotoCollectionList = () => {
             //     console.log(`index onClick is ${index2}`);
           }}
         /> */}
-           <img
-           key={imgPhoto.id}
-        alt={imgPhoto.name}
-        src={imgPhoto.localAddress}
-        onClick={() => {
-          //   setModal(true);
-          setImageCarousel(true);
-          console.log(`imageCarousel from PhotoCollection is ${imageCarousel}`);
-        }}
-        className="PhotoCollection"
-      />
+        <img
+          key={imgPhoto.id}
+          alt={imgPhoto.name}
+          src={imgPhoto.localAddress}
+          onClick={() => {
+            //   setModal(true);
+            setImageCarousel(true);
+            setIndex2(imgPhoto.id);
+            console.log(
+              `imageCarousel from PhotoCollection is ${imageCarousel}`
+            );
+          }}
+          className="PhotoCollection"
+        />
         {imageCarousel && (
           <Modal
             show={true}
@@ -54,37 +56,39 @@ const PhotoCollectionList = () => {
             //closeButton is not working
             //       closeButton
             >
-              <Modal.Title>{imgPhoto.id}</Modal.Title>
+              <Modal.Title>{index2}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <Carousel
                 style={{ backgroundColor: "black" }}
-                activeIndex={index2}
+             activeIndex={index2-1}
                 onSelect={handleSelect}
                 // variant="dark"
                 variant="light"
                 prevLabel={"Previous"}
                 interval={null}
               >
-                {/* // image 1   */}
-                <Carousel.Item>
-                  <img
-                    className="imgCarousel"
-                    // className="d-block w-100 "
-                    src={imgPhoto.localAddress}
-                    alt={imgPhoto.name}
-                  />
-                  <Carousel.Caption>
-                    <h3 id="carouselH3">{imgPhoto.message}</h3>
-                    <p> </p>
-                  </Carousel.Caption>
-                </Carousel.Item>
+                {imgPhotos.map((imgPhoto) => {
+                  return (
+                    <Carousel.Item key={imgPhoto.id}>
+                      <img
+                        className="imgCarousel"
+                        // className="d-block w-100 "
+                        src={imgPhoto.localAddress}
+                        alt={imgPhoto.name}
+                      />
+                      <Carousel.Caption>
+                        <h3 id="carouselH3">{imgPhoto.message}</h3>
+                        <p> </p>
+                      </Carousel.Caption>
+                    </Carousel.Item>
+                  );
+                })}
               </Carousel>
             </Modal.Body>
             <Modal.Footer>
               <Button
                 onClick={() => {
-                  // setModal(false);
                   setImageCarousel(false);
                 }}
               >
