@@ -66,6 +66,7 @@ const PhotoCollectionList = () => {
                 // variant="dark"
                 variant="light"
                 prevLabel={"Previous"}
+                nextLabel={"Next"}
                 interval={null}
               >
                 {imgPhotos.map((imgPhoto) => {
