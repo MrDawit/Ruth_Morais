@@ -61,7 +61,7 @@ const PhotoCollectionList = () => {
             <Modal.Body>
               <Carousel
                 style={{ backgroundColor: "black" }}
-             activeIndex={index2-1}
+             activeIndex={index2}
                 onSelect={handleSelect}
                 // variant="dark"
                 variant="light"
