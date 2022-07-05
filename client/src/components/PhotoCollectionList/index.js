@@ -18,7 +18,7 @@ const PhotoCollectionList = () => {
     console.log(`imgPhoto is = ${imgPhoto.id}`);
     console.log(imageCarousel);
     return (
-      <>
+      <div key={imgPhoto.id}>
         {/* <PhotoCollection
           name={imgPhoto.name}
           photoUrl={imgPhoto.localAddress}
@@ -33,7 +33,7 @@ const PhotoCollectionList = () => {
           }}
         /> */}
         <img
-          key={imgPhoto.id}
+          // key={imgPhoto.id}
           alt={imgPhoto.name}
           src={imgPhoto.localAddress}
           onClick={() => {
@@ -51,6 +51,7 @@ const PhotoCollectionList = () => {
             show={true}
             fullscreen={true}
             style={{ backgroundColor: "black" }}
+            // key={imgPhoto.id}
           >
             <Modal.Header
             //closeButton is not working
@@ -82,7 +83,9 @@ const PhotoCollectionList = () => {
                         <h3 id="carouselH3">{imgPhoto.message}</h3>
                         <p> </p>
                       </Carousel.Caption>
+                      <h3 id="carouselH3">{imgPhoto.message}</h3>
                     </Carousel.Item>
+                    
                   );
                 })}
               </Carousel>
@@ -98,7 +101,7 @@ const PhotoCollectionList = () => {
             </Modal.Footer>
           </Modal>
         )}
-      </>
+      </div>
     );
   });
 };
