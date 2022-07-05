@@ -67,10 +67,13 @@ const PhotoCollectionList = () => {
             style={{ backgroundColor: "black" }}
             // key={imgPhoto.id}
           >
-            <Modal.Header closeButton/>
+            <Modal.Header 
+            closeButton
+            style={{ backgroundColor: "white" }}
+            />
               {/* <Modal.Title>{index2}</Modal.Title>
             </Modal.Header> */}
-            <Modal.Body>
+            <Modal.Body style={{ backgroundColor: "black" }}>
               <Carousel
                 style={{ backgroundColor: "black" }}
                 activeIndex={index2}
@@ -103,19 +106,19 @@ const PhotoCollectionList = () => {
                         <h3 id="carouselH3">{imgPhoto.message}</h3>
                         <p> </p>
                       </Carousel.Caption>
-                      <Button
+                      {/* <Button
                         onClick={() => {
                           setImageCarousel(false);
                         }}
                       >
                         Close
-                      </Button>
+                      </Button> */}
                     </Carousel.Item>
                   );
                 })}
               </Carousel>
             </Modal.Body>
-            <Modal.Footer>
+            {/* <Modal.Footer> */}
               {/* <Button
                 onClick={() => {
                   setImageCarousel(false);
@@ -126,7 +129,7 @@ const PhotoCollectionList = () => {
               {/* <CloseButton
               // variant="white"
               /> */}
-            </Modal.Footer>
+            {/* </Modal.Footer> */}
           </Modal>
         )}
       </div>
