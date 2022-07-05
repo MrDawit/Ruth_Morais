@@ -67,9 +67,9 @@ const PhotoCollectionList = () => {
             style={{ backgroundColor: "black" }}
             // key={imgPhoto.id}
           >
-            <Modal.Header closeButton>
-              <Modal.Title>{index2}</Modal.Title>
-            </Modal.Header>
+            <Modal.Header closeButton/>
+              {/* <Modal.Title>{index2}</Modal.Title>
+            </Modal.Header> */}
             <Modal.Body>
               <Carousel
                 style={{ backgroundColor: "black" }}
