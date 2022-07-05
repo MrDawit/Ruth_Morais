@@ -9,6 +9,11 @@ const PhotoCollectionList = () => {
     setIndex2(selectedIndex);
   };
   const [imageCarousel, setImageCarousel] = useState(false);
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   // const handleClick = () => {
   //   setImageCarousel(true);
 
@@ -39,6 +44,7 @@ const PhotoCollectionList = () => {
           onClick={() => {
             //   setModal(true);
             setImageCarousel(true);
+            handleShow();
             setIndex2(imgPhoto.id);
             console.log(
               `imageCarousel from PhotoCollection is ${imageCarousel}`
@@ -48,14 +54,15 @@ const PhotoCollectionList = () => {
         />
         {imageCarousel && (
           <Modal
-            show={true}
+            show={show}
+            onHide={handleClose}
             fullscreen={true}
             style={{ backgroundColor: "black" }}
             // key={imgPhoto.id}
           >
             <Modal.Header
-            //closeButton is not working
-            //       closeButton
+           
+                  closeButton
             >
               <Modal.Title>{index2}</Modal.Title>
             </Modal.Header>
@@ -74,13 +81,19 @@ const PhotoCollectionList = () => {
               >
                 {imgPhotos.map((imgPhoto) => {
                   return (
-                    <Carousel.Item key={imgPhoto.id} className="carousel.item">
+                    <Carousel.Item key={imgPhoto.id} className='carousel-item'>
                       <img
-                        className="imgCarousel"
+                        className='justify-content-center'
                         // className="d-block w-100"
                         src={imgPhoto.localAddress}
                         alt={imgPhoto.name}
                       />
+                      {/* <img
+                        className="imgCarousel"
+                        // className="d-block w-100"
+                        src={imgPhoto.localAddress}
+                        alt={imgPhoto.name}
+                      /> */}
                       <Carousel.Caption>
                         <h3 id="carouselH3">{imgPhoto.message}</h3>
                         <p> </p>
