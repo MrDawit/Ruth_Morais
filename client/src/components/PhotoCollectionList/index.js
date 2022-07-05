@@ -1,6 +1,13 @@
 import React, { useState, useContext } from "react";
 import { PhotoCollectionContext } from "../../utils/PhotoCollectionContext";
-import { Modal, Button, Carousel, Image } from "react-bootstrap";
+import {
+  Modal,
+  Button,
+  Carousel,
+  // CloseButton,
+  Image,
+} from "react-bootstrap";
+// import CloseButton from "react-bootstrap/CloseButton";
 import "./style.css";
 const PhotoCollectionList = () => {
   const [imgPhotos] = useContext(PhotoCollectionContext);
@@ -60,16 +67,13 @@ const PhotoCollectionList = () => {
             style={{ backgroundColor: "black" }}
             // key={imgPhoto.id}
           >
-            <Modal.Header
-           
-                  closeButton
-            >
+            <Modal.Header closeButton>
               <Modal.Title>{index2}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
               <Carousel
                 style={{ backgroundColor: "black" }}
-             activeIndex={index2}
+                activeIndex={index2}
                 onSelect={handleSelect}
                 // variant="dark"
                 variant="light"
@@ -81,9 +85,10 @@ const PhotoCollectionList = () => {
               >
                 {imgPhotos.map((imgPhoto) => {
                   return (
-                    <Carousel.Item key={imgPhoto.id} className='carousel-item'>
+                    <Carousel.Item key={imgPhoto.id} className="carousel-item">
                       <img
-                        className='justify-content-center'
+                        className="imgCarousel"
+                        // className="justify-content-center"
                         // className="d-block w-100"
                         src={imgPhoto.localAddress}
                         alt={imgPhoto.name}
@@ -98,21 +103,29 @@ const PhotoCollectionList = () => {
                         <h3 id="carouselH3">{imgPhoto.message}</h3>
                         <p> </p>
                       </Carousel.Caption>
-                      <h3 id="carouselH3">{imgPhoto.message}</h3>
+                      <Button
+                        onClick={() => {
+                          setImageCarousel(false);
+                        }}
+                      >
+                        Close
+                      </Button>
                     </Carousel.Item>
-                    
                   );
                 })}
               </Carousel>
             </Modal.Body>
             <Modal.Footer>
-              <Button
+              {/* <Button
                 onClick={() => {
                   setImageCarousel(false);
                 }}
               >
                 Close
-              </Button>
+              </Button> */}
+              {/* <CloseButton
+              // variant="white"
+              /> */}
             </Modal.Footer>
           </Modal>
         )}

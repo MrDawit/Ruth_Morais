@@ -6,14 +6,14 @@ width: 150px ;
 
 .carousel-item{
     display:flex;
-    /* flex-direction:row;
-    height:100%; */
+    /* flex-direction:row; */
+    /* height:100%; */
 }
 
 .imgCarousel{
     
-    /* height: 300% ;
-    width: 100%; */
+    /* height: 300% ; */
+    width: 50%;
     /* align-items:center;
     justify-content:center !important; */
     /* height:auto;
