@@ -70,14 +70,14 @@ const PhotoCollectionList = () => {
                 nextLabel={"Next"}
                 interval={null}
                 fade={true}
-                indicatorLabels={["fancy","facts"]}
+                // indicatorLabels={["fancy","facts"]}
               >
                 {imgPhotos.map((imgPhoto) => {
                   return (
-                    <Carousel.Item key={imgPhoto.id}>
+                    <Carousel.Item key={imgPhoto.id} className="carousel.item">
                       <img
-                        // className="imgCarousel"
-                        className="d-block w-100"
+                        className="imgCarousel"
+                        // className="d-block w-100"
                         src={imgPhoto.localAddress}
                         alt={imgPhoto.name}
                       />
