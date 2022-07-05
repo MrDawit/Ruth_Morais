@@ -64,7 +64,7 @@ const PhotoCollectionList = () => {
             show={show}
             onHide={handleClose}
             fullscreen={true}
-            style={{ backgroundColor: "black" }}
+            style={{ backgroundColor: "black"}}
             // key={imgPhoto.id}
           >
             <Modal.Header 
