@@ -69,6 +69,7 @@ const PhotoCollectionList = () => {
                 prevLabel={"Previous"}
                 nextLabel={"Next"}
                 interval={null}
+                fade={true}
               >
                 {imgPhotos.map((imgPhoto) => {
                   return (
