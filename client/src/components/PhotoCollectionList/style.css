@@ -11,7 +11,7 @@ width: 150px ;
 }
 
 .imgCarousel{
-    
+    /* margin-left:33% */
     /* height: 300% ; */
     width: 50%;
     /* align-items:center;
@@ -23,3 +23,13 @@ width: 150px ;
     color:white;
     text-decoration:none;
 }
+
+/* #photoCollectionCarousel{
+    height:100%;
+    border:20px solid red;
+} */
+
+/* #photoCollectionModalBody{
+    height:50% !important;
+    border:20px solid red;
+} */

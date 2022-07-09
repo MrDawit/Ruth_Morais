@@ -1,7 +1,10 @@
-import React, { useState } from "react"; // ,{ useContext }
-import { 
-  //  Carousel, Image, 
-  Modal, Button } from "react-bootstrap";
+import React, { useState, useContext } from "react"; // ,{ useContext }
+import {
+  Carousel,
+  // Image,
+  Modal,
+  Button,
+} from "react-bootstrap";
 // import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
 import { motion } from "framer-motion";
 import "../assets/css/aboutPage.css";
@@ -9,9 +12,11 @@ import { Link } from "react-router-dom";
 import { AiOutlineMail } from "react-icons/ai";
 import PhotoCollectionList from "../components/PhotoCollectionList/index";
 import { PhotoCollectionProvider } from "../utils/PhotoCollectionContext";
-
+import {PhotoCollectionListProvider, PhotoCollectionListContext} from "../components/PhotoCollectionList/PhotoCollectionListContext.js"
 
 const AboutPage = () => {
+  const [carouselImageId, setCarouselImageId] = useState(0);
+  const [imageCarousel, setImageCarousel] = useState(false);
 
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
   let [emailIconButtonColor, setEmailIconButtonColor] = useState("black");
@@ -186,7 +191,6 @@ const AboutPage = () => {
         </div>
       </main>
 
-     
       <div id="carouselPlacement">
         <h2 id="carouselTitle">
           <span style={{ fontWeight: "bold" }}>Ruth</span> -according to
@@ -194,13 +198,77 @@ const AboutPage = () => {
         </h2>
         <div id="photoCollectionParent">
           <PhotoCollectionProvider>
-            <PhotoCollectionList />
+            <PhotoCollectionList setCarouselImageId={setCarouselImageId} setImageCarousel={setImageCarousel}/>
           </PhotoCollectionProvider>
         </div>
-                              </div>
+      </div>
 
+      
+      {/* <PhotoCollectionList  */}
+        {/* // value={[
+        //   imageCarousel,
+        //   index2,
+        //   handleSelect,
+        //   imgPhotos.id,
+        //   imgPhotos.name,
+        //   imgPhotos.message,
+        //   imgPhotos.localAddress,
+        // ]}
+      > */}
+   
+   {imageCarousel && (
+      
+      <Carousel
+      id="photoCollectionCarousel"
+        style={{ backgroundColor: "black" }}
+        activeIndex={setCarouselImageId}
+        // onSelect={handleSelect}
+        // variant="dark"
+        variant="light"
+        prevLabel={"Previous"}
+        nextLabel={"Next"}
+        interval={null}
+        fade={true}
+        // indicatorLabels={["fancy","facts"]}
+      >
+      
+       {/* image 1  */}
+          <Carousel.Item>
+            <img
+              className="imgCarousel"
+              // className="d-block w-100 "
+              src={require("../assets/img/aria.jpg").default}
+              alt="First slide"
+            />
+            <div>{console.log(carouselImageId)}</div>
+            <div>Here sits this imageId:{carouselImageId}</div>
+            <Carousel.Caption>
+              <h3 id="carouselH3">Low Def</h3>
+              <p> </p>
+            </Carousel.Caption>
+          </Carousel.Item>
+            {/* <Carousel.Item key={imgPhotos.id} className="carousel-item">
+              <img
+                className="imgCarousel"
+                // className="justify-content-center"
+                // className="d-block w-100"
+                src={imgPhotos.localAddress}
+                alt={imgPhotos.name}
+              />
+             
+              <Carousel.Caption>
+                <h3 id="carouselH3">{imgPhotos.message}</h3>
+                <p> </p>
+              </Carousel.Caption>
+           
+            </Carousel.Item> */}
+       
+      </Carousel>
+   
+)} 
 
-        {/* <Carousel activeIndex={index} onSelect={handleSelect}>
+      
+      {/* <Carousel activeIndex={index} onSelect={handleSelect}>
           // image 1 
           <Carousel.Item>
             <img
@@ -301,8 +369,8 @@ const AboutPage = () => {
 
       </div> */}
 
-{/* testing State of Modal */}
-{/* <Button
+      {/* testing State of Modal */}
+      {/* <Button
     
     onClick={()=>{setTestMap(true);}}
   >
