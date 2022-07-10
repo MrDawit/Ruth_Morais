@@ -203,7 +203,8 @@ const[modalCarouselShowInPage, setModalCarouselShowInPage] =useState(false);
         <div
           id="photoCollectionParent"
           onClick={() => {
-            setImageCarouselInPage(imageCarouselInPage);
+            setImageCarouselInPage(true);
+            // setImageCarouselInPage(imageCarouselInPage);
             setCarouselImageIdInPage(carouselImageIdInPage);
             
           }}
@@ -232,7 +233,7 @@ const[modalCarouselShowInPage, setModalCarouselShowInPage] =useState(false);
         // ]}
       > */}
 
-      {imageCarouselInPage && <div>We in Here!!</div>}
+      {/* {imageCarouselInPage && <div>We in Here!!</div>} */}
 
       {imageCarouselInPage && (
         <Modal
