@@ -1,4 +1,4 @@
-import React, { useState, useContext,createContext } from "react";
+import React, { useState, useContext, createContext } from "react";
 import { PhotoCollectionContext } from "../../utils/PhotoCollectionContext";
 import {
   Modal,
@@ -10,15 +10,19 @@ import {
 // import CloseButton from "react-bootstrap/CloseButton";
 import "./style.css";
 
-
- const PhotoCollectionList = ({setCarouselImageId,setImageCarousel}) => {
+const PhotoCollectionList = ({
+  carouselImageIdInList,
+  imageCarouselInList,
+  modalCarouselShowInList,
+  modalHandleCloseInList,
+}) => {
   const [imgPhotos] = useContext(PhotoCollectionContext);
   const [index2, setIndex2] = useState(0);
-  setCarouselImageId =index2;
+  const [imageCarousel, setImageCarousel] = useState(false);
+
   const handleSelect = (selectedIndex, e) => {
     setIndex2(selectedIndex);
   };
-  
 
   const [show, setShow] = useState(false);
 
@@ -29,6 +33,13 @@ import "./style.css";
 
   //   console.log(`index onClick is ${index2}`);
   // };
+  // console.log(`index onClick is ${index2}`);
+  
+  carouselImageIdInList = index2;
+  imageCarouselInList = imageCarousel;
+  modalCarouselShowInList = show;
+  modalHandleCloseInList = handleClose;
+  console.log(`index onClick is ${carouselImageIdInList}`);
   return imgPhotos.map((imgPhoto) => {
     console.log(`imgPhoto is = ${imgPhoto.id}`);
     // console.log(imageCarousel);
@@ -54,21 +65,18 @@ import "./style.css";
           src={imgPhoto.localAddress}
           onClick={() => {
             //   setModal(true);
-            setImageCarousel=true;
+            setImageCarousel(true);
             handleShow();
             setIndex2(imgPhoto.id);
             // console.log(
             //   `imageCarousel from PhotoCollection is ${imageCarousel}`
             // );
+            console.log("image has been clicked, next check prop variables");
           }}
         />
-     
-   
-
       </div>
     );
   });
 };
 
 export default PhotoCollectionList;
-

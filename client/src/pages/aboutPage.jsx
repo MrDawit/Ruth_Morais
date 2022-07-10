@@ -12,11 +12,15 @@ import { Link } from "react-router-dom";
 import { AiOutlineMail } from "react-icons/ai";
 import PhotoCollectionList from "../components/PhotoCollectionList/index";
 import { PhotoCollectionProvider } from "../utils/PhotoCollectionContext";
-import {PhotoCollectionListProvider, PhotoCollectionListContext} from "../components/PhotoCollectionList/PhotoCollectionListContext.js"
+import {
+  PhotoCollectionListProvider,
+  PhotoCollectionListContext,
+} from "../components/PhotoCollectionList/PhotoCollectionListContext.js";
 
 const AboutPage = () => {
-  const [carouselImageId, setCarouselImageId] = useState(0);
-  const [imageCarousel, setImageCarousel] = useState(false);
+  const [carouselImageIdInPage, setCarouselImageIdInPage] = useState(0);
+  const [imageCarouselInPage, setImageCarouselInPage] = useState(false);
+const[modalCarouselShowInPage, setModalCarouselShowInPage] =useState(false);
 
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
   let [emailIconButtonColor, setEmailIconButtonColor] = useState("black");
@@ -196,16 +200,28 @@ const AboutPage = () => {
           <span style={{ fontWeight: "bold" }}>Ruth</span> -according to
           Instragram
         </h2>
-        <div id="photoCollectionParent">
+        <div
+          id="photoCollectionParent"
+          onClick={() => {
+            setImageCarouselInPage(imageCarouselInPage);
+            setCarouselImageIdInPage(carouselImageIdInPage);
+            
+          }}
+        >
           <PhotoCollectionProvider>
-            <PhotoCollectionList setCarouselImageId={setCarouselImageId} setImageCarousel={setImageCarousel}/>
+            <PhotoCollectionList
+              carouselImageIdInList={carouselImageIdInPage}
+              imageCarouselInList={imageCarouselInPage}
+              modalCarouselShowInList={modalCarouselShowInPage}
+              // modalHandleClose={modalHandleClose}
+            />
           </PhotoCollectionProvider>
+          {console.log(`${carouselImageIdInPage} & ${imageCarouselInPage}`)}
         </div>
       </div>
 
-      
       {/* <PhotoCollectionList  */}
-        {/* // value={[
+      {/* // value={[
         //   imageCarousel,
         //   index2,
         //   handleSelect,
@@ -215,39 +231,51 @@ const AboutPage = () => {
         //   imgPhotos.localAddress,
         // ]}
       > */}
-   
-   {imageCarousel && (
-      
-      <Carousel
-      id="photoCollectionCarousel"
-        style={{ backgroundColor: "black" }}
-        activeIndex={setCarouselImageId}
-        // onSelect={handleSelect}
-        // variant="dark"
-        variant="light"
-        prevLabel={"Previous"}
-        nextLabel={"Next"}
-        interval={null}
-        fade={true}
-        // indicatorLabels={["fancy","facts"]}
-      >
-      
-       {/* image 1  */}
-          <Carousel.Item>
-            <img
-              className="imgCarousel"
-              // className="d-block w-100 "
-              src={require("../assets/img/aria.jpg").default}
-              alt="First slide"
-            />
-            <div>{console.log(carouselImageId)}</div>
-            <div>Here sits this imageId:{carouselImageId}</div>
-            <Carousel.Caption>
-              <h3 id="carouselH3">Low Def</h3>
-              <p> </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-            {/* <Carousel.Item key={imgPhotos.id} className="carousel-item">
+
+      {imageCarouselInPage && <div>We in Here!!</div>}
+
+      {imageCarouselInPage && (
+        <Modal
+        show={true}
+          // show={modalCarouselShowInPage}
+          // onHide={modalHandleClose}
+          fullscreen={true}
+          style={{ backgroundColor: "black" }}
+          // key={imgPhoto.id}
+        >
+          <Modal.Header closeButton style={{ backgroundColor: "white" }} >
+          <Modal.Title>{carouselImageIdInPage}{console.log(`index onClick from Page is ${carouselImageIdInPage}`)}</Modal.Title>
+      </Modal.Header>
+          <Modal.Body style={{ backgroundColor: "black" }}>
+            <Carousel
+              id="photoCollectionCarousel"
+              style={{ backgroundColor: "black" }}
+              activeIndex={carouselImageIdInPage}
+              // onSelect={handleSelect}
+              // variant="dark"
+              variant="light"
+              prevLabel={"Previous"}
+              nextLabel={"Next"}
+              interval={null}
+              fade={true}
+              // indicatorLabels={["fancy","facts"]}
+            >
+              {/* image 1  */}
+              <Carousel.Item>
+                <img
+                  className="imgCarousel"
+                  // className="d-block w-100 "
+                  src={require("../assets/img/aria.jpg").default}
+                  alt="First slide"
+                />
+                <div>{console.log(carouselImageIdInPage)}</div>
+                <div>Here sits this imageId:{carouselImageIdInPage}</div>
+                <Carousel.Caption>
+                  <h3 id="carouselH3">Low Def</h3>
+                  <p> </p>
+                </Carousel.Caption>
+              </Carousel.Item>
+              {/* <Carousel.Item key={imgPhotos.id} className="carousel-item">
               <img
                 className="imgCarousel"
                 // className="justify-content-center"
@@ -262,12 +290,11 @@ const AboutPage = () => {
               </Carousel.Caption>
            
             </Carousel.Item> */}
-       
-      </Carousel>
-   
-)} 
+            </Carousel>
+          </Modal.Body>
+        </Modal>
+      )}
 
-      
       {/* <Carousel activeIndex={index} onSelect={handleSelect}>
           // image 1 
           <Carousel.Item>
