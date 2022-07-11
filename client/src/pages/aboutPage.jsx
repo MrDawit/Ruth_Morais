@@ -36,7 +36,9 @@ const callbackAfterImagePress = (imageIndex) => {
 
 const handleClose = () => setModal(false);
 const handleShow = () => setModal(true);
-
+const handleSelect = (selectedIndex, e) => {
+  setCarouselImageIdInPage(selectedIndex);
+};
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
   let [emailIconButtonColor, setEmailIconButtonColor] = useState("black");
 
@@ -217,12 +219,12 @@ const handleShow = () => setModal(true);
         </h2>
         <div
           id="photoCollectionParent"
-          onClick={() => {
+          // onClick={() => {
             // setImageCarouselInPage(true);
             // // setImageCarouselInPage(imageCarouselInPage);
             // setCarouselImageIdInPage(carouselImageIdInPage);
             
-          }}
+          // }}
         >
           <PhotoCollectionProvider>
             <PhotoCollectionList
@@ -270,7 +272,8 @@ const handleShow = () => setModal(true);
               id="photoCollectionCarousel"
               style={{ backgroundColor: "black" }}
               // activeIndex={carouselImageIdInPage}
-              // onSelect={handleSelect}
+              activeIndex={0}
+              onSelect={handleSelect}
               // variant="dark"
               variant="light"
               prevLabel={"Previous"}
@@ -284,7 +287,9 @@ const handleShow = () => setModal(true);
                 <img
                   className="imgCarousel"
                   // className="d-block w-100 "
-                  src={require("../assets/img/aria.jpg").default}
+                  src={require("../assets/img/aria.jpg")}
+                  // client\src\assets\img\aria.jpg
+                  // client\src\pages\aboutPage.jsx
                   alt="First slide"
                 />
                 <div>{console.log(carouselImageIdInPage)}</div>
