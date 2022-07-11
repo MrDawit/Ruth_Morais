@@ -145,92 +145,105 @@ h3 {
   font-weight: initial;
 }
 
-#connectAndLinks{
-    padding-top:10em;
-    text-align:center;
+#connectAndLinks {
+  padding-top: 10em;
+  text-align: center;
 }
 #connectHeader {
-  
 }
 #connectComment {
-    width:50%;
-    display:inline-block;
+  width: 50%;
+  display: inline-block;
 }
 #aboutButton {
-    color:black;
-    text-decoration: none;
-    border: black solid 2px;
-    margin:auto;
-    display: flex;
-    background-color:white;
-    padding:1.25vw;
-    padding-right:2.5vw;
-    padding-left:3vw;
-    width:18%;
-    border-radius:999px;
-    margin-top: 2vw;
-  }
-  #aboutButton:hover{
-    color: white;
-    background-color: black;
-  }
-  #aboutLinkedinAndEmail{
-    margin:auto;
-    display: flex;
-    justify-content: center;
-    padding:2vw;
-  }
-  #aboutLinkedin{
-    /* margin:auto;
+  color: black;
+  text-decoration: none;
+  border: black solid 2px;
+  margin: auto;
+  display: flex;
+  background-color: white;
+  padding: 1.25vw;
+  padding-right: 2.5vw;
+  padding-left: 3vw;
+  width: 18%;
+  border-radius: 999px;
+  margin-top: 2vw;
+}
+#aboutButton:hover {
+  color: white;
+  background-color: black;
+}
+#aboutLinkedinAndEmail {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 2vw;
+}
+#aboutLinkedin {
+  /* margin:auto;
     display: flex; */
-    font-weight:bold;
-    text-decoration: none;
-    /* justify-content: center; */
-    color:black;
-    font-size:2em;
+  font-weight: bold;
+  text-decoration: none;
+  /* justify-content: center; */
+  color: black;
+  font-size: 2em;
+}
+#emailIcon {
+  height: 3vw;
+  width: 3vw;
+  margin-left: 1vw;
+}
+#connectQuote {
+  width: 65%;
+  display: inline-block;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-top: 4em;
+  margin-bottom: 1em;
+}
+#connectQuoteSpan {
+  width: 65%;
+  display: inline-block;
+  text-align: left;
+}
 
-  }
-  #emailIcon {
-      height:3vw;
-      width:3vw;
-      margin-left:1vw;
-  }
-  #connectQuote{
-width:65%;
-display:inline-block;
-text-align:left;
-font-weight:bold;
-font-size:1.2em;
-margin-top:4em;
-margin-bottom:1em;
-
-  }
-  #connectQuoteSpan{
-width:65%;
-display:inline-block;
-text-align:left;
-  }
-
-  #photoCollectionParent{
-    display:flex;
-    justify-content: center ;
-    flex-direction:row;
-
-  }
-  .imgCarousel{
+#photoCollectionParent {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+/* .imgCarousel{
 color:black;
     width:30%;
 display:inline-block;
 text-align:center;
-    /* border:10px solid red; */
-  }
-  #carouselTitle {
-    font-weight:normal;
-    text-align:center;
-  }
-  #carouselH3 {
-    color:black;
-  }
+  } */
+#carouselTitle {
+  font-weight: normal;
+  text-align: center;
+}
+#carouselH3 {
+  color: black;
+}
+.carousel-item {
+  display: flex;
+  /* flex-direction:row; */
+  /* height:100%; */
+}
+.imgCarousel {
+  /* margin-left:33% */
+  /* height: 300% ; */
+  width: 50%;
+  /* align-items:center;
+    justify-content:center !important; */
+  /* height:auto;
+    border:20px solid red; */
+}
+#carouselH3 {
+  color: white;
+  text-decoration: none;
+}
 /* 
 @media screen and (max-width:768px) {
     main{padding-top:5rem!important;

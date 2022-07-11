@@ -18,7 +18,7 @@ import {
 } from "../components/PhotoCollectionList/PhotoCollectionListContext.js";
 
 const AboutPage = () => {
-  const [carouselImageIdInPage, setCarouselImageIdInPage] = useState(0);
+  const [carouselImageIdInPage, setCarouselImageIdInPage] = useState(null);
   const [imageCarouselInPage, setImageCarouselInPage] = useState(false);
 
 const[modal, setModal] =useState(false);
@@ -28,6 +28,10 @@ const callbackAfterImagePress = (imageIndex) => {
   setCarouselImageIdInPage(imageIndex.id);
   handleShow();
   console.log(`inside callbackAfterImagePress index value: ${imageIndex.id}`);
+
+  return (
+    {carouselImageIdInPage}
+  )
 };
 
 const handleClose = () => setModal(false);
@@ -214,9 +218,9 @@ const handleShow = () => setModal(true);
         <div
           id="photoCollectionParent"
           onClick={() => {
-            setImageCarouselInPage(true);
-            // setImageCarouselInPage(imageCarouselInPage);
-            setCarouselImageIdInPage(carouselImageIdInPage);
+            // setImageCarouselInPage(true);
+            // // setImageCarouselInPage(imageCarouselInPage);
+            // setCarouselImageIdInPage(carouselImageIdInPage);
             
           }}
         >
@@ -265,7 +269,7 @@ const handleShow = () => setModal(true);
             <Carousel
               id="photoCollectionCarousel"
               style={{ backgroundColor: "black" }}
-              activeIndex={carouselImageIdInPage}
+              // activeIndex={carouselImageIdInPage}
               // onSelect={handleSelect}
               // variant="dark"
               variant="light"
