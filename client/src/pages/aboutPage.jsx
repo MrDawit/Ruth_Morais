@@ -21,16 +21,17 @@ const AboutPage = () => {
   const [carouselImageIdInPage, setCarouselImageIdInPage] = useState(0);
   const [imageCarouselInPage, setImageCarouselInPage] = useState(false);
 
-const[modalCarouselShowInPage, setModalCarouselShowInPage] =useState(false);
+const[modal, setModal] =useState(false);
 
 //callback function with data from PhotoCollectionList
 const callbackAfterImagePress = (imageIndex) => {
   setCarouselImageIdInPage(imageIndex);
+  setModal(true);
   // setImageCarouselInPage(imageCarousel);
   console.log(`inside callbackAfterImagePress index value: ${imageIndex}`);
 };
 const startImageCarousel=(turnOn) =>{
-  setImageCarouselInPage(turnOn);
+  
 }
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
   let [emailIconButtonColor, setEmailIconButtonColor] = useState("black");
@@ -223,9 +224,9 @@ const startImageCarousel=(turnOn) =>{
             <PhotoCollectionList
               // carouselImageIdInList={carouselImageIdInPage}
               callbackAfterImagePress={callbackAfterImagePress}
-              startImageCarousel={startImageCarousel}
+              // startImageCarousel={startImageCarousel}
               imageCarouselInList={imageCarouselInPage}
-              modalCarouselShowInList={modalCarouselShowInPage}
+              // modalCarouselShowInList={modalCarouselShowInPage}
               // modalHandleClose={modalHandleClose}
             />
           </PhotoCollectionProvider>
@@ -249,7 +250,7 @@ const startImageCarousel=(turnOn) =>{
 
       {/* {imageCarouselInPage && ( */}
         <Modal
-        show={imageCarouselInPage}
+        show={modal}
           // show={modalCarouselShowInPage}
           // onHide={modalHandleClose}
           fullscreen={true}

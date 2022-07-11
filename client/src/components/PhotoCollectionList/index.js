@@ -12,17 +12,17 @@ import "./style.css";
 
 const PhotoCollectionList = ({
   callbackAfterImagePress,
-  startImageCarousel,
+  // startImageCarousel,
   imageCarouselInList,
   modalCarouselShowInList,
   modalHandleCloseInList,
 }) => {
   const [imgPhotos] = useContext(PhotoCollectionContext);
-  const [index2, setIndex2] = useState(0);
+  // const [index2, setIndex2] = useState(0);
   // const [imageCarousel, setImageCarousel] = useState(false);
 
   const handleSelect = (selectedIndex, e) => {
-    setIndex2(selectedIndex);
+    // setIndex2(selectedIndex);
   };
 
   const [show, setShow] = useState(false);
@@ -67,7 +67,7 @@ const PhotoCollectionList = ({
           src={imgPhoto.localAddress}
           onClick={() => {
             //   setModal(true);
-            startImageCarousel(true);
+            // startImageCarousel(true);
             handleShow();
             // setIndex2(imgPhoto.id);
             callbackAfterImagePress(imgPhoto.id);
