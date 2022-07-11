@@ -26,10 +26,12 @@ const[modal, setModal] =useState(false);
 //callback function with data from PhotoCollectionList
 const callbackAfterImagePress = (imageIndex) => {
   setCarouselImageIdInPage(imageIndex.id);
-  setModal(true);
-  // setImageCarouselInPage(imageCarousel);
+  handleShow();
   console.log(`inside callbackAfterImagePress index value: ${imageIndex.id}`);
 };
+
+const handleClose = () => setModal(false);
+const handleShow = () => setModal(true);
 
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
   let [emailIconButtonColor, setEmailIconButtonColor] = useState("black");
@@ -249,6 +251,7 @@ const callbackAfterImagePress = (imageIndex) => {
       {/* {imageCarouselInPage && ( */}
         <Modal
         show={modal}
+        onHide={handleClose}
           // show={modalCarouselShowInPage}
           // onHide={modalHandleClose}
           fullscreen={true}

@@ -13,9 +13,9 @@ import "./style.css";
 const PhotoCollectionList = ({
   callbackAfterImagePress,
   // startImageCarousel,
-  imageCarouselInList,
-  modalCarouselShowInList,
-  modalHandleCloseInList,
+  // imageCarouselInList,
+  // modalCarouselShowInList,
+  // modalHandleCloseInList,
 }) => {
   const [imgPhotos] = useContext(PhotoCollectionContext);
   // const [index2, setIndex2] = useState(0);
@@ -38,10 +38,10 @@ const PhotoCollectionList = ({
   // const [imageCarousel,setImageCarousel]=useState(false);
   // carouselImageIdInList = index2;
   // imageCarouselInList = imageCarousel;
-  imageCarouselInList = 0;
-  modalCarouselShowInList = show;
-  modalHandleCloseInList = handleClose;
-  console.log(`index onClick is ${callbackAfterImagePress}`);
+  // imageCarouselInList = 0;
+  // modalCarouselShowInList = show;
+  // modalHandleCloseInList = handleClose;
+  // console.log(`index onClick is ${callbackAfterImagePress}`);
   return imgPhotos.map((imgPhoto) => {
     console.log(`imgPhoto is = ${imgPhoto.id}`);
     // console.log(imageCarousel);
@@ -68,13 +68,13 @@ const PhotoCollectionList = ({
           onClick={() => {
             //   setModal(true);
             // startImageCarousel(true);
-            handleShow();
+            // handleShow();
             // setIndex2(imgPhoto.id);
             callbackAfterImagePress(imgPhoto);
             // console.log(
             //   `imageCarousel from PhotoCollection is ${imageCarousel}`
             // );
-            console.log("image has been clicked, next check prop variables");
+            // console.log("image has been clicked, next check prop variables");
           }}
         />
       </div>
