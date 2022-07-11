@@ -70,7 +70,7 @@ const PhotoCollectionList = ({
             // startImageCarousel(true);
             handleShow();
             // setIndex2(imgPhoto.id);
-            callbackAfterImagePress(imgPhoto.id);
+            callbackAfterImagePress(imgPhoto);
             // console.log(
             //   `imageCarousel from PhotoCollection is ${imageCarousel}`
             // );

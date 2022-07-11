@@ -25,14 +25,12 @@ const[modal, setModal] =useState(false);
 
 //callback function with data from PhotoCollectionList
 const callbackAfterImagePress = (imageIndex) => {
-  setCarouselImageIdInPage(imageIndex);
+  setCarouselImageIdInPage(imageIndex.id);
   setModal(true);
   // setImageCarouselInPage(imageCarousel);
-  console.log(`inside callbackAfterImagePress index value: ${imageIndex}`);
+  console.log(`inside callbackAfterImagePress index value: ${imageIndex.id}`);
 };
-const startImageCarousel=(turnOn) =>{
-  
-}
+
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
   let [emailIconButtonColor, setEmailIconButtonColor] = useState("black");
 
