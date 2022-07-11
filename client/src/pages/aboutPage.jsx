@@ -20,8 +20,18 @@ import {
 const AboutPage = () => {
   const [carouselImageIdInPage, setCarouselImageIdInPage] = useState(0);
   const [imageCarouselInPage, setImageCarouselInPage] = useState(false);
+
 const[modalCarouselShowInPage, setModalCarouselShowInPage] =useState(false);
 
+//callback function with data from PhotoCollectionList
+const callbackAfterImagePress = (imageIndex) => {
+  setCarouselImageIdInPage(imageIndex);
+  // setImageCarouselInPage(imageCarousel);
+  console.log(`inside callbackAfterImagePress index value: ${imageIndex}`);
+};
+const startImageCarousel=(turnOn) =>{
+  setImageCarouselInPage(turnOn);
+}
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
   let [emailIconButtonColor, setEmailIconButtonColor] = useState("black");
 
@@ -211,7 +221,9 @@ const[modalCarouselShowInPage, setModalCarouselShowInPage] =useState(false);
         >
           <PhotoCollectionProvider>
             <PhotoCollectionList
-              carouselImageIdInList={carouselImageIdInPage}
+              // carouselImageIdInList={carouselImageIdInPage}
+              callbackAfterImagePress={callbackAfterImagePress}
+              startImageCarousel={startImageCarousel}
               imageCarouselInList={imageCarouselInPage}
               modalCarouselShowInList={modalCarouselShowInPage}
               // modalHandleClose={modalHandleClose}
@@ -233,11 +245,11 @@ const[modalCarouselShowInPage, setModalCarouselShowInPage] =useState(false);
         // ]}
       > */}
 
-      {/* {imageCarouselInPage && <div>We in Here!!</div>} */}
+      {/* {imageCarouselInPage && <div>We in Here!!{carouselImageIdInPage}</div>} */}
 
-      {imageCarouselInPage && (
+      {/* {imageCarouselInPage && ( */}
         <Modal
-        show={true}
+        show={imageCarouselInPage}
           // show={modalCarouselShowInPage}
           // onHide={modalHandleClose}
           fullscreen={true}
@@ -294,7 +306,7 @@ const[modalCarouselShowInPage, setModalCarouselShowInPage] =useState(false);
             </Carousel>
           </Modal.Body>
         </Modal>
-      )}
+      {/* )} */}
 
       {/* <Carousel activeIndex={index} onSelect={handleSelect}>
           // image 1 

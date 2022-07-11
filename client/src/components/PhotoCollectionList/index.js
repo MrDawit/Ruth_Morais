@@ -11,14 +11,15 @@ import {
 import "./style.css";
 
 const PhotoCollectionList = ({
-  carouselImageIdInList,
+  callbackAfterImagePress,
+  startImageCarousel,
   imageCarouselInList,
   modalCarouselShowInList,
   modalHandleCloseInList,
 }) => {
   const [imgPhotos] = useContext(PhotoCollectionContext);
   const [index2, setIndex2] = useState(0);
-  const [imageCarousel, setImageCarousel] = useState(false);
+  // const [imageCarousel, setImageCarousel] = useState(false);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex2(selectedIndex);
@@ -34,12 +35,13 @@ const PhotoCollectionList = ({
   //   console.log(`index onClick is ${index2}`);
   // };
   // console.log(`index onClick is ${index2}`);
-  
-  carouselImageIdInList = index2;
-  imageCarouselInList = imageCarousel;
+  // const [imageCarousel,setImageCarousel]=useState(false);
+  // carouselImageIdInList = index2;
+  // imageCarouselInList = imageCarousel;
+  imageCarouselInList = 0;
   modalCarouselShowInList = show;
   modalHandleCloseInList = handleClose;
-  console.log(`index onClick is ${carouselImageIdInList}`);
+  console.log(`index onClick is ${callbackAfterImagePress}`);
   return imgPhotos.map((imgPhoto) => {
     console.log(`imgPhoto is = ${imgPhoto.id}`);
     // console.log(imageCarousel);
@@ -65,9 +67,10 @@ const PhotoCollectionList = ({
           src={imgPhoto.localAddress}
           onClick={() => {
             //   setModal(true);
-            setImageCarousel(true);
+            startImageCarousel(true);
             handleShow();
-            setIndex2(imgPhoto.id);
+            // setIndex2(imgPhoto.id);
+            callbackAfterImagePress(imgPhoto.id);
             // console.log(
             //   `imageCarousel from PhotoCollection is ${imageCarousel}`
             // );
