@@ -15,12 +15,14 @@ const PhotoCollectionList = ({
 }) => {
   const [imgPhotos] = useContext(PhotoCollectionContext);
 
-  const handleSelect = (selectedIndex, e) => {
+  // const handleSelect = (selectedIndex, e) => {
     // setIndex2(selectedIndex);
-  };
+  // };
 
   // console.log(`index onClick is ${callbackAfterImagePress}`);
-  return imgPhotos.map((imgPhoto) => {
+  return (
+    <>
+    {imgPhotos.map((imgPhoto) => {
     console.log(`imgPhoto is = ${imgPhoto.id}`);
     // console.log(imageCarousel);
     return (
@@ -50,7 +52,10 @@ const PhotoCollectionList = ({
         />
       </div>
     );
-  });
+    
+  })}
+</>
+  )
 };
 
 export default PhotoCollectionList;
