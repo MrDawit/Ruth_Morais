@@ -265,11 +265,16 @@ const AboutPage = () => {
         style={{ backgroundColor: "black" }}
         // key={imgPhoto.id}
       >
-        <Modal.Header closeButton style={{ backgroundColor: "white" }}>
-          <Modal.Title>
+        <Modal.Header
+         closeButton 
+        //  style={{ backgroundColor: "black" }} 
+        //  className="shadow-none"
+        >
+          
+          {/* <Modal.Title>
             {carouselImageIdInPage}
             {console.log(`index onClick from Page is ${carouselImageIdInPage}`)}
-          </Modal.Title>
+          </Modal.Title> */}
         </Modal.Header>
         <Modal.Body style={{ backgroundColor: "black" }}>
           <Carousel
@@ -289,7 +294,7 @@ const AboutPage = () => {
 
 
 {/* // image 1  */}
-          <Carousel.Item>
+          <Carousel.Item className="carousel-item">
             <img
               className="imgCarousel"
               // className="d-block w-100 "
@@ -303,7 +308,7 @@ const AboutPage = () => {
           </Carousel.Item>
 
          {/* // image 2  */}
-          <Carousel.Item>
+          <Carousel.Item className="carousel-item">
             <img
               className="imgCarousel"
               // className="d-block w-100"
@@ -317,7 +322,7 @@ const AboutPage = () => {
           </Carousel.Item>
 
           {/* // image 3 */}
-          <Carousel.Item>
+          <Carousel.Item className="carousel-item">
             <img
               // fluid='true'
               // thumbnail='true'
@@ -333,7 +338,7 @@ const AboutPage = () => {
           </Carousel.Item>
 
           {/* // image 4  */}
-          <Carousel.Item>
+          <Carousel.Item className="carousel-item">
             <img
               className="imgCarousel"
               // className="d-block w-100 "
@@ -350,7 +355,7 @@ const AboutPage = () => {
           </Carousel.Item>
 
           {/* //image 5  */}
-          <Carousel.Item>
+          <Carousel.Item className="carousel-item">
             <img
               className="imgCarousel"
               // className="d-block w-100"
@@ -367,7 +372,7 @@ const AboutPage = () => {
           </Carousel.Item>
 
          {/* // image 6  */}
-          <Carousel.Item>
+          <Carousel.Item className="carousel-item">
             <img
               // fluid='true'
               // thumbnail='true'
@@ -375,9 +380,9 @@ const AboutPage = () => {
               // className="d-block w-100"
               src={
                 require("../assets/img/Screenshot 2022-06-23 at 00-09-24 Y.png")
-                  
               }
               alt="Sixth slide"
+              // style={{height:"100vh"}}
             />
             <Carousel.Caption>
               <h3 id="carouselH3">Ramen, Ramen, Ramen </h3>
