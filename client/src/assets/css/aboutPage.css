@@ -213,12 +213,6 @@ h3 {
   justify-content: center;
   flex-direction: row;
 }
-/* .imgCarousel{
-color:black;
-    width:30%;
-display:inline-block;
-text-align:center;
-  } */
 #carouselTitle {
   font-weight: normal;
   text-align: center;
@@ -227,44 +221,26 @@ text-align:center;
   color: black;
 }
 .carousel-item {
-  /* display: flex; */
-  /* flex-direction:row; */
-  /* height:auto; */
-  /* width:10%; */
-}
-.carousel-item {
-  /* align-items:center; */
-  /* object-fit:cover;
-  object-position:center; */
-  /* height:50vh; */
-  /* overflow:hidden; */
 }
 .imgCarousel {
-  margin-left:33%;
-  /* height: 50% !important;
-  width: 10%; */
-  
-  /* object-fit:cover;
-  object-position:center; */
-  /* height:70vh; */
-  max-height:80vh;
-/* height:90vmax; */
-width:40%;
-  /* overflow:hidden; */
-  /* height:auto; */
-    /* border:20px solid red; */
+  margin-left: 33%;
+  max-height: 80vh;
+  width: 40%;
+  /* border:20px solid red; */
 }
 #carouselH3 {
   color: white;
   text-decoration: none;
 }
-.carousel-control-prev,.carousel-control-next {
-  cursor:pointer;
+.carousel-control-prev,
+.carousel-control-next {
+  cursor: pointer;
 }
 /* .closeButton{
   color:white;
 } */
-.btn:focus,.btn:active {
+.btn:focus,
+.btn:active {
   outline: none !important;
   box-shadow: none;
 }
