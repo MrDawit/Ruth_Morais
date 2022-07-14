@@ -5,7 +5,7 @@ width: 150px ;
 }
 
 .carousel-item{
-    display:flex;
+    /* display:flex; */
     /* flex-direction:row; */
     /* height:100%; */
 }
@@ -13,15 +13,15 @@ width: 150px ;
 .imgCarousel{
     /* margin-left:33% */
     /* height: 300% ; */
-    width: 50%;
+    /* width: 30%; */
     /* align-items:center;
     justify-content:center !important; */
     /* height:auto;
     border:20px solid red; */
 }
 #carouselH3{
-    color:white;
-    text-decoration:none;
+    /* color:white;
+    text-decoration:none; */
 }
 
 /* #photoCollectionCarousel{

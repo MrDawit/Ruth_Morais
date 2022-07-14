@@ -7,12 +7,13 @@ import {
 } from "react-bootstrap";
 // import { Button, Modal, ModalBody, ModalHeader, ModalFooter } from "reactstrap";
 import { motion } from "framer-motion";
-import "../assets/css/aboutPage.css";
+// import "../assets/css/aboutPage.css";
 import { Link } from "react-router-dom";
 import { AiOutlineMail } from "react-icons/ai";
 import PhotoCollectionList from "../components/PhotoCollectionList/index";
 import { PhotoCollectionProvider } from "../utils/PhotoCollectionContext";
 import { PhotoCollectionContext } from "../utils/PhotoCollectionContext";
+import "../assets/css/aboutPage.css";
 // import CarouselPhotos from "../components/PhotoCollectionList/CarouselPhotos";
 // import {
 //   PhotoCollectionListProvider,
@@ -270,7 +271,7 @@ const AboutPage = () => {
         //  style={{ backgroundColor: "black" }} 
         //  className="shadow-none"
         >
-          
+
           {/* <Modal.Title>
             {carouselImageIdInPage}
             {console.log(`index onClick from Page is ${carouselImageIdInPage}`)}
