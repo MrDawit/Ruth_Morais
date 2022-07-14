@@ -263,21 +263,13 @@ const AboutPage = () => {
         // show={modalCarouselShowInPage}
         // onHide={modalHandleClose}
         fullscreen={true}
-        style={{ backgroundColor: "black" }}
+        id="aboutPageModal"
         // key={imgPhoto.id}
       >
-        <Modal.Header
-         closeButton 
-        //  style={{ backgroundColor: "black" }} 
-        //  className="shadow-none"
-        >
-
-          {/* <Modal.Title>
-            {carouselImageIdInPage}
-            {console.log(`index onClick from Page is ${carouselImageIdInPage}`)}
-          </Modal.Title> */}
+        <Modal.Header id="aboutPageModalHeader">
+         <Button id="aboutPageModalButton" onClick={handleClose}>X</Button>
         </Modal.Header>
-        <Modal.Body style={{ backgroundColor: "black" }}>
+        <Modal.Body id="aboutPageModalBody">
           <Carousel
             id="photoCollectionCarousel"
             style={{ backgroundColor: "black" }}

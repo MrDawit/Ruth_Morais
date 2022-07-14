@@ -244,6 +244,28 @@ h3 {
   outline: none !important;
   box-shadow: none;
 }
+#aboutPageModal {
+  background-color: black;
+  /* display:flex; */
+}
+#aboutPageModalHeader {
+  background-color: black;
+  display: flex;
+  justify-content: right;
+}
+#aboutPageModalBody {
+  background-color: black;
+}
+#aboutPageModalButton {
+  background-color: black;
+  color: grey;
+  border: none;
+}
+#aboutPageModalButton:hover {
+  background-color: black;
+  color: white;
+  border: none;
+}
 /* 
 @media screen and (max-width:768px) {
     main{padding-top:5rem!important;
