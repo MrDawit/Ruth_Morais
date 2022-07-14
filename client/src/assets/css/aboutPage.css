@@ -240,13 +240,15 @@ text-align:center;
   /* overflow:hidden; */
 }
 .imgCarousel {
-  margin-left:33%;
+  margin-left:25%;
   /* height: 50% !important;
   width: 10%; */
   
   /* object-fit:cover; */
   /* object-position:center; */
-  height:70%;
+  /* height:70vh; */
+height:90vh;
+  /* width:auto; */
   /* overflow:hidden; */
   /* height:auto; */
     /* border:20px solid red; */
