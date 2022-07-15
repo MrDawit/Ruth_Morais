@@ -294,7 +294,7 @@ const AboutPage = () => {
               src={require("../assets/img/aria.jpg")}
               alt="First slide"
             />
-            <Carousel.Caption>
+            <Carousel.Caption className="imgCarouselCaption">
               <h3 id="carouselH3">Low Def</h3>
               <p> </p>
             </Carousel.Caption>
@@ -307,9 +307,12 @@ const AboutPage = () => {
               // className="d-block w-100"
               src={require("../assets/img/tomWedding.jpg")}
               alt="Second slide"
+       
             />
-            <Carousel.Caption>
-              <h3 id="carouselH3">@ Tom's Wedding</h3>
+            <Carousel.Caption className="imgCarouselCaption">
+              <h3 id="carouselH3" 
+              // style={{backgroundImage: "linear-gradient(to bottom,transparent, rgba(0,0,0,0.5))"}}
+              >@ Tom's Wedding</h3>
               <p> </p>
             </Carousel.Caption>
           </Carousel.Item>
@@ -324,7 +327,7 @@ const AboutPage = () => {
               src={require("../assets/img/aria_light.jpg")}
               alt="Third slide"
             />
-            <Carousel.Caption>
+            <Carousel.Caption className="imgCarouselCaption">
               <h3 id="carouselH3">With the scarf!</h3>
               <p></p>
             </Carousel.Caption>
@@ -341,7 +344,7 @@ const AboutPage = () => {
               }
               alt="Fourth slide"
             />
-            <Carousel.Caption>
+            <Carousel.Caption className="imgCarouselCaption">
               <h3 id="carouselH3">Palm Trees! </h3>
               <p> </p>
             </Carousel.Caption>
@@ -358,7 +361,7 @@ const AboutPage = () => {
               }
               alt="Fifth slide"
             />
-            <Carousel.Caption>
+            <Carousel.Caption className="imgCarouselCaption">
               <h3 id="carouselH3">Fourth of July Food Truckin' </h3>
               <p> </p>
             </Carousel.Caption>
@@ -377,7 +380,7 @@ const AboutPage = () => {
               alt="Sixth slide"
               // style={{height:"100vh"}}
             />
-            <Carousel.Caption>
+            <Carousel.Caption className="imgCarouselCaption">
               <h3 id="carouselH3">Ramen, Ramen, Ramen </h3>
               <p></p>
             </Carousel.Caption>
