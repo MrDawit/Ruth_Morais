@@ -307,7 +307,7 @@ const AboutPage = () => {
               // className="d-block w-100"
               src={require("../assets/img/tomWedding.jpg")}
               alt="Second slide"
-       
+              
             />
             <Carousel.Caption className="imgCarouselCaption">
               <h3 id="carouselH3" 
