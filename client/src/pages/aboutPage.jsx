@@ -256,7 +256,7 @@ const AboutPage = () => {
 
       {/* {imageCarouselInPage && <div>We in Here!!{carouselImageIdInPage}</div>} */}
 
-      {/* {imageCarouselInPage && ( */}
+      {modal && (
       <Modal
         show={modal}
         onHide={handleClose}
@@ -264,15 +264,26 @@ const AboutPage = () => {
         // onHide={modalHandleClose}
         fullscreen={true}
         id="aboutPageModal"
+        // style={{ backgroundColor:"rgba(0,0,0,0.1)"}}
+        // style={{ opacity:0.6}}
         // key={imgPhoto.id}
       >
-        <Modal.Header id="aboutPageModalHeader">
-         <Button id="aboutPageModalButton" onClick={handleClose}>X</Button>
+        <Modal.Header id="aboutPageModalHeader" 
+        // style={{ backgroundColor:"rgba(0,0,0,0.1)"}}
+        >
+         <Button 
+         id="aboutPageModalButton" 
+         onClick={handleClose} 
+         style={{ backgroundColor:"rgba(0,0,0,0.1)"}}
+        
+          >X</Button> 
         </Modal.Header>
-        <Modal.Body id="aboutPageModalBody">
+        <Modal.Body id="aboutPageModalBody"
+        //  style={{ backgroundColor:"rgba(0,0,0,0.1)"}}
+         >
           <Carousel
             id="photoCollectionCarousel"
-            style={{ backgroundColor: "black" }}
+            // style={{ backgroundColor: "black" }}
             activeIndex={carouselImageIdInPage}
             // activeIndex={0}
             onSelect={handleSelect}
@@ -283,6 +294,7 @@ const AboutPage = () => {
             interval={null}
             fade={true}
             // indicatorLabels={["fancy","facts"]}
+            // style={{ backgroundColor:"rgba(0,0,0,0.1)"}}
           >
 
 
@@ -296,7 +308,7 @@ const AboutPage = () => {
             />
             <Carousel.Caption className="imgCarouselCaption">
               <h3 id="carouselH3">Low Def</h3>
-              <p> </p>
+              
             </Carousel.Caption>
           </Carousel.Item>
 
@@ -313,7 +325,7 @@ const AboutPage = () => {
               <h3 id="carouselH3" 
               // style={{backgroundImage: "linear-gradient(to bottom,transparent, rgba(0,0,0,0.5))"}}
               >@ Tom's Wedding</h3>
-              <p> </p>
+              
             </Carousel.Caption>
           </Carousel.Item>
 
@@ -329,7 +341,7 @@ const AboutPage = () => {
             />
             <Carousel.Caption className="imgCarouselCaption">
               <h3 id="carouselH3">With the scarf!</h3>
-              <p></p>
+              
             </Carousel.Caption>
           </Carousel.Item>
 
@@ -346,7 +358,7 @@ const AboutPage = () => {
             />
             <Carousel.Caption className="imgCarouselCaption">
               <h3 id="carouselH3">Palm Trees! </h3>
-              <p> </p>
+              
             </Carousel.Caption>
           </Carousel.Item>
 
@@ -363,7 +375,7 @@ const AboutPage = () => {
             />
             <Carousel.Caption className="imgCarouselCaption">
               <h3 id="carouselH3">Fourth of July Food Truckin' </h3>
-              <p> </p>
+              
             </Carousel.Caption>
           </Carousel.Item>
 
@@ -382,7 +394,7 @@ const AboutPage = () => {
             />
             <Carousel.Caption className="imgCarouselCaption">
               <h3 id="carouselH3">Ramen, Ramen, Ramen </h3>
-              <p></p>
+              
             </Carousel.Caption>
           </Carousel.Item>
 
@@ -419,7 +431,7 @@ const AboutPage = () => {
               <div>Here sits this imageId:{carouselImageIdInPage}</div>
               <Carousel.Caption>
                 <h3 id="carouselH3">Low Def</h3>
-                <p> </p>
+                
               </Carousel.Caption> */}
             {/* </Carousel.Item> */}
             {/* <Carousel.Item key={imgPhotos.id} className="carousel-item">
@@ -440,7 +452,7 @@ const AboutPage = () => {
           </Carousel>
         </Modal.Body>
       </Modal>
-      {/* )} */}
+     )} 
 
       {/* <Carousel activeIndex={index} onSelect={handleSelect}>
           // image 1 
