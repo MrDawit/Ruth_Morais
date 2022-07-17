@@ -261,10 +261,12 @@ h3 {
 #aboutPageModalBody {
   background-color: black;
 }
-#aboutPageModalButton {
+#aboutPageModalButton ,#aboutPageModalButton:active,#aboutPageModalButton:focus{
   background-color: black;
   color: grey;
   border: none;
+  /* outline:none !important; */
+  box-shadow: none;
   opacity:1;
 }
 .imgCarouselCaption{
@@ -278,6 +280,8 @@ h3 {
 #aboutPageModalButton:hover {
   background-color: black;
   color: white;
+  /* outline:none !important; */
+  /* box-shadow: none; */
   border: none;
 }
 .imgCarousel {

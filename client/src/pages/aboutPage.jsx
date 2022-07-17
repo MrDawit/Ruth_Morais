@@ -274,7 +274,7 @@ const AboutPage = () => {
          <Button 
          id="aboutPageModalButton" 
          onClick={handleClose} 
-         style={{ backgroundColor:"rgba(0,0,0,0.1)"}}
+        //  style={{ backgroundColor:"rgba(0,0,0,0.1)"}}
         
           >X</Button> 
         </Modal.Header>
