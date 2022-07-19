@@ -281,7 +281,7 @@ background-color:rgba(174, 43, 16, 0.5) !important;
 }
 .modal-content{
   /* background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); */
-   background-color: rgba(0, 0, 0, 0.75);
+   background-color: rgba(0, 0, 0, 0.9);
 }
 #aboutPageModalHeader {
   /* background-color: black; */
