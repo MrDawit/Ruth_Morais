@@ -267,6 +267,7 @@ const AboutPage = () => {
         // style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
         // style={{ opacity:0.6}}
         // key={imgPhoto.id}
+        animation={false}
       >
         <Modal.Header id="aboutPageModalHeader" 
         // style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
