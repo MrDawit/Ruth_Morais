@@ -264,12 +264,12 @@ const AboutPage = () => {
         // onHide={modalHandleClose}
         fullscreen={true}
         id="aboutPageModal"
-        // style={{ backgroundColor:"rgba(0,0,0,0.1)"}}
+        // style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
         // style={{ opacity:0.6}}
         // key={imgPhoto.id}
       >
         <Modal.Header id="aboutPageModalHeader" 
-        // style={{ backgroundColor:"rgba(0,0,0,0.1)"}}
+        // style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
         >
          <Button 
          id="aboutPageModalButton" 
@@ -279,9 +279,9 @@ const AboutPage = () => {
           >X</Button> 
         </Modal.Header>
         <Modal.Body id="aboutPageModalBody"
-        //  style={{ backgroundColor:"rgba(0,0,0,0.1)"}}
+        //  style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
          >
-          <Carousel
+           <Carousel
             id="photoCollectionCarousel"
             // style={{ backgroundColor: "black" }}
             activeIndex={carouselImageIdInPage}
@@ -294,13 +294,16 @@ const AboutPage = () => {
             interval={null}
             fade={true}
             // indicatorLabels={["fancy","facts"]}
-            // style={{ backgroundColor:"rgba(0,0,0,0.1)"}}
+            // style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
           >
 
 
-{/* // image 1  */}
-          <Carousel.Item className="carousel-item">
+      {/* // image 1  */}
+          <Carousel.Item className="carousel-item"       
+          // style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
+          >
             <img
+                  // style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
               className="imgCarousel"
               // className="d-block w-100 "
               src={require("../assets/img/aria.jpg")}
@@ -329,7 +332,7 @@ const AboutPage = () => {
             </Carousel.Caption>
           </Carousel.Item>
 
-          {/* // image 3 */}
+          {/* // image 3            */}
           <Carousel.Item className="carousel-item">
             <img
               // fluid='true'
@@ -362,11 +365,12 @@ const AboutPage = () => {
             </Carousel.Caption>
           </Carousel.Item>
 
-          {/* //image 5  */}
+          {/* // image 5 */}  
           <Carousel.Item className="carousel-item">
             <img
               className="imgCarousel"
               // className="d-block w-100"
+              // style={{position:"absolute", zIndex:10000, opacity:1}}
               src={
                 require("../assets/img/Screenshot 2022-06-23 at 00-09-50 Y.png")
                   
@@ -396,7 +400,7 @@ const AboutPage = () => {
               <h3 id="carouselH3">Ramen, Ramen, Ramen </h3>
               
             </Carousel.Caption>
-          </Carousel.Item>
+          </Carousel.Item> 
 
 
             {/* image 1  */}
@@ -449,6 +453,9 @@ const AboutPage = () => {
               </Carousel.Caption> */}
            
             {/* </Carousel.Item> */}
+
+
+
           </Carousel>
         </Modal.Body>
       </Modal>

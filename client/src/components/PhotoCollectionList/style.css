@@ -2,6 +2,8 @@
 .PhotoCollection{
 height: 150px ;
 width: 150px ;
+background-image: linear-gradient(to bottom,transparent, rgba(0,0,0,0.5));
+opacity:1;
 }
 
 .carousel-item{

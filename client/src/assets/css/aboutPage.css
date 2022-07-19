@@ -220,8 +220,10 @@ h3 {
 #carouselH3 {
   color: black;
 }
-.carousel-item {
-  /* opacity:1; */
+.carousel-item, .carousel-item:after {
+ 
+  opacity:1;
+  
 }
 /* .imgCarousel {
   margin-left: 33%;
@@ -245,24 +247,45 @@ h3 {
   outline: none !important;
   box-shadow: none;
 }
+/* .modal{ 
+  
+background-color:rgba(174, 43, 16, 0.5) !important;
+} */
 #aboutPageModal {
   /* background-color: black;
   background-image:rgba(0,0,0.1); */
   /* opacity:0.5; */
   /* display:flex; */
-  /* background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)); */
-  /* background-color: rgba(0,0,0,.0001) !important; */
+  /* background-image: linear-gradient(to bottom, rgba(14, 41, 196, 0.3), rgba(209, 22, 162, 0.2)) !important; */
+  /* background-color: rgba(26, 182, 70, 0.5) !important; */
+  /* position:relative; */
+  /* background-image: linear-gradient(to bottom,transparent, rgba(0,0,0,0.5)); */
+ 
+}
+.modal-backdrop{
+  /* position:relative; */
+  /* opacity:.5; */
+  /* background-image: linear-gradient(to bottom,transparent, rgba(0,0,0,0.5)); */
+  /* background-color: rgba(26, 182, 70, 0.2) !important; */
+}
+.modal-content{
+  background-color: rgba(26, 182, 70, 0.5) !important;
 }
 #aboutPageModalHeader {
-  background-color: black;
+  /* background-color: black; */
+  /* position:relative; */
   display: flex;
   justify-content: right;
+  /* background-color: rgba(26, 182, 70, 0.5) !important; */
 }
-#aboutPageModalBody {
-  background-color: black;
+#aboutPageModalBody,#aboutPageModalBody:after {
+  /* background-color: black; */
+/* position:relative; */
+  /* background-color: rgba(26, 182, 70, 0.5) !important; */
 }
+
 #aboutPageModalButton ,#aboutPageModalButton:active,#aboutPageModalButton:focus{
-  background-color: black;
+  /* background-color: black; */
   color: grey;
   border: none;
   /* outline:none !important; */
@@ -288,14 +311,12 @@ h3 {
   margin-left: 33%;
   max-height: 80vh;
   width: 40%;
+  /* position:absolute; */
   opacity:1;
   /* border:20px solid red; */
 }
 
-.modal{ 
-    /* border:20px solid red; */
-  background-image:rgba(0,0,0,0) !important;
-}
+
 /* .imgCarousel:before{
   content:"";
 background-image: linear-gradient(to bottom,transparent, rgba(0,0,0,0.5));
