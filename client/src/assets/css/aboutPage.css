@@ -244,9 +244,9 @@ h3 {
   opacity:.75;
   border-bottom:0.1em white solid;
 }
-/* .carousel-control-next:hover {
-  text-decoration:underline;
-} */
+.carousel-control-next-icon:hover {
+  border-bottom:0.1em white solid;
+}
 /* .closeButton{
   color:white;
 } */
