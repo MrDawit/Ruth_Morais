@@ -314,6 +314,8 @@ background-color:rgba(174, 43, 16, 0.5) !important;
 }
 .imgCarouselCaption:hover{
   /* background-image: linear-gradient(to bottom,transparent, rgba(0,0,0,0.5)); */
+  margin-left: 18%;
+  width:40%;
   background-color:rgba(0,0,0,0.5);
   opacity:1;
 }
