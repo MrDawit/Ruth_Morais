@@ -293,7 +293,7 @@ const AboutPage = () => {
             nextLabel={"Next"}
             interval={null}
             fade={true}
-            indicatorLabels={false}
+            // indicatorLabels={["fancy","facts"]}
             // style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
           >
 

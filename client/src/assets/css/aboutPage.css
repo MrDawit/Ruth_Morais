@@ -247,6 +247,9 @@ h3 {
 .carousel-control-next-icon:hover {
   border-bottom:0.1em white solid;
 }
+.carousel-indicators{
+  display:none;
+}
 /* .closeButton{
   color:white;
 } */
