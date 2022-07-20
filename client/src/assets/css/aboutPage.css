@@ -310,14 +310,17 @@ border-bottom:none;
 }
 .imgCarouselCaption{
   /* border:red solid 20px; */
+  bottom:0;
+  padding-bottom:0;
   opacity:0;
 }
 .imgCarouselCaption:hover{
   /* background-image: linear-gradient(to bottom,transparent, rgba(0,0,0,0.5)); */
   margin-left: 18%;
   width:40%;
-  background-color:rgba(0,0,0,0.5);
+  background-color:rgba(0,0,0,0.75);
   opacity:1;
+
 }
 #aboutPageModalButton:hover {
   background-color: black;
