@@ -271,7 +271,7 @@ background-color:rgba(174, 43, 16, 0.5) !important;
   /* background-color: rgba(26, 182, 70, 0.5) !important; */
   /* position:relative; */
   /* background-image: linear-gradient(to bottom,transparent, rgba(0,0,0,0.5)); */
- 
+ /* transition:ease-in-out; */
 }
 .modal-backdrop{
   /* position:relative; */
@@ -288,7 +288,7 @@ background-color:rgba(174, 43, 16, 0.5) !important;
   /* position:relative; */
   display: flex;
   justify-content: right;
-  /* background-color: rgba(26, 182, 70, 0.5) !important; */
+border-bottom:none;
 }
 #aboutPageModalBody,#aboutPageModalBody:after {
   /* background-color: black; */
