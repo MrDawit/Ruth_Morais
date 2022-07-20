@@ -26,7 +26,8 @@ const AboutPage = () => {
   // const [imageCarouselInPage, setImageCarouselInPage] = useState(false);
 
   const [modal, setModal] = useState(false);
-
+const [closeAnimation, setCloseAnimation] = useState("fadeMe 2s");
+const [contactModal, setContactModal] = useState(false);
   //callback function with data from PhotoCollectionList
   const callbackAfterImagePress = (imageIndex) => {
     setCarouselImageIdInPage(imageIndex.id);
@@ -36,7 +37,7 @@ const AboutPage = () => {
     return { carouselImageIdInPage };
   };
 
-  const handleClose = () => setModal(false);
+  const handleClose = () => {setModal(false); setCloseAnimation("fadeIn 2s ");}
   const handleShow = () => setModal(true);
   const handleSelect = (selectedIndex, e) => {
     setCarouselImageIdInPage(selectedIndex);
@@ -64,11 +65,9 @@ const AboutPage = () => {
     color: emailIconButtonColor,
   };
 
-  // const [index, setIndex] = useState(0);
-
-  // const handleSelect = (selectedIndex, e) => {
-  //   setIndex(selectedIndex);
-  // };
+  const ContactMeModal = ()=>{
+    setContactModal(true);
+  }
   return (
     <motion.div
       initial="hidden"
@@ -200,9 +199,20 @@ const AboutPage = () => {
             really anything... As always, I’ll my best to answer you in a timely
             fashion.
           </div>
-          <Link id="aboutButton" to="/resume">
+          {/* <Link id="aboutButton" to="/resume">
             CONTACT ME
-          </Link>
+          </Link> */}
+          <div id="aboutButton" onClick={ContactMeModal}>CONTACT ME
+          {
+          contactModal && 
+          <Modal
+          show={true}
+          
+          >
+              Hello
+          </Modal>
+          }
+          </div>
           <div id="connectQuote">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod porro quisquam est qui labore et dolore magna aliqua. Ut
@@ -265,9 +275,11 @@ const AboutPage = () => {
         fullscreen={true}
         id="aboutPageModal"
         // style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
+     
         // style={{ opacity:0.6}}
         // key={imgPhoto.id}
         animation={false}
+        style={{ animation:closeAnimation}}
       >
         <Modal.Header id="aboutPageModalHeader" 
         // style={{ backgroundColor:"rgba(0,0,0,0.5)"}}

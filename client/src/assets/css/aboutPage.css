@@ -220,10 +220,9 @@ h3 {
 #carouselH3 {
   color: black;
 }
-.carousel-item, .carousel-item:after {
- 
+.carousel-item,
+.carousel-item:after {
   /* opacity:1; */
-  
 }
 /* .imgCarousel {
   margin-left: 33%;
@@ -237,18 +236,18 @@ h3 {
 }
 .carousel-control-prev {
   /* cursor: pointer; */
-  opacity:0;
+  opacity: 0;
 }
 .carousel-control-prev-icon:hover {
   /* text-decoration:underline; */
-  opacity:.75;
-  border-bottom:0.1em white solid;
+  opacity: 0.75;
+  border-bottom: 0.1em white solid;
 }
 .carousel-control-next-icon:hover {
-  border-bottom:0.1em white solid;
+  border-bottom: 0.1em white solid;
 }
-.carousel-indicators{
-  display:none;
+.carousel-indicators {
+  display: none;
 }
 /* .closeButton{
   color:white;
@@ -271,36 +270,38 @@ background-color:rgba(174, 43, 16, 0.5) !important;
   /* background-color: rgba(26, 182, 70, 0.5) !important; */
   /* position:relative; */
   /* background-image: linear-gradient(to bottom,transparent, rgba(0,0,0,0.5)); */
- /* transition:ease-in-out; */
+  /* transition:ease-in-out; */
+  animation:"fadeMe 1s ";
+  
 }
-.modal-backdrop{
+.modal-backdrop {
   /* position:relative; */
   /* opacity:.5; */
   /* background-image: linear-gradient(to bottom,transparent, rgba(0,0,0,0.5)); */
   /* background-color: rgba(0, 0, 0, 0.5); */
 }
-.modal-content{
+.modal-content {
   /* background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1)); */
-   background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 #aboutPageModalHeader {
   /* background-color: black; */
   /* position:relative; */
   display: flex;
   justify-content: right;
-border-bottom:none;
+  border-bottom: none;
 }
-#aboutPageModalBody,#aboutPageModalBody:after {
+#aboutPageModalBody,
+#aboutPageModalBody:after {
   /* background-color: black; */
-/* position:relative; */
+  /* position:relative; */
   /* background-color: rgba(26, 182, 70, 0.5) !important; */
 }
 
 #aboutPageModalButton
 /* , #aboutPageModalButton:active,
 #aboutPageModalButton:focus, 
-#aboutPageModalButton:after */
-{
+#aboutPageModalButton:after */ {
   background-color: rgba(0, 0, 0, 0.5);
   color: grey;
   border: none;
@@ -308,19 +309,18 @@ border-bottom:none;
   box-shadow: none;
   /* opacity:1; */
 }
-.imgCarouselCaption{
+.imgCarouselCaption {
   /* border:red solid 20px; */
-  bottom:0;
-  padding-bottom:0;
-  opacity:0;
+  bottom: 0;
+  padding-bottom: 0;
+  opacity: 0;
 }
-.imgCarouselCaption:hover{
+.imgCarouselCaption:hover {
   /* background-image: linear-gradient(to bottom,transparent, rgba(0,0,0,0.5)); */
   margin-left: 18%;
-  width:40%;
-  background-color:rgba(0,0,0,0.75);
-  opacity:1;
-
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.75);
+  opacity: 1;
 }
 #aboutPageModalButton:hover {
   background-color: black;
@@ -337,7 +337,6 @@ border-bottom:none;
   /* opacity:1; */
   /* border:20px solid red; */
 }
-
 
 /* .imgCarousel:before{
   content:"";
@@ -358,3 +357,20 @@ border:red solid 20px;
     font-size: 10vw;
         }
     }  */
+    @keyframes fadeMe {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+    
