@@ -13,6 +13,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import PhotoCollectionList from "../components/PhotoCollectionList/index";
 import { PhotoCollectionProvider } from "../utils/PhotoCollectionContext";
 import { PhotoCollectionContext } from "../utils/PhotoCollectionContext";
+import ContactForm from "../components/ContactForm";
 import "../assets/css/aboutPage.css";
 // import CarouselPhotos from "../components/PhotoCollectionList/CarouselPhotos";
 // import {
@@ -207,9 +208,9 @@ const [contactModal, setContactModal] = useState(false);
           contactModal && 
           <Modal
           show={true}
-          
+
           >
-              Hello
+              <ContactForm/>
           </Modal>
           }
           </div>
