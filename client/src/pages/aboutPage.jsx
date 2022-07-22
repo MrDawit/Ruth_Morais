@@ -27,8 +27,8 @@ const AboutPage = () => {
   // const [imageCarouselInPage, setImageCarouselInPage] = useState(false);
 
   const [modal, setModal] = useState(false);
-const [closeAnimation, setCloseAnimation] = useState("fadeMe 2s");
-const [contactModal, setContactModal] = useState(false);
+  const [closeAnimation, setCloseAnimation] = useState("fadeMe 2s");
+  const [contactModal, setContactModal] = useState(false);
   //callback function with data from PhotoCollectionList
   const callbackAfterImagePress = (imageIndex) => {
     setCarouselImageIdInPage(imageIndex.id);
@@ -38,7 +38,10 @@ const [contactModal, setContactModal] = useState(false);
     return { carouselImageIdInPage };
   };
 
-  const handleClose = () => {setModal(false); setCloseAnimation("fadeIn 2s ");}
+  const handleClose = () => {
+    setModal(false);
+    setCloseAnimation("fadeIn 2s ");
+  };
   const handleShow = () => setModal(true);
   const handleSelect = (selectedIndex, e) => {
     setCarouselImageIdInPage(selectedIndex);
@@ -66,9 +69,9 @@ const [contactModal, setContactModal] = useState(false);
     color: emailIconButtonColor,
   };
 
-  const ContactMeModal = ()=>{
+  const ContactMeModal = () => {
     setContactModal(true);
-  }
+  };
   return (
     <motion.div
       initial="hidden"
@@ -203,16 +206,20 @@ const [contactModal, setContactModal] = useState(false);
           {/* <Link id="aboutButton" to="/resume">
             CONTACT ME
           </Link> */}
-          <div id="aboutButton" onClick={ContactMeModal}>CONTACT ME
-          {
-          contactModal && 
-          <Modal
-          show={true}
-
-          >
-              <ContactForm/>
-          </Modal>
-          }
+          <div id="aboutButton" onClick={ContactMeModal}>
+            CONTACT ME
+            {contactModal && (
+              <Modal show={true} onHide={handleClose}>
+                <Modal.Header id="aboutPageModalHeader">
+                  <Button id="aboutPageModalButton" onClick={handleClose}>
+                    X
+                  </Button>
+                </Modal.Header>
+                <Modal.Body id="aboutPageModalBody">
+                  <ContactForm />
+                </Modal.Body>
+              </Modal>
+            )}
           </div>
           <div id="connectQuote">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -268,162 +275,141 @@ const [contactModal, setContactModal] = useState(false);
       {/* {imageCarouselInPage && <div>We in Here!!{carouselImageIdInPage}</div>} */}
 
       {modal && (
-      <Modal
-        show={modal}
-        onHide={handleClose}
-        // show={modalCarouselShowInPage}
-        // onHide={modalHandleClose}
-        fullscreen={true}
-        id="aboutPageModal"
-        // style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
-     
-        // style={{ opacity:0.6}}
-        // key={imgPhoto.id}
-        animation={false}
-        style={{ animation:closeAnimation}}
-      >
-        <Modal.Header id="aboutPageModalHeader" 
-        // style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
-        >
-         <Button 
-         id="aboutPageModalButton" 
-         onClick={handleClose} 
-        //  style={{ backgroundColor:"rgba(0,0,0,0.1)"}}
-        
-          >X</Button> 
-        </Modal.Header>
-        <Modal.Body id="aboutPageModalBody"
-        //  style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
-         >
-           <Carousel
-            id="photoCollectionCarousel"
-            // style={{ backgroundColor: "black" }}
-            activeIndex={carouselImageIdInPage}
-            // activeIndex={0}
-            onSelect={handleSelect}
-            // variant="dark"
-            variant="light"
-            prevLabel={"Previous"}
-            nextLabel={"Next"}
-            interval={null}
-            fade={true}
-            // indicatorLabels={["fancy","facts"]}
-            // style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
-          >
-
-
-      {/* // image 1  */}
-          <Carousel.Item className="carousel-item"       
+        <Modal
+          show={modal}
+          onHide={handleClose}
+          // show={modalCarouselShowInPage}
+          // onHide={modalHandleClose}
+          fullscreen={true}
+          id="aboutPageModal"
           // style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
+
+          // style={{ opacity:0.6}}
+          // key={imgPhoto.id}
+          animation={false}
+          style={{ animation: closeAnimation }}
+        >
+          <Modal.Header
+            id="aboutPageModalHeader"
           >
-            <img
-                  // style={{ backgroundColor:"rgba(0,0,0,0.5)"}}
-              className="imgCarousel"
-              // className="d-block w-100 "
-              src={require("../assets/img/aria.jpg")}
-              alt="First slide"
-            />
-            <Carousel.Caption className="imgCarouselCaption">
-              <h3 id="carouselH3">Low Def</h3>
-              
-            </Carousel.Caption>
-          </Carousel.Item>
+            <Button
+              id="aboutPageModalButton"
+              onClick={handleClose}
+            >
+              X
+            </Button>
+          </Modal.Header>
+          <Modal.Body
+            id="aboutPageModalBody"
+          >
+            <Carousel
+              id="photoCollectionCarousel"
+              activeIndex={carouselImageIdInPage}
+              // activeIndex={0}
+              onSelect={handleSelect}
+              // variant="dark"
+              variant="light"
+              prevLabel={"Previous"}
+              nextLabel={"Next"}
+              interval={null}
+              fade={true}
+              // indicatorLabels={["fancy","facts"]}
+            >
+              {/* // image 1  */}
+              <Carousel.Item
+                className="carousel-item"
+              >
+                <img
+                  className="imgCarousel"
+                  // className="d-block w-100 "
+                  src={require("../assets/img/aria.jpg")}
+                  alt="First slide"
+                />
+                <Carousel.Caption className="imgCarouselCaption">
+                  <h3 id="carouselH3">Low Def</h3>
+                </Carousel.Caption>
+              </Carousel.Item>
 
-         {/* // image 2  */}
-          <Carousel.Item className="carousel-item">
-            <img
-              className="imgCarousel"
-              // className="d-block w-100"
-              src={require("../assets/img/tomWedding.jpg")}
-              alt="Second slide"
-              
-            />
-            <Carousel.Caption className="imgCarouselCaption">
-              <h3 id="carouselH3" 
-              // style={{backgroundImage: "linear-gradient(to bottom,transparent, rgba(0,0,0,0.5))"}}
-              >@ Tom's Wedding</h3>
-              
-            </Carousel.Caption>
-          </Carousel.Item>
+              {/* // image 2  */}
+              <Carousel.Item className="carousel-item">
+                <img
+                  className="imgCarousel"
+                  // className="d-block w-100"
+                  src={require("../assets/img/tomWedding.jpg")}
+                  alt="Second slide"
+                />
+                <Carousel.Caption className="imgCarouselCaption">
+                  <h3
+                    id="carouselH3"
+                  >
+                    @ Tom's Wedding
+                  </h3>
+                </Carousel.Caption>
+              </Carousel.Item>
 
-          {/* // image 3            */}
-          <Carousel.Item className="carousel-item">
-            <img
-              // fluid='true'
-              // thumbnail='true'
-              className="imgCarousel"
-              // className="d-block w-100"
-              src={require("../assets/img/aria_light.jpg")}
-              alt="Third slide"
-            />
-            <Carousel.Caption className="imgCarouselCaption">
-              <h3 id="carouselH3">With the scarf!</h3>
-              
-            </Carousel.Caption>
-          </Carousel.Item>
+              {/* // image 3            */}
+              <Carousel.Item className="carousel-item">
+                <img
+                  // fluid='true'
+                  // thumbnail='true'
+                  className="imgCarousel"
+                  // className="d-block w-100"
+                  src={require("../assets/img/aria_light.jpg")}
+                  alt="Third slide"
+                />
+                <Carousel.Caption className="imgCarouselCaption">
+                  <h3 id="carouselH3">With the scarf!</h3>
+                </Carousel.Caption>
+              </Carousel.Item>
 
-          {/* // image 4  */}
-          <Carousel.Item className="carousel-item">
-            <img
-              className="imgCarousel"
-              // className="d-block w-100 "
-              src={
-                require("../assets/img/Screenshot 2022-06-23 at 00-08-04 Y.png")
-                  
-              }
-              alt="Fourth slide"
-            />
-            <Carousel.Caption className="imgCarouselCaption">
-              <h3 id="carouselH3">Palm Trees! </h3>
-              
-            </Carousel.Caption>
-          </Carousel.Item>
+              {/* // image 4  */}
+              <Carousel.Item className="carousel-item">
+                <img
+                  className="imgCarousel"
+                  // className="d-block w-100 "
+                  src={require("../assets/img/Screenshot 2022-06-23 at 00-08-04 Y.png")}
+                  alt="Fourth slide"
+                />
+                <Carousel.Caption className="imgCarouselCaption">
+                  <h3 id="carouselH3">Palm Trees! </h3>
+                </Carousel.Caption>
+              </Carousel.Item>
 
-          {/* // image 5 */}  
-          <Carousel.Item className="carousel-item">
-            <img
-              className="imgCarousel"
-              // className="d-block w-100"
-              // style={{position:"absolute", zIndex:10000, opacity:1}}
-              src={
-                require("../assets/img/Screenshot 2022-06-23 at 00-09-50 Y.png")
-                  
-              }
-              alt="Fifth slide"
-            />
-            <Carousel.Caption className="imgCarouselCaption">
-              <h3 id="carouselH3">Fourth of July Food Truckin' </h3>
-              
-            </Carousel.Caption>
-          </Carousel.Item>
+              {/* // image 5 */}
+              <Carousel.Item className="carousel-item">
+                <img
+                  className="imgCarousel"
+                  // className="d-block w-100"
+                  src={require("../assets/img/Screenshot 2022-06-23 at 00-09-50 Y.png")}
+                  alt="Fifth slide"
+                />
+                <Carousel.Caption className="imgCarouselCaption">
+                  <h3 id="carouselH3">Fourth of July Food Truckin' </h3>
+                </Carousel.Caption>
+              </Carousel.Item>
 
-         {/* // image 6  */}
-          <Carousel.Item className="carousel-item">
-            <img
-              // fluid='true'
-              // thumbnail='true'
-              className="imgCarousel"
-              // className="d-block w-100"
-              src={
-                require("../assets/img/Screenshot 2022-06-23 at 00-09-24 Y.png")
-              }
-              alt="Sixth slide"
-              // style={{height:"100vh"}}
-            />
-            <Carousel.Caption className="imgCarouselCaption">
-              <h3 id="carouselH3">Ramen, Ramen, Ramen </h3>
-              
-            </Carousel.Caption>
-          </Carousel.Item> 
+              {/* // image 6  */}
+              <Carousel.Item className="carousel-item">
+                <img
+                  // fluid='true'
+                  // thumbnail='true'
+                  className="imgCarousel"
+                  // className="d-block w-100"
+                  src={require("../assets/img/Screenshot 2022-06-23 at 00-09-24 Y.png")}
+                  alt="Sixth slide"
+                  // style={{height:"100vh"}}
+                />
+                <Carousel.Caption className="imgCarouselCaption">
+                  <h3 id="carouselH3">Ramen, Ramen, Ramen </h3>
+                </Carousel.Caption>
+              </Carousel.Item>
 
-
-            {/* image 1  */}
-            {/* <Carousel.Item> */}
-            {/* importing context through sibling component of PhotoCollectionList */}
+              {/* image 1  */}
+              {/* <Carousel.Item> */}
+              {/* importing context through sibling component of PhotoCollectionList */}
               {/* <PhotoCollectionProvider>
                 <CarouselPhotos/>
               </PhotoCollectionProvider> */}
-
 
               {/* using context directly in aboutPage */}
               {/* {imgPhotos.map((imgPhoto) => {
@@ -451,8 +437,8 @@ const [contactModal, setContactModal] = useState(false);
                 <h3 id="carouselH3">Low Def</h3>
                 
               </Carousel.Caption> */}
-            {/* </Carousel.Item> */}
-            {/* <Carousel.Item key={imgPhotos.id} className="carousel-item">
+              {/* </Carousel.Item> */}
+              {/* <Carousel.Item key={imgPhotos.id} className="carousel-item">
               <img
                 className="imgCarousel"
                 // className="justify-content-center"
@@ -460,22 +446,17 @@ const [contactModal, setContactModal] = useState(false);
                 src={imgPhotos.localAddress}
                 alt={imgPhotos.name}
               /> */}
-             
+
               {/* <Carousel.Caption>
                 <h3 id="carouselH3">{imgPhotos.message}</h3>
                 <p> </p>
               </Carousel.Caption> */}
-           
-            {/* </Carousel.Item> */}
 
-
-
-          </Carousel>
-        </Modal.Body>
-      </Modal>
-     )} 
-
-   
+              {/* </Carousel.Item> */}
+            </Carousel>
+          </Modal.Body>
+        </Modal>
+      )}
     </motion.div>
   );
 };
