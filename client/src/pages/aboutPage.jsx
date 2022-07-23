@@ -13,7 +13,8 @@ import { AiOutlineMail } from "react-icons/ai";
 import PhotoCollectionList from "../components/PhotoCollectionList/index";
 import { PhotoCollectionProvider } from "../utils/PhotoCollectionContext";
 import { PhotoCollectionContext } from "../utils/PhotoCollectionContext";
-import ContactForm from "../components/ContactForm";
+
+import ContactFormModal from "../components/ContactFormModal";
 import "../assets/css/aboutPage.css";
 // import CarouselPhotos from "../components/PhotoCollectionList/CarouselPhotos";
 // import {
@@ -38,10 +39,19 @@ const AboutPage = () => {
     return { carouselImageIdInPage };
   };
 
-  const handleClose = () => {
+  const handleCarouselClose = () => {
     setModal(false);
     setCloseAnimation("fadeIn 2s ");
+    // setContactModal(false);
+    console.log(`contactModal:${contactModal}`);
   };
+  // const callbackHandleContactFormClose =()=>{
+  //   handleContactFormClose();
+  // }
+  // const handleContactFormClose = () => {
+  //   setContactModal(false);
+  //   console.log(`FIX IT FELIX, contactModal:${contactModal}`);
+  // };
   const handleShow = () => setModal(true);
   const handleSelect = (selectedIndex, e) => {
     setCarouselImageIdInPage(selectedIndex);
@@ -209,16 +219,25 @@ const AboutPage = () => {
           <div id="aboutButton" onClick={ContactMeModal}>
             CONTACT ME
             {contactModal && (
-              <Modal show={true} onHide={handleClose}>
-                <Modal.Header id="aboutPageModalHeader">
-                  <Button id="aboutPageModalButton" onClick={handleClose}>
-                    X
-                  </Button>
-                </Modal.Header>
-                <Modal.Body id="aboutPageModalBody">
-                  <ContactForm />
-                </Modal.Body>
-              </Modal>
+              // <Modal 
+              // show={contactModal}
+              //  onHide={callbackHandleContactFormClose}
+              //  >
+              //   <Modal.Header id="aboutPageModalHeader" closeButton >
+              //     <Modal.Title/>
+              //     {/* <Button id="aboutPageModalButton" 
+              //     // onClick= {()=>{handleContactFormClose()}}
+              //     // onClick={handleContactFormClose}
+              //     onClick={()=>setContactModal(false)}
+              //     >
+              //       X
+              //     </Button> */}
+              //   </Modal.Header>
+              //   <Modal.Body id="aboutPageModalBody">
+              //     <ContactForm />
+              //   </Modal.Body>
+              // </Modal>
+              <ContactFormModal />
             )}
           </div>
           <div id="connectQuote">
@@ -256,7 +275,7 @@ const AboutPage = () => {
               // modalHandleClose={modalHandleClose}
             />
           </PhotoCollectionProvider>
-          {console.log(`${carouselImageIdInPage}`)}
+          {/* {console.log(`${carouselImageIdInPage}`)} */}
         </div>
       </div>
 
@@ -277,7 +296,7 @@ const AboutPage = () => {
       {modal && (
         <Modal
           show={modal}
-          onHide={handleClose}
+          onHide={handleCarouselClose}
           // show={modalCarouselShowInPage}
           // onHide={modalHandleClose}
           fullscreen={true}
@@ -294,7 +313,7 @@ const AboutPage = () => {
           >
             <Button
               id="aboutPageModalButton"
-              onClick={handleClose}
+              onClick={handleCarouselClose}
             >
               X
             </Button>
