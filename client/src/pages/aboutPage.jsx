@@ -31,7 +31,8 @@ const AboutPage = () => {
   const [closeAnimation, setCloseAnimation] = useState("fadeMe 2s");
   const [contactModal, setContactModal] = useState(false);
   // const[contactModalNumber,setContactModalNumber]=useState(1);
-  const[test,setTest]=useState(true);
+  // const[test,setTest]=useState(true);
+
   //callback function with data from PhotoCollectionList
   const callbackAfterImagePress = (imageIndex) => {
     setCarouselImageIdInPage(imageIndex.id);
@@ -45,8 +46,8 @@ const AboutPage = () => {
     setModal(false);
     setCloseAnimation("fadeIn 2s ");
     // setContactModal(false);
-    console.log(`contactModal:${contactModal}`);
-    console.log(`outside callbackAfterContactFormClose test value: ${test}`)
+    // console.log(`contactModal:${contactModal}`);
+    // console.log(`outside callbackAfterContactFormClose test value: ${test}`)
   };
   // const callbackHandleContactFormClose =()=>{
   //   handleContactFormClose();
@@ -66,19 +67,19 @@ const AboutPage = () => {
 
 
   const callbackAfterContactFormClose = (close) => {
-    setTest(close)
+    // setTest(close)
     setContactModal(close);
     // console.log(`inside callbackAfterContactFormClose contactModal value: ${contactModal}`);
 
     return (
       <>
       {contactModal}
-      {console.log(`inside callbackAfterContactFormClose test value: ${test}`)}
+      {/* {console.log(`inside callbackAfterContactFormClose test value: ${test}`)} */}
       </>
     );
   };
 
-  
+
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
   let [emailIconButtonColor, setEmailIconButtonColor] = useState("black");
 
@@ -102,7 +103,7 @@ const AboutPage = () => {
     color: emailIconButtonColor,
   };
 
-  const ContactMeModal = () => {
+  const ContactModal = () => {
     setContactModal(true);
   };
   return (
@@ -239,7 +240,7 @@ const AboutPage = () => {
           {/* <Link id="aboutButton" to="/resume">
             CONTACT ME
           </Link> */}
-          <div id="aboutButton" onClick={ContactMeModal}>
+          <div id="aboutButton" onClick={ContactModal}>
             CONTACT ME
             </div>
                
