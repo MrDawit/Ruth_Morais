@@ -1,17 +1,13 @@
 import React, {
   useState,
-  // useEffect,
-  // useContext
 } from "react";
 
 import { Carousel, Modal, Button } from "react-bootstrap";
 
 import { motion } from "framer-motion";
-// import { Link } from "react-router-dom";
 import { AiOutlineMail } from "react-icons/ai";
 import PhotoCollectionList from "../components/PhotoCollectionList/index";
 import { PhotoCollectionProvider } from "../utils/PhotoCollectionContext";
-// import { PhotoCollectionContext } from "../utils/PhotoCollectionContext";
 
 import ContactFormModal from "../components/ContactFormModal";
 import "../assets/css/aboutPage.css";
@@ -33,19 +29,11 @@ const AboutPage = () => {
   };
 
   const handleCarouselClose = () => {
-    // setCarouselModal(false);
+    
     setOpenCloseAnimation("fadeOut 1s ");
     setTimeout(() => {
       setCarouselModal(false);
     }, 500);
-    // handleAfterAnimation();
-  };
-  const handleAfterAnimation = () => {
-    //setTimeout is shorter than fadeOut
-    //but takes longer since outside of handleCarouselClose
-    // setTimeout(() => {
-    //   setCarouselModal(false);
-    // }, 800);
   };
 
   const handleShow = () => {
