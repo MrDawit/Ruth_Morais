@@ -44,7 +44,7 @@ const AboutPage = () => {
 
   const handleCarouselClose = () => {
     // setCarouselModal(false);
-    setOpenCloseAnimation("fadeOut 2s ");
+    setOpenCloseAnimation("fadeOut 6s ");
     handleAfterAnimation();
   };
   const handleAfterAnimation = () => {
@@ -291,7 +291,7 @@ const AboutPage = () => {
 
       {/* {imageCarouselInPage && <div>We in Here!!{carouselImageIdInPage}</div>} */}
 
-      {carouselModal && (
+      {/* {carouselModal && ( */}
         <Modal
           show={carouselModal}
           onHide={handleCarouselClose}
@@ -473,7 +473,7 @@ const AboutPage = () => {
             </Carousel>
           </Modal.Body>
         </Modal>
-      )}
+      {/* )} */}
     </motion.div>
   );
 };
