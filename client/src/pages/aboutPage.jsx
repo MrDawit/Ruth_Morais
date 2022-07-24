@@ -37,7 +37,7 @@ const AboutPage = () => {
     setOpenCloseAnimation("fadeOut 1s ");
     setTimeout(() => {
       setCarouselModal(false);
-    }, 800);
+    }, 500);
     // handleAfterAnimation();
   };
   const handleAfterAnimation = () => {
