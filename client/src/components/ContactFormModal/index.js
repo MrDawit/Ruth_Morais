@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ContactForm from "../ContactForm";
 import {
-    Carousel,
+    // Carousel,
     // Image,
     Modal,
     Button,
