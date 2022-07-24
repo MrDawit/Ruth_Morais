@@ -53,7 +53,7 @@ const AboutPage = () => {
   };
 
 
-  const callbackAfterContactFormClose = (close) => {
+  const contactFormClose = (close) => {
     setContactModal(close);
     // return ({contactModal} );
   };
@@ -225,7 +225,7 @@ const AboutPage = () => {
                
           
           {contactModal && (
-          <ContactFormModal callbackAfterContactFormClose={callbackAfterContactFormClose}/>
+          <ContactFormModal contactFormClose={contactFormClose}/>
             )}
 
           <div id="connectQuote">

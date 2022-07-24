@@ -7,15 +7,15 @@ import {
     Button,
   } from "react-bootstrap";
   
-function ContactFormModal({callbackAfterContactFormClose}) {
+function ContactFormModal({contactFormClose}) {
     const [childContactModal, setChildContactModal] = useState(true);
 
-    const callbackHandleContactFormClose =()=>{
-        handleContactFormClose();
-      }
+    // const callbackHandleContactFormClose =()=>{
+    //     handleContactFormClose();
+    //   }
       const handleContactFormClose = () => {
         setChildContactModal(false);
-        callbackAfterContactFormClose(false);
+        contactFormClose(false);
         // console.log(`contactModal2:${contactModal2}`);
       };
 
@@ -23,7 +23,7 @@ function ContactFormModal({callbackAfterContactFormClose}) {
 
 <Modal 
               show={childContactModal}
-               onHide={callbackHandleContactFormClose}
+               onHide={handleContactFormClose}
                >
                 <Modal.Header id="aboutPageModalHeader" 
                 closeButton 
