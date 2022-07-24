@@ -254,7 +254,7 @@ const AboutPage = () => {
         onHide={handleCarouselClose}
         fullscreen={true}
         id="aboutPageModal"
-        
+        animation={false}
         style={{ animation: openCloseAnimation }}
       >
         <Modal.Header id="aboutPageModalHeader">
