@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ContactForm from "../ContactForm";
+import "./style.css";
 import {
     // Carousel,
     // Image,
@@ -21,15 +22,15 @@ function ContactFormModal({contactFormClose}) {
 
     return (
 
-<Modal 
+<Modal id="contactFormModal" 
               show={childContactModal}
               //  onHide={HandleContactFormClose}
                >
-                <Modal.Header id="aboutPageModalHeader" 
+                <Modal.Header id="contactFormModalHeader" 
                 // closeButton 
                 >
                   <Modal.Title/>
-                  <Button id="aboutPageModalButton" 
+                  <Button id="contactFormModalButton" 
                   // onClick= {()=>{handleContactFormClose()}}
                   // onClick={handleContactFormClose}
                   onClick={()=>HandleContactFormClose()}
@@ -38,7 +39,7 @@ function ContactFormModal({contactFormClose}) {
                   </Button>
                   
                 </Modal.Header>
-                <Modal.Body id="aboutPageModalBody">
+                <Modal.Body id="contactFormModalBody">
                   <ContactForm />
                 </Modal.Body>
               </Modal>
