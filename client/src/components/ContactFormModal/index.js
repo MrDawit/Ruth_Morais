@@ -13,7 +13,7 @@ function ContactFormModal({contactFormClose}) {
     // const callbackHandleContactFormClose =()=>{
     //     handleContactFormClose();
     //   }
-      const handleContactFormClose = () => {
+      const HandleContactFormClose = () => {
         setChildContactModal(false);
         contactFormClose(false);
         // console.log(`contactModal2:${contactModal2}`);
@@ -23,19 +23,19 @@ function ContactFormModal({contactFormClose}) {
 
 <Modal 
               show={childContactModal}
-               onHide={handleContactFormClose}
+              //  onHide={HandleContactFormClose}
                >
                 <Modal.Header id="aboutPageModalHeader" 
-                closeButton 
+                // closeButton 
                 >
                   <Modal.Title/>
-                  {/* <Button id="aboutPageModalButton" 
+                  <Button id="aboutPageModalButton" 
                   // onClick= {()=>{handleContactFormClose()}}
                   // onClick={handleContactFormClose}
-                  onClick={()=>setContactModal2(false)}
+                  onClick={()=>HandleContactFormClose()}
                   >
                     X
-                  </Button> */}
+                  </Button>
                 </Modal.Header>
                 <Modal.Body id="aboutPageModalBody">
                   <ContactForm />
