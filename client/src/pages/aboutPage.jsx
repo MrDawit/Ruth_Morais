@@ -35,14 +35,17 @@ const AboutPage = () => {
   const handleCarouselClose = () => {
     // setCarouselModal(false);
     setOpenCloseAnimation("fadeOut 1s ");
-    handleAfterAnimation();
+    setTimeout(() => {
+      setCarouselModal(false);
+    }, 800);
+    // handleAfterAnimation();
   };
   const handleAfterAnimation = () => {
     //setTimeout is shorter than fadeOut
     //but takes longer since outside of handleCarouselClose
-    setTimeout(() => {
-      setCarouselModal(false);
-    }, 800);
+    // setTimeout(() => {
+    //   setCarouselModal(false);
+    // }, 800);
   };
 
   const handleShow = () => {
@@ -251,6 +254,7 @@ const AboutPage = () => {
         onHide={handleCarouselClose}
         fullscreen={true}
         id="aboutPageModal"
+        
         style={{ animation: openCloseAnimation }}
       >
         <Modal.Header id="aboutPageModalHeader">
