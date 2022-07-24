@@ -43,13 +43,18 @@ const AboutPage = () => {
   };
 
   const handleCarouselClose = () => {
-    setCarouselModal(false);
+    // setCarouselModal(false);
     setOpenCloseAnimation("fadeOut 2s ");
+    handleAfterAnimation();
+  };
+  const handleAfterAnimation = () => {
+    setCarouselModal(false);
+    
   };
  
   const handleShow = () => {
     setCarouselModal(true);
-    setOpenCloseAnimation("fadeIn 2s");
+    setOpenCloseAnimation("fadeIn 1s");
   };
 
   const handleSelect = (selectedIndex, e) => {
