@@ -27,7 +27,7 @@ const AboutPage = () => {
   const [carouselImageIdInPage, setCarouselImageIdInPage] = useState(null);
   // const [imageCarouselInPage, setImageCarouselInPage] = useState(false);
 
-  const [modal, setModal] = useState(false);
+  const [carouselModal, setCarouselModal] = useState(false);
   const [closeAnimation, setCloseAnimation] = useState("fadeMe 2s");
   const [contactModal, setContactModal] = useState(false);
   // const[contactModalNumber,setContactModalNumber]=useState(1);
@@ -43,40 +43,19 @@ const AboutPage = () => {
   };
 
   const handleCarouselClose = () => {
-    setModal(false);
+    setCarouselModal(false);
     setCloseAnimation("fadeIn 2s ");
-    // setContactModal(false);
-    // console.log(`contactModal:${contactModal}`);
-    // console.log(`outside callbackAfterContactFormClose test value: ${test}`)
   };
-  // const callbackHandleContactFormClose =()=>{
-  //   handleContactFormClose();
-  // }
-  // const handleContactFormClose = () => {
-  //   setContactModal(false);
-  //   console.log(`FIX IT FELIX, contactModal:${contactModal}`);
-  // };
-  const handleShow = () => setModal(true);
+ 
+  const handleShow = () => setCarouselModal(true);
   const handleSelect = (selectedIndex, e) => {
     setCarouselImageIdInPage(selectedIndex);
   };
 
-  // useEffect(() => {
-  //   setContactModal(true);
-  // }, [setContactModal]);
-
 
   const callbackAfterContactFormClose = (close) => {
-    // setTest(close)
     setContactModal(close);
-    // console.log(`inside callbackAfterContactFormClose contactModal value: ${contactModal}`);
-
-    return (
-      <>
-      {contactModal}
-      {/* {console.log(`inside callbackAfterContactFormClose test value: ${test}`)} */}
-      </>
-    );
+    // return ({contactModal} );
   };
 
 
@@ -302,9 +281,9 @@ const AboutPage = () => {
 
       {/* {imageCarouselInPage && <div>We in Here!!{carouselImageIdInPage}</div>} */}
 
-      {modal && (
+      {carouselModal && (
         <Modal
-          show={modal}
+          show={carouselModal}
           onHide={handleCarouselClose}
           // show={modalCarouselShowInPage}
           // onHide={modalHandleClose}

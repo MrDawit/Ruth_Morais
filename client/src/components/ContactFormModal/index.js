@@ -8,13 +8,13 @@ import {
   } from "react-bootstrap";
   
 function ContactFormModal({callbackAfterContactFormClose}) {
-    const [contactModal2, setContactModal2] = useState(true);
+    const [childContactModal, setChildContactModal] = useState(true);
 
     const callbackHandleContactFormClose =()=>{
         handleContactFormClose();
       }
       const handleContactFormClose = () => {
-        setContactModal2(false);
+        setChildContactModal(false);
         callbackAfterContactFormClose(false);
         // console.log(`contactModal2:${contactModal2}`);
       };
@@ -22,7 +22,7 @@ function ContactFormModal({callbackAfterContactFormClose}) {
     return (
 
 <Modal 
-              show={contactModal2}
+              show={childContactModal}
                onHide={callbackHandleContactFormClose}
                >
                 <Modal.Header id="aboutPageModalHeader" 
