@@ -23,7 +23,7 @@ const AboutPage = () => {
   const callbackAfterImagePress = (imageIndex) => {
     setCarouselImageIdInPage(imageIndex.id);
     handleShow();
-    console.log(`inside callbackAfterImagePress index value: ${imageIndex.id}`);
+    // console.log(`inside callbackAfterImagePress index value: ${imageIndex.id}`);
 
     return { carouselImageIdInPage };
   };

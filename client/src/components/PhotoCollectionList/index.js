@@ -25,7 +25,7 @@ const PhotoCollectionList = ({ callbackAfterImagePress }) => {
   return (
     <>
       {imgPhotos.map((imgPhoto) => {
-        console.log(`imgPhoto is = ${imgPhoto.id}`);
+        // console.log(`imgPhoto is = ${imgPhoto.id}`);
         // console.log(imageCarousel);
         return (
           <div key={imgPhoto.id}>
