@@ -36,6 +36,7 @@ function ContactFormModal({contactFormClose}) {
                   >
                     X
                   </Button>
+                  
                 </Modal.Header>
                 <Modal.Body id="aboutPageModalBody">
                   <ContactForm />

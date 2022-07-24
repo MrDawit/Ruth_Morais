@@ -357,7 +357,7 @@ border:red solid 20px;
     font-size: 10vw;
         }
     }  */
-    @keyframes fadeMe {
+    @keyframes fadeIn {
       from {
         opacity: 0;
       }
@@ -365,7 +365,7 @@ border:red solid 20px;
         opacity: 1;
       }
     }
-    @keyframes fadeIn {
+    @keyframes fadeOut {
       from {
         opacity: 1;
       }

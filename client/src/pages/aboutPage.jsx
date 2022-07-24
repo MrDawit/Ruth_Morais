@@ -28,7 +28,7 @@ const AboutPage = () => {
   // const [imageCarouselInPage, setImageCarouselInPage] = useState(false);
 
   const [carouselModal, setCarouselModal] = useState(false);
-  const [closeAnimation, setCloseAnimation] = useState("fadeMe 2s");
+  const [openCloseAnimation, setOpenCloseAnimation] = useState(null);
   const [contactModal, setContactModal] = useState(false);
   // const[contactModalNumber,setContactModalNumber]=useState(1);
   // const[test,setTest]=useState(true);
@@ -44,10 +44,14 @@ const AboutPage = () => {
 
   const handleCarouselClose = () => {
     setCarouselModal(false);
-    setCloseAnimation("fadeIn 2s ");
+    setOpenCloseAnimation("fadeOut 2s ");
   };
  
-  const handleShow = () => setCarouselModal(true);
+  const handleShow = () => {
+    setCarouselModal(true);
+    setOpenCloseAnimation("fadeIn 2s");
+  };
+
   const handleSelect = (selectedIndex, e) => {
     setCarouselImageIdInPage(selectedIndex);
   };
@@ -85,6 +89,7 @@ const AboutPage = () => {
   const ContactModal = () => {
     setContactModal(true);
   };
+
   return (
     <motion.div
       initial="hidden"
@@ -293,8 +298,8 @@ const AboutPage = () => {
 
           // style={{ opacity:0.6}}
           // key={imgPhoto.id}
-          animation={false}
-          style={{ animation: closeAnimation }}
+          // animation={false}
+          style={{ animation: openCloseAnimation }}
         >
           <Modal.Header
             id="aboutPageModalHeader"
