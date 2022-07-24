@@ -69,17 +69,21 @@ function ContactForm() {
       { confirmationSuccess && <ResultSuccess />}
       {confirmationOther && <ResultOther />}
       <form id="contactForm" onSubmit={submitRequest}>
-        {/* <label htmlFor="name">Your Name *</label> */}
+        {/* <div id="formTitle">Let's Connect</div> */}
+        <label htmlFor="firstName">Your Name *</label>
         <br />
         <input type="text" id="firstName" name="firstName" placeholder="First Name" onChange={e => setFirstName(e.target.value)}
           value={firstName} />
           <input type="text" id="lastName" name="lastName" placeholder="Last Name" onChange={e => setLastName(e.target.value)}
           value={lastName} />
+          {/* <label htmlFor="firstName">First Name</label> <label htmlFor="lastName">Last Name</label> */}
         <br />
-        <label htmlFor="firstName">First Name</label> <label htmlFor="lastName">Last Name</label>
+        
         <label htmlFor="contactWay">Your Email *</label>
         <br />
-        <input type="text" id="contactWay" name="contactWay" placeholder="EMAIL" onChange={e => setContactWay(e.target.value)}
+        <input type="text" id="contactWay" name="contactWay"
+        //  placeholder="EMAIL" 
+         onChange={e => setContactWay(e.target.value)}
           value={contactWay}
           required
         />
