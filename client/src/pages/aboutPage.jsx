@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"; // ,{ useContext }
+import React, { useState, useEffect, useContext } from "react"; // ,{ useContext }
 import {
   Carousel,
   // Image,
@@ -30,6 +30,8 @@ const AboutPage = () => {
   const [modal, setModal] = useState(false);
   const [closeAnimation, setCloseAnimation] = useState("fadeMe 2s");
   const [contactModal, setContactModal] = useState(false);
+  // const[contactModalNumber,setContactModalNumber]=useState(1);
+  const[test,setTest]=useState(true);
   //callback function with data from PhotoCollectionList
   const callbackAfterImagePress = (imageIndex) => {
     setCarouselImageIdInPage(imageIndex.id);
@@ -44,6 +46,7 @@ const AboutPage = () => {
     setCloseAnimation("fadeIn 2s ");
     // setContactModal(false);
     console.log(`contactModal:${contactModal}`);
+    console.log(`outside callbackAfterContactFormClose test value: ${test}`)
   };
   // const callbackHandleContactFormClose =()=>{
   //   handleContactFormClose();
@@ -56,6 +59,26 @@ const AboutPage = () => {
   const handleSelect = (selectedIndex, e) => {
     setCarouselImageIdInPage(selectedIndex);
   };
+
+  // useEffect(() => {
+  //   setContactModal(true);
+  // }, [setContactModal]);
+
+
+  const callbackAfterContactFormClose = (close) => {
+    setTest(close)
+    setContactModal(close);
+    // console.log(`inside callbackAfterContactFormClose contactModal value: ${contactModal}`);
+
+    return (
+      <>
+      {contactModal}
+      {console.log(`inside callbackAfterContactFormClose test value: ${test}`)}
+      </>
+    );
+  };
+
+  
   let [linkedInButtonColor, setLinkedInButtonColor] = useState("black");
   let [emailIconButtonColor, setEmailIconButtonColor] = useState("black");
 
@@ -218,28 +241,13 @@ const AboutPage = () => {
           </Link> */}
           <div id="aboutButton" onClick={ContactMeModal}>
             CONTACT ME
-            {contactModal && (
-              // <Modal 
-              // show={contactModal}
-              //  onHide={callbackHandleContactFormClose}
-              //  >
-              //   <Modal.Header id="aboutPageModalHeader" closeButton >
-              //     <Modal.Title/>
-              //     {/* <Button id="aboutPageModalButton" 
-              //     // onClick= {()=>{handleContactFormClose()}}
-              //     // onClick={handleContactFormClose}
-              //     onClick={()=>setContactModal(false)}
-              //     >
-              //       X
-              //     </Button> */}
-              //   </Modal.Header>
-              //   <Modal.Body id="aboutPageModalBody">
-              //     <ContactForm />
-              //   </Modal.Body>
-              // </Modal>
-              <ContactFormModal />
+            </div>
+               
+          
+          {contactModal && (
+          <ContactFormModal callbackAfterContactFormClose={callbackAfterContactFormClose}/>
             )}
-          </div>
+
           <div id="connectQuote">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod porro quisquam est qui labore et dolore magna aliqua. Ut
