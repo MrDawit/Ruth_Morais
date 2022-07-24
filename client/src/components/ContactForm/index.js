@@ -15,7 +15,7 @@ function ContactForm() {
 
   const submitRequest = async (e) => {
     e.preventDefault();
-    let data = { firstName, lastName, contactWay, subject, message };
+    let data = { firstName, lastName, contactWay, message };
     // console.log(data);
     const url = '/api/contact';
     const options = {
@@ -44,7 +44,7 @@ function ContactForm() {
       setFirstName('');
       setLastName('');
       setContactWay('');
-      setSubject('');
+      // setSubject('');
       setMessage('');
 
 
@@ -56,7 +56,7 @@ function ContactForm() {
       setFirstName('');
       setLastName('');
       setContactWay('');
-      setSubject('');
+      // setSubject('');
       setMessage('');
 
 
@@ -77,22 +77,24 @@ function ContactForm() {
           value={lastName} />
         <br />
         <label htmlFor="firstName">First Name</label> <label htmlFor="lastName">Last Name</label>
-        <label htmlFor="contactWay">Contact Info:</label>
+        <label htmlFor="contactWay">Your Email *</label>
         <br />
-        <input type="text" id="contactWay" name="contactWay" placeholder="EMAIL,PHONE #,ETC..(req'd)" onChange={e => setContactWay(e.target.value)}
+        <input type="text" id="contactWay" name="contactWay" placeholder="EMAIL" onChange={e => setContactWay(e.target.value)}
           value={contactWay}
           required
         />
         <br />
-        <label htmlFor="subject" >Subject:</label>
+        {/* <label htmlFor="subject" >Subject:</label>
         <br />
         <input type="text" id="subject" name="subject" placeholder="SPECIFY THE SUBJECT" onChange={e => setSubject(e.target.value)}
           value={subject}
         />
+        <br /> */}
+        <label htmlFor="message">Message *</label>
         <br />
-        <label htmlFor="message">Message:</label>
-        <br />
-        <textarea id="message" type="text" name="message" placeholder="WRITE YOUR MESSAGE (req'd)" cols="40"
+        <textarea id="message" type="text" name="message" 
+        // placeholder="WRITE YOUR MESSAGE (req'd)" 
+        cols="40"
           onChange={e => setMessage(e.target.value)}
           value={message}
           required
