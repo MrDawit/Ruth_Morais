@@ -44,11 +44,16 @@ const AboutPage = () => {
 
   const handleCarouselClose = () => {
     // setCarouselModal(false);
-    setOpenCloseAnimation("fadeOut 6s ");
+    setOpenCloseAnimation("fadeOut 1s ");
     handleAfterAnimation();
   };
   const handleAfterAnimation = () => {
-    setCarouselModal(false);
+    //setTimeout is shorter than fadeOut 
+    //but takes longer since outside of handleCarouselClose
+    setTimeout(() => {
+      setCarouselModal(false);
+    }, 800);
+    
     
   };
  
