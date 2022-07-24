@@ -5,7 +5,8 @@ import ResultSuccess from "../ResultSuccess";
 import ResultOther from "../ResultOther";
 
 function ContactForm() {
-  const [name, setName] = useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [contactWay, setContactWay] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
@@ -14,7 +15,7 @@ function ContactForm() {
 
   const submitRequest = async (e) => {
     e.preventDefault();
-    let data = { name, contactWay, subject, message };
+    let data = { firstName, lastName, contactWay, subject, message };
     // console.log(data);
     const url = '/api/contact';
     const options = {
@@ -40,7 +41,8 @@ function ContactForm() {
       setConfirmationSuccess(true);
       setConfirmationOther(false);
       //clearing form
-      setName('');
+      setFirstName('');
+      setLastName('');
       setContactWay('');
       setSubject('');
       setMessage('');
@@ -51,7 +53,8 @@ function ContactForm() {
       setConfirmationOther(true);
       setConfirmationSuccess(false);
       //clearing form
-      setName('');
+      setFirstName('');
+      setLastName('');
       setContactWay('');
       setSubject('');
       setMessage('');
@@ -66,11 +69,14 @@ function ContactForm() {
       { confirmationSuccess && <ResultSuccess />}
       {confirmationOther && <ResultOther />}
       <form id="contactForm" onSubmit={submitRequest}>
-        <label htmlFor="name">Name:</label>
+        {/* <label htmlFor="name">Your Name *</label> */}
         <br />
-        <input type="text" id="name" name="name" placeholder="ENTER YOUR NAME" onChange={e => setName(e.target.value)}
-          value={name} />
+        <input type="text" id="firstName" name="firstName" placeholder="First Name" onChange={e => setFirstName(e.target.value)}
+          value={firstName} />
+          <input type="text" id="lastName" name="lastName" placeholder="Last Name" onChange={e => setLastName(e.target.value)}
+          value={lastName} />
         <br />
+        <label htmlFor="firstName">First Name</label> <label htmlFor="lastName">Last Name</label>
         <label htmlFor="contactWay">Contact Info:</label>
         <br />
         <input type="text" id="contactWay" name="contactWay" placeholder="EMAIL,PHONE #,ETC..(req'd)" onChange={e => setContactWay(e.target.value)}
