@@ -77,8 +77,10 @@ function ContactForm() {
           <input type="text" id="lastName" name="lastName" placeholder="Last Name" onChange={e => setLastName(e.target.value)}
           value={lastName} />
           {/* <label htmlFor="firstName">First Name</label> <label htmlFor="lastName">Last Name</label> */}
+
         <br />
-        
+        <br />
+
         <label htmlFor="contactWay">Your Email *</label>
         <br />
         <input type="text" id="contactWay" name="contactWay"
@@ -87,7 +89,10 @@ function ContactForm() {
           value={contactWay}
           required
         />
+
         <br />
+        <br />
+
         {/* <label htmlFor="subject" >Subject:</label>
         <br />
         <input type="text" id="subject" name="subject" placeholder="SPECIFY THE SUBJECT" onChange={e => setSubject(e.target.value)}
@@ -103,7 +108,10 @@ function ContactForm() {
           value={message}
           required
         />
+
         <br />
+        <br />
+        
         <input id="submitBtn" type="submit" value="Submit" />
         <br /><br />
         <div><span>Email: </span>moraisruth@yahoo.com</div>
