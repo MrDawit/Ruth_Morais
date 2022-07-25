@@ -98,10 +98,23 @@ background-color:rgba(174, 43, 16, 0.5) !important;
 #contactFormModalHeader {
   background-color: white;
   /* position:relative; */
+  /* display: flex; */
+  /* justify-content: right; */
+  /* justify-content: left; */
+  /* border:solid red 10px; */
   display: flex;
-  justify-content: right;
+  flex-direction:row;
+  justify-content: space-between;
   border-bottom: none;
 }
+#contactFormModalTitle{
+  /* display: flex;
+  flex-direction:row;
+  justify-content: space-between; */
+  /* border:solid red 10px; */
+
+}
+
 #contactFormModalBody,
 #contactFormModalBody:after {
   background-color: white;
@@ -113,12 +126,15 @@ background-color:rgba(174, 43, 16, 0.5) !important;
 /* , #contactFormModalButton:active,
 #contactFormModalButton:focus, 
 #contactFormModalButton:after */ {
+  
   background-color: grey;
   color: rgb(231, 231, 231);
   border: none;
   /* outline:none !important; */
   box-shadow: none;
   /* opacity:1; */
+  
+  justify-content: right !important;
 }
 
 #contactFormModalButton:hover {

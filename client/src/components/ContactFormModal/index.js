@@ -29,7 +29,9 @@ function ContactFormModal({contactFormClose}) {
                 <Modal.Header id="contactFormModalHeader" 
                 // closeButton 
                 >
-                  <Modal.Title/>
+                  {/* <Modal.Title id="contactFormModalTitle"> */}
+                    {/* Button just for testing style */}
+                  <Button id="contactFormModalTitleText">Let's Connect</Button>
                   <Button id="contactFormModalButton" 
                   // onClick= {()=>{handleContactFormClose()}}
                   // onClick={handleContactFormClose}
@@ -37,8 +39,9 @@ function ContactFormModal({contactFormClose}) {
                   >
                     X
                   </Button>
-                  
+                  {/* </Modal.Title> */}
                 </Modal.Header>
+
                 <Modal.Body id="contactFormModalBody">
                   <ContactForm />
                 </Modal.Body>
