@@ -70,12 +70,12 @@ function ContactForm() {
       {confirmationOther && <ResultOther />}
       <form id="contactForm" onSubmit={submitRequest}>
         {/* <div id="formTitle">Let's Connect</div> */}
-        <label htmlFor="firstName">Your Name *</label>
+        <label  htmlFor="firstName">Your Name *</label>
         <br />
         <input type="text" id="firstName" name="firstName" placeholder="First Name" onChange={e => setFirstName(e.target.value)}
-          value={firstName} />
+          value={firstName} required/>
           <input type="text" id="lastName" name="lastName" placeholder="Last Name" onChange={e => setLastName(e.target.value)}
-          value={lastName} />
+          value={lastName} required/>
           {/* <label htmlFor="firstName">First Name</label> <label htmlFor="lastName">Last Name</label> */}
 
         <br />
@@ -87,9 +87,8 @@ function ContactForm() {
         //  placeholder="EMAIL" 
          onChange={e => setContactWay(e.target.value)}
           value={contactWay}
-          required
+          
         />
-
         <br />
         <br />
 
@@ -111,7 +110,7 @@ function ContactForm() {
 
         <br />
         <br />
-        
+
         <input id="submitBtn" type="submit" value="Submit" />
         <br /><br />
         <div><span>Email: </span>moraisruth@yahoo.com</div>
