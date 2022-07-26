@@ -37,6 +37,9 @@ textarea:invalid {
     text-decoration: underline;
 }
 
+.formLabel {
+    font-size:1.25em;
+}
 .contact_icon:hover {
     opacity:0.7;
 }
