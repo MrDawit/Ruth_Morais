@@ -45,7 +45,7 @@ module.exports = function (app) {
         }
       });
       // send mail with defined transport object
-      let info = await transporter.sendMail({
+      let info = transporter.sendMail({
         from: `'Ruth_Morais App' <${process.env.USER}>`, // sender address
         //  to: `'Contacts' <${process.env.USER}>`, // list of receivers,MUST BE VALID email
         to: ` <${process.env.USER}>`, // list of receivers,MUST BE VALID email
