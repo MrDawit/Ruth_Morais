@@ -70,7 +70,7 @@ function ContactForm() {
       {confirmationOther && <ResultOther />}
       <form id="contactForm" onSubmit={submitRequest}>
         {/* <div id="formTitle">Let's Connect</div> */}
-        <label  htmlFor="firstName">Your Name *</label>
+        <label className="formLabel" htmlFor="firstName">Your Name *</label>
         <br />
         <input type="text" id="firstName" name="firstName" placeholder="First Name" onChange={e => setFirstName(e.target.value)}
           value={firstName} required/>
@@ -81,7 +81,7 @@ function ContactForm() {
         <br />
         <br />
 
-        <label htmlFor="contactWay">Your Email *</label>
+        <label className="formLabel" htmlFor="contactWay">Your Email *</label>
         <br />
         <input type="text" id="contactWay" name="contactWay"
         //  placeholder="EMAIL" 
@@ -98,7 +98,7 @@ function ContactForm() {
           value={subject}
         />
         <br /> */}
-        <label htmlFor="message">Message *</label>
+        <label className="formLabel" htmlFor="message">Message *</label>
         <br />
         <textarea id="message" type="text" name="message" 
         // placeholder="WRITE YOUR MESSAGE (req'd)" 
