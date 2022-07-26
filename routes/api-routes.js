@@ -46,15 +46,16 @@ module.exports = function (app) {
       });
       // send mail with defined transport object
       let info = await transporter.sendMail({
-        from: `'Portafoglio App' <${process.env.USER}>`, // sender address
+        from: `'Ruth_Morais App' <${process.env.USER}>`, // sender address
          to: `'Contacts' <${process.env.USER}>`, // list of receivers,MUST BE VALID email
-        subject: `${req.body.subject}`, // Subject line
+         subject: `Message sent from Ruth_Morais page`, // Subject line
+        // subject: `${req.body.subject}`, // Subject line
         text: `${req.body.message}`, // plain text body
         // html: "just a test",
-        html: `<p>Contact Name: <b>${req.body.name}</b></p></br>
+        html: `<p>Contact Name: <b>${req.body.firstName} ${req.body.lastName}</b></p></br>
                 <p>Contact Info: <b>${req.body.contactWay}</b></p></br>
-                <p>Subject: ${req.body.subject}</p></br>
                 <p>Message: ${req.body.message}</p>`, // html body
+                // <p>Subject: ${req.body.subject}</p></br> //previously in html, currently not being used on frontend
         // dsn: {
         //     return: 'headers',
         //     notify: ['success','failure','delay'],
