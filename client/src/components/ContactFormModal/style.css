@@ -107,7 +107,8 @@ background-color:rgba(174, 43, 16, 0.5) !important;
   justify-content: space-between;
   border-bottom: none;
 }
-#contactFormModalTitle{
+#contactFormModalTitleText{
+  font-size:1.5em
   /* display: flex;
   flex-direction:row;
   justify-content: space-between; */
