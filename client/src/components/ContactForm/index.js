@@ -8,7 +8,7 @@ function ContactForm() {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [contactWay, setContactWay] = useState('');
-  const [subject, setSubject] = useState('');
+  // const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
   const [confirmationSuccess, setConfirmationSuccess] = useState(false);
   const [confirmationOther, setConfirmationOther] = useState(false);
@@ -81,7 +81,7 @@ function ContactForm() {
         <br />
         <br />
 
-        <label className="formLabel" htmlFor="contactWay">Your Email *</label>
+        <label className="formLabel" htmlFor="contactWay">Your Email</label>
         <br />
         <input type="text" id="contactWay" name="contactWay"
         //  placeholder="EMAIL" 
