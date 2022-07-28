@@ -30,7 +30,7 @@ const ProjectListPage = () => {
         <div className="bod">
           <main className="col-xs-12 col-lg-10">
             <h2 id="h2Portfolio">
-              - Ruth is a Marketing Project Manager, Sales Manager and Product
+              - Marketing Project Manager, Sales Manager and Product
               Innovationist in the USA
             </h2>
 
