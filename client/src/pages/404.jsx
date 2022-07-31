@@ -1,9 +1,9 @@
 import React from 'react';
 // import {Link} from 'react-router-dom';
-import '../assets/css/404Page.css';
+// import '../assets/css/404Page.css';
 // import Spacer from '../components/Spacer';
 import {motion} from 'framer-motion';
-
+import '../assets/css/404Page.css';
 
 const NotFoundPage = () => {
 
@@ -24,10 +24,11 @@ const NotFoundPage = () => {
             <div className="bod">
         <div id="container404">
             <h3 className="text404">404 :  Page Not Found!</h3>
-            {/* <Spacer /> */}
+
+           
             {/* <Link to='/home' /> */}
         </div>
-         {/* <Spacer /> */}
+ 
 </div>
 </motion.div> 
 );

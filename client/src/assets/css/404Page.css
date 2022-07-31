@@ -1,9 +1,11 @@
 #container404{
     height: 50vw;
+    display:flex;
+    justify-content: space-around;
 }
 
 .text404 {
     padding-top:200px;
-    color:white;
-
+    color:black;
+    text-decoration: none;
 }
