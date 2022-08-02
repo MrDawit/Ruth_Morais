@@ -35,6 +35,10 @@ h1{
   text-align:center;
   /* font-family:Courier; */
 }
+#contactH1{
+  padding-top: 17vh;
+  padding-bottom: 22vh;
+}
 .resume_image{
   filter: blur(4px);
 }

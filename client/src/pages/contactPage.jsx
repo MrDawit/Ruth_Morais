@@ -27,15 +27,15 @@ const ContactPage = () => {
     >
       {/* <div className="bod"> */}
       <main className="col-xs-12 col-lg-10" id="main_resume">
+        {/* <br />
         <br />
         <br />
+        <br /> */}
+        <h1 id="contactH1">My Resume</h1>
+        {/* <br />
         <br />
         <br />
-        <h1>My Resume</h1>
-        <br />
-        <br />
-        <br />
-        <br />
+        <br /> */}
         <div id="resume_command">
           Simply click on the image below to view my resume.
         </div>
