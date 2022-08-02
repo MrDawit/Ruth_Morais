@@ -95,22 +95,22 @@ const AboutPage = () => {
       }}
     >
       <main className="col-xs-12 col-lg-10" id="main_about">
+        {/* <br />
         <br />
         <br />
         <br />
         <br />
         <br />
-        <br />
-        <br />
+        <br /> */}
         <h1 id="aboutH1">About Ruth</h1>
+        {/* <br />
         <br />
         <br />
         <br />
         <br />
         <br />
         <br />
-        <br />
-        <br />
+        <br /> */}
         <h2 id="aboutH2">Marketing Project Manager</h2>
         <br />
         <h2 id="aboutH3">Strategic, Collaborative, Data-Driven</h2>
