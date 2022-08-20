@@ -1,9 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-// import ContactForm from '../components/ContactForm';
-// import Tilt from '../components/Tilt/Tilt.js';
-// import resume from "../assets/files/RMorais.docx";
-// import Footer from '../components/Footer/index';
 import "../assets/css/contactPage.css";
 
 const ContactPage = () => {
@@ -25,7 +21,6 @@ const ContactPage = () => {
         },
       }}
     >
-      {/* <div className="bod"> */}
       <main className="col-xs-12 col-lg-10" id="main_resume">
        
         <h1 id="contactH1">My Resume</h1>
@@ -55,7 +50,6 @@ const ContactPage = () => {
           <div id="resumeQuoteSig">-Lorem Ipsum @ The Malorum Suite</div>
         </div>
       </main>
-      {/* <Footer/> */}
     </motion.div>
   );
 };

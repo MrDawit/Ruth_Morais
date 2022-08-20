@@ -35,7 +35,7 @@ const AboutPage = () => {
       setCarouselModal(false);
     }, 500);
   };
-
+  
   const handleShow = () => {
     setCarouselModal(true);
     setOpenCloseAnimation("fadeIn 1s");
